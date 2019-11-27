@@ -76,7 +76,7 @@ ansible-vault edit trellis/group_vars/development/vault.yml
 vault_mysql_root_password: devpw
 
 # Variables to accompany `group_vars/development/wordpress_sites.yml`
-# Note: the site name (`example.com`) must match up with the site name in the above file.
+# Note: the site name (`local.exciting-project`) must match up with the site name in the above file.
 vault_wordpress_sites:
   local.exciting-project:
     admin_password: admin
@@ -96,6 +96,21 @@ cd trellis && vagrant up
 * Set theme to Lunar Base Theme
 
 ## Plugins
+Plugins are version managed as Composer dependencies at the root of the site/ directory. This can be accomplished in different ways depending on the plugin.
+
+### Installing plugins from the Wordpress Plugin Directory
+This is the simplest use case. All plugins from the [WP Plugin Directory](https://wordpress.org/plugins/) are available from the wpackagist-plugin namespace, already defined in site/composer.json. For example:
+````
+composer require wpackagist-plugin/akismet
+````
+For more information read this [document](https://roots.io/bedrock/docs/composer/)
+
+### Installing custom or private plugins
+See [this document](https://roots.io/wordpress-plugins-with-composer/)
+
+### Installing ACF Pro with encrypted license key
+This base theme comes with ACF already installed, with an encrypted license key stored in /trellis/group_vars/development/vault.yml. It does not currently have the same key stored in the other environment vaults - assuming that production versions of the site will have their own license. To understand how to set this up, read [this document](https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/).
+
 
 ### Installing ACF Pro as a composer dependency
 
