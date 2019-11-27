@@ -15,12 +15,14 @@ See the [Roots documentation for installing machine dependencies](https://roots.
 
 ### Quick setup
 
-* Clone this repo:
+* [Fork this repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+
+* Clone the newly created repo, for example:
 ````
 git clone git@github.com:lunar-build/lunar-wp-base.git
 ````
 
-* Change directory into project root
+* Change directory into project root, for example:
 ````
 cd lunar-wp-base
 ````
@@ -46,7 +48,9 @@ wordpress_sites:
       enabled: false
 ````
 
-* Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo. At the root of the trellis directory, add a file called .vault_pass. Paste in the password for this repository. This is stored in Last Pass under 'Lunar base theme encryption password'.
+* Create a file called .vault_pass at the root of the trellis directory. Paste in the password stored in LastPass, under 'Lunar base theme encryption password'.
+
+* Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo.
 
 To edit the development vault file, run the following command:
 ````
