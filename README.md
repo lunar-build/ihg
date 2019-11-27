@@ -25,14 +25,14 @@ git clone git@github.com:lunar-build/lunar-wp-base.git
 cd lunar-wp-base
 ````
 
-* Clone Trellis
+* Install Trellis composer packages
 ````
-git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
+cd trellis && composer install
 ````
 
 * Install Bedrock composer packages
 ````
-cd site && composer install
+cd ../site && composer install
 ````
 
 * Install theme composer packages
@@ -47,16 +47,16 @@ yarn && yarn build
 
 ### Local environment setup
 
-* Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. For example:
+* Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. You may wish to define a site based on the eventual domain of the project. For example:
 ````
 wordpress_sites:
-  local.lunar-wp-base:
+  local.exciting-project:
     site_hosts:
-      - canonical: local.lunar-wp-base
+      - canonical: local.exciting-project
         redirects:
-          - www.local.lunar-wp-base
+          - www.local.exciting-project
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@local.lunar-wp-base
+    admin_email: admin@local.exciting-project
     multisite:
       enabled: false
     ssl:
@@ -66,19 +66,25 @@ wordpress_sites:
       enabled: false
 ````
 
-* Define admin panel and database passwords in /trellis/group_vars/development/vault.yml. For example:
+* Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo. To edit the development vault file, run the following command:
 ````
-# Documentation: https://roots.io/trellis/docs/vault/
+ansible-vault edit trellis/group_vars/development/vault.yml
+````
+
+* Ensure that the site name matches the one defined in /trellis/group_vars/development/wordpress_sites.yml. For example:
+````
 vault_mysql_root_password: devpw
 
 # Variables to accompany `group_vars/development/wordpress_sites.yml`
 # Note: the site name (`example.com`) must match up with the site name in the above file.
 vault_wordpress_sites:
-  local.lunar-wp-base:
+  local.exciting-project:
     admin_password: admin
     env:
       db_password: password
 ````
+
+* For more information about how to deal with encrypted vault.yml files, see [this document](https://roots.io/trellis/docs/vault/).
 
 * Build vagrant box (this will take some time)
 ````
