@@ -50,13 +50,13 @@ yarn && yarn build
 * Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. You may wish to define a site based on the eventual domain of the project. For example:
 ````
 wordpress_sites:
-  local.exciting-project:
+  local.exciting-project.co.uk:
     site_hosts:
-      - canonical: local.exciting-project
+      - canonical: local.exciting-project.co.uk
         redirects:
-          - www.local.exciting-project
+          - www.local.exciting-project.co.uk
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@local.exciting-project
+    admin_email: admin@local.exciting-project.co.uk
     multisite:
       enabled: false
     ssl:
@@ -76,9 +76,9 @@ ansible-vault edit trellis/group_vars/development/vault.yml
 vault_mysql_root_password: devpw
 
 # Variables to accompany `group_vars/development/wordpress_sites.yml`
-# Note: the site name (`local.exciting-project`) must match up with the site name in the above file.
+# Note: the site name (`local.exciting-project.co.uk`) must match up with the site name in the above file.
 vault_wordpress_sites:
-  local.exciting-project:
+  local.exciting-project.co.uk:
     admin_password: admin
     env:
       db_password: password
@@ -91,30 +91,30 @@ vault_wordpress_sites:
 cd trellis && vagrant up
 ````
 
-* Login to site at, for example, http://local.lunar-wp-base/wp-admin. Your username is and password are defined in the file /trellis/group_vars/development/vault.yml
+* Login to site at, for example, http://local.lunar-wp-base/wp-admin. Your username and password are defined in the file /trellis/group_vars/development/vault.yml. To view this, run:
+````
+ansible-vault view trellis/group_vars/development/vault.yml
+````
 
 * Set theme to Lunar Base Theme
+* Activate plugins
+* Or, upload an existing database. Database details are found in .env, which will have been generated from the encrypted vault.yml file on vagrant up.
 
 ## Plugins
-Plugins are version managed as Composer dependencies at the root of the site/ directory. This can be accomplished in different ways depending on the plugin.
+Plugins are version managed as Composer dependencies at the root of the site directory. This can be accomplished in different ways depending on the plugin.
 
 ### Installing plugins from the Wordpress Plugin Directory
 This is the simplest use case. All plugins from the [WP Plugin Directory](https://wordpress.org/plugins/) are available from the wpackagist-plugin namespace, already defined in site/composer.json. For example:
 ````
 composer require wpackagist-plugin/akismet
 ````
-For more information read this [document](https://roots.io/bedrock/docs/composer/)
+For more information read this [document](https://roots.io/bedrock/docs/composer/).
 
 ### Installing custom or private plugins
-See [this document](https://roots.io/wordpress-plugins-with-composer/)
+See [this document](https://roots.io/wordpress-plugins-with-composer/).
 
 ### Installing ACF Pro with encrypted license key
-This base theme comes with ACF already installed, with an encrypted license key stored in /trellis/group_vars/development/vault.yml. It does not currently have the same key stored in the other environment vaults - assuming that production versions of the site will have their own license. To understand how to set this up, read [this document](https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/).
-
-
-### Installing ACF Pro as a composer dependency
-
-https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/
+This base theme comes with ACF already installed, with an encrypted license key stored in /trellis/group_vars/development/vault.yml. It does not currently have the same key stored in the other environment vaults - on the assumption that the site will use another license in production, paid for by the client. To understand how this is setup, read [this document](https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/).
 
 ## Features
 * Environment variables set in .env file, not wp_admin
@@ -126,4 +126,3 @@ https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-
 * Very lightweight layout strategy defined. Navigate to /sample-page in the browser (uses page.blade.php template) for examples. Feel free to use or delete if not fit for purpose
 
 ## Deployment
-
