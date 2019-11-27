@@ -31,13 +31,19 @@ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
 ````
 
 * Install Bedrock composer packages
+````
 cd site && composer install
+````
 
 * Install theme composer packages
+````
 cd web/app/themes/sage && composer install
+````
 
 * Install theme yarn packages
+````
 yarn && yarn build
+````
 
 ### Local environment setup
 
