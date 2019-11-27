@@ -25,27 +25,7 @@ git clone git@github.com:lunar-build/lunar-wp-base.git
 cd lunar-wp-base
 ````
 
-* Install Trellis composer packages
-````
-cd trellis && composer install
-````
-
-* Install Bedrock composer packages
-````
-cd ../site && composer install
-````
-
-* Install theme composer packages
-````
-cd web/app/themes/sage && composer install
-````
-
-* Install theme yarn packages
-````
-yarn && yarn build
-````
-
-### Local environment setup
+#### Define and build local environment
 
 * Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. You may wish to define a site based on the eventual domain of the project. For example:
 ````
@@ -89,6 +69,23 @@ vault_wordpress_sites:
 * Build vagrant box (this will take some time)
 ````
 cd trellis && vagrant up
+````
+
+#### Install dependencies and build assets
+
+* Install Bedrock composer packages
+````
+cd site && composer install
+````
+
+* Install theme composer packages
+````
+cd web/app/themes/sage && composer install
+````
+
+* Install theme yarn packages
+````
+yarn && yarn build
 ````
 
 * Login to site at, for example, http://local.lunar-wp-base/wp-admin. Your username and password are defined in the file /trellis/group_vars/development/vault.yml. To view this, run:
