@@ -89,6 +89,12 @@ cd trellis && vagrant up
 
 * Set theme to Lunar Base Theme
 
+## Plugins
+
+### Installing ACF Pro as a composer dependency
+
+https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/
+
 ## Features
 * Environment variables set in .env file, not wp_admin
 * Additional image sizes are defined in setup.php
@@ -97,4 +103,6 @@ cd trellis && vagrant up
 * Browser watch. Run ````yarn start```` in the theme folder
 * Linter is turned off in resources/assets/build/webpack.config.js. Turn back on if web development isn't frustrating enough for you
 * Very lightweight layout strategy defined. Navigate to /sample-page in the browser (uses page.blade.php template) for examples. Feel free to use or delete if not fit for purpose
+
+## Deployment
 
