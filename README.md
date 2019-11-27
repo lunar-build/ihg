@@ -46,10 +46,13 @@ wordpress_sites:
       enabled: false
 ````
 
-* Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo. To edit the development vault file, run the following command:
+* Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo. At the root of the trellis directory, add a file called .vault_pass. Paste in the password for this repository. This is stored in Last Pass under 'Lunar base theme encryption password'.
+
+To edit the development vault file, run the following command:
 ````
 ansible-vault edit trellis/group_vars/development/vault.yml
 ````
+When prompted, supply the Lunar base theme encryption password.
 
 * Ensure that the site name matches the one defined in /trellis/group_vars/development/wordpress_sites.yml. For example:
 ````
