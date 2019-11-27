@@ -1,0 +1,21 @@
+/** Colors */
+$brand-primary: #525ddc;
+
+$black: #333;
+
+$grey--darkest: #2B2B2B;
+$grey: #7f7f7f;
+$grey--light: #DEDEDE;
+$grey--lighter: #ECECEA;
+$grey--lightest: #F5F5F5;
+
+/** Breakpoints  */
+// NB: update js files if these change;
+$max-width: 1500px;
+$max-width-inner: 1068px;
+$breakpoint--lg: 1068px;
+$breakpoint--md: 768px;
+$breakpoint--sm: 501px;
+
+/** Box Model  */
+$spacer:                2rem;
