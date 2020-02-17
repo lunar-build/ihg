@@ -2,10 +2,20 @@
 
 namespace App;
 
+
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use App\CPT;
+
+add_action('init', function () {
+    // @TODO - refactor to action
+    $cpt = new CPT;
+    $cpt->register_events();
+    $cpt->register_images();
+    $cpt->register_resources();
+});
 
 /**
  * Theme assets
@@ -155,3 +165,4 @@ add_action('init', function () {
         }
     });
 });
+
