@@ -3,13 +3,13 @@
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
-  local.lunar-wp-base:
+  ihg.local:
     site_hosts:
-      - canonical: local.lunar-wp-base
+      - canonical: ihg.local
         redirects:
-          - www.local.lunar-wp-base
+          - www.ihg.local
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@local.lunar-wp-base
+    admin_email: admin@ihg.local
     multisite:
       enabled: false
     ssl:
