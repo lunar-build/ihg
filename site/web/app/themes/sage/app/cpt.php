@@ -65,7 +65,7 @@ Class CPT {
         'show_in_menu' => true,
         'show_in_nav_menus' => true,
         'show_in_admin_bar' => true,
-        'menu_icon' => 'dashicons-calendar-alt',
+        'menu_icon' => 'dashicons-downloads',
         'has_archive' => true,
       ]
     );

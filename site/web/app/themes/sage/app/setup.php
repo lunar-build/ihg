@@ -9,7 +9,7 @@ use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 use App\CPT;
 
-add_action('admin_init', function () {
+add_action('init', function () {
     // @TODO - refactor to action
     $cpt = new CPT;
     $cpt->register_events();
