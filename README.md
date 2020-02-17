@@ -1,4 +1,4 @@
-# lunar-wp-base
+# IHG
 
 Base Wordpress theme and setup using Roots. Comprehensive documentation for Roots can be found [here](root.io).
 
@@ -46,13 +46,13 @@ cd lunar-wp-base
 
 ```
 wordpress_sites:
-  local.exciting-project.co.uk:
+  ihg.local:
     site_hosts:
-      - canonical: local.exciting-project.co.uk
+      - canonical: ihg.local
         redirects:
-          - www.local.exciting-project.co.uk
+          - www.ihg.local
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@local.exciting-project.co.uk
+    admin_email: admin@ihg.local
     multisite:
       enabled: false
     ssl:
@@ -80,9 +80,9 @@ When prompted, supply the Lunar base theme encryption password.
 vault_mysql_root_password: devpw
 
 # Variables to accompany `group_vars/development/wordpress_sites.yml`
-# Note: the site name (`local.exciting-project.co.uk`) must match up with the site name in the above file.
+# Note: the site name (`ihg.local`) must match up with the site name in the above file.
 vault_wordpress_sites:
-  local.exciting-project.co.uk:
+  ihg.local:
     admin_password: admin
     env:
       db_password: password
@@ -116,7 +116,7 @@ cd web/app/themes/sage && composer install
 yarn && yarn build
 ```
 
-- Login to site at, for example, http://local.lunar-wp-base/wp-admin. Your username and password are defined in the file /trellis/group_vars/development/vault.yml. To view this, run:
+- Login to site at, for example, http://ihg.local/wp-admin. Your username and password are defined in the file /trellis/group_vars/development/vault.yml. To view this, run:
 
 ```
 ansible-vault view trellis/group_vars/development/vault.yml
