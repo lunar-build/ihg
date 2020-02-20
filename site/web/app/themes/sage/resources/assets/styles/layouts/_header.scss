@@ -1,6 +1,3 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
-
 .banner {
 	.header-container {
 		position: relative;
@@ -27,10 +24,10 @@
 		transition: transform 0.2s ease-in-out;
 
 		&[data-toggle="close"] {
-			transform: translateX(0);
+			transform: translateX(100vw);
 		}
 		&[data-toggle="open"] {
-			transform: translateX(100vw);
+			transform: translateX(0);
 		}
 		ul {
 			padding-left: 0;
@@ -44,6 +41,42 @@
 
 			font-size: 1.5rem;
 			text-decoration: none;
+		}
+	}
+	
+	@media screen and (min-width: 768px) {
+		.header-container {
+			position: static;
+			justify-content: space-between;
+			button {
+				display: none;
+			}
+		}
+		.menu-main-navigation-container {
+			width: 100%;
+			.nav {
+				display: flex;
+				margin: 0;
+			}
+		}
+		nav {
+			flex-direction: row;
+			justify-content: center;
+
+			height: auto;
+			flex: 0 0 75%;
+
+			&.nav-primary {
+				transform: translateX(0);
+			}
+
+			a {
+				margin: 0 1rem;
+				font-size: 1rem;
+			}
+			ul li {
+				flex: 1 16.67%;
+			}
 		}
 	}
 }
