@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2ab3435cf766fe43871fd63028b8ac6",
+    "content-hash": "ff4fb45628357dac1166251a21d39846",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -604,21 +604,21 @@
         },
         {
             "name": "stoutlogic/acf-builder",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StoutLogic/acf-builder.git",
-                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb"
+                "reference": "c2c9181218ed63a041f24dd550324e920e4846cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
-                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
+                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/c2c9181218ed63a041f24dd550324e920e4846cf",
+                "reference": "c2c9181218ed63a041f24dd550324e920e4846cf",
                 "shasum": ""
             },
             "require": {
-                "doctrine/inflector": "~1.1",
-                "doctrine/instantiator": "~1.0.0",
+                "doctrine/inflector": "^1.1",
+                "doctrine/instantiator": "^1.0",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -643,7 +643,7 @@
                 }
             ],
             "description": "An Advanced Custom Field Configuration Builder",
-            "time": "2018-09-14T16:55:15+00:00"
+            "time": "2019-12-09T14:37:25+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
