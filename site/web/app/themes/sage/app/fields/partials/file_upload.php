@@ -4,12 +4,11 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$image_upload = new FieldsBuilder('image_upload');
-
-$image_upload
-    ->addTab('Image Upload', ['placement' => 'left'])
+$file_upload = new FieldsBuilder('file_upload');
+$file_upload
+    ->addTab('File Upload', ['placement' => 'left'])
         ->addImage('image_field', [
-            'label' => 'Image',
+            'label' => 'File Thumbnail',
             'instructions' => '',
             'required' => 0,
             'return_format' => 'array',
@@ -22,6 +21,16 @@ $image_upload
             // 'max_height' => '',
             // 'max_size' => '',
             // 'mime_types' => '',
+        ])
+        ->addFile('file_Field', [
+            'label' => 'File',
+            'instructions' => '',
+            'required' => 0,
+            'return_format' => 'array',
+            'library' => 'all',
+            'min_size' => '',
+            'max_size' => '',
+            'mime_types' => '',
         ]);
             
-return $image_upload;
+return $file_upload;
