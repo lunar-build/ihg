@@ -38,5 +38,3 @@ $event
         'height' => '',
     ]);
 return $event;
-
-// Map link
