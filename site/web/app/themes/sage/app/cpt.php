@@ -8,7 +8,7 @@ Class CPT {
     register_post_type(
       'events',
       [
-        'label' => 'Events',
+        'label' => 'Upcoming Events',
         'public'             => true,
         'publicly_queryable' => true,
         'description' => 'Add Events here',
@@ -27,7 +27,7 @@ Class CPT {
     register_post_type(
       'images',
       [
-        'label' => 'Images',
+        'label' => 'Image Gallery',
         'public'             => true,
         'publicly_queryable' => true,
         'description' => 'Add Images here',
@@ -45,7 +45,7 @@ Class CPT {
     register_post_type(
       'resources',
       [
-        'label' => 'Resources',
+        'label' => 'Downloadable Resources',
         'public'             => true,
         'publicly_queryable' => true,
         'description' => 'Add Resources here',
