@@ -11,6 +11,8 @@
 }
 
 .container {
+	margin: 0 auto;
+	max-width: 1400px;
 	width: 100%;
 	display: flex;
 	position: relative;
@@ -21,23 +23,10 @@
 		margin: 0 auto; 
 		margin-bottom: 4em;
 	}
-	&--inner { 
-		border: 1px solid black;
-		max-width: $max-width-inner; 
-	}
 }
 
-.col-4 {
-	@include col-container;
-	&__item { @include col-3 }
+.container-inner { 
+	margin: 0 auto;
+	max-width: $max-width-inner; 
 }
 
-.col-3 {
-	@include col-container;
-	&__item { @include col-4 }
-}
-
-.col-2 {
-	@include col-container;
-	&__item { @include col-6 }
-}

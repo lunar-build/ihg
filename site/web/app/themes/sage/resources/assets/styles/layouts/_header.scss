@@ -1,5 +1,7 @@
 .banner {
 	.header-container {
+		background-color: tomato; //@todo await brand colors
+
 		position: relative;
 		flex-wrap: wrap;
 
@@ -40,6 +42,7 @@
 			padding: 0.5em 0;
 			width: 100%;
 
+			color: white; //@todo await brand colors
 			font-size: 1.5rem;
 			text-decoration: none;
 		}
@@ -48,7 +51,10 @@
 	@media screen and (min-width: 768px) {
 		.header-container {
 			position: static;
+			align-items: center;
 			justify-content: space-between;
+			padding: 2rem 1rem;
+
 			button {
 				display: none;
 			}
@@ -61,24 +67,26 @@
 			}
 		}
 		.brand {
-			flex: 1 15%;
+			flex: 1 30%;
 		}
 		nav {
 			flex-direction: row;
 			justify-content: center;
 
 			height: auto;
-			flex: 0 0 85%;
+			flex: 0 0 70%;
 
 			&.nav-primary {
 				transform: translateX(0);
 			}
 
 			a {
-				margin: 0 1rem;
+				margin: 0;
 				font-size: 1rem;
+				text-align: center;
 			}
 			ul li {
+				margin: 0 .5rem;
 				flex: 1 16.67%;
 			}
 		}
