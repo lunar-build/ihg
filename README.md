@@ -45,16 +45,18 @@ cd lunar-wp-base
 - Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. You may wish to define a site based on the eventual domain of the project. For example:
 
 ```
+
 wordpress_sites:
-  ihg.test:
+  ihg.local:
     site_hosts:
-      - canonical: ihg.test
+      - canonical: ihg.local
         redirects:
-          - www.ihg.test
+          - www.ihg.local
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@ihg.test
+    admin_email: admin@ihg.local
     multisite:
-      enabled: false
+      enabled: true
+      subdomains: false # Set to true if you're using a subdomain multisite install
     ssl:
       enabled: false
       provider: self-signed
@@ -80,9 +82,9 @@ When prompted, supply the Lunar base theme encryption password.
 vault_mysql_root_password: devpw
 
 # Variables to accompany `group_vars/development/wordpress_sites.yml`
-# Note: the site name (`ihg.test`) must match up with the site name in the above file.
+# Note: the site name (`ihg.local`) must match up with the site name in the above file.
 vault_wordpress_sites:
-  ihg.test:
+  ihg.local:
     admin_password: admin
     env:
       db_password: password
@@ -116,7 +118,7 @@ cd web/app/themes/sage && composer install
 yarn && yarn build
 ```
 
-- Login to site at, for example, http://ihg.test/wp-admin. Your username and password are defined in the file /trellis/group_vars/development/vault.yml. To view this, run:
+- Login to site at, for example, http://ihg.local/wp-admin. Your username and password are defined in the file /trellis/group_vars/development/vault.yml. To view this, run:
 
 ```
 ansible-vault view trellis/group_vars/development/vault.yml
@@ -125,6 +127,32 @@ ansible-vault view trellis/group_vars/development/vault.yml
 - Set theme to Lunar Base Theme
 - Activate plugins
 - Or, upload an existing database. Database details are found in .env, which will have been generated from the encrypted vault.yml file on vagrant up.
+
+## Multisite
+
+Should be setup as soon as you vagrant up, and log in to the WP admin area.
+
+There is currently a bug, where `Config::define` isn't setting up the appropriate constants that WP is provisioned with Multisite, this is why there are now duplicate constant definitions in application.php.
+
+```
+Config::define('WP_ALLOW_MULTISITE', true);
+Config::define('MULTISITE', true);
+Config::define('SUBDOMAIN_INSTALL', false); // Set to true if using subdomains
+Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
+Config::define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
+Config::define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
+Config::define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
+
+define('WP_ALLOW_MULTISITE', true);
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false); // Set to true if using subdomains
+define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
+define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
+define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
+define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
+```
+
+### Adding sites
 
 ## Plugins
 
