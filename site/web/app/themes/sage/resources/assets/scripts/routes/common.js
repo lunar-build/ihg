@@ -5,7 +5,7 @@ export default {
 			const nav = $('.nav-primary');
 			const isOpen = nav.attr('data-toggle') === 'open';
 
-			$(e.target).text(isOpen ? 'X' : 'Menu');
+			$(e.target).text(isOpen ? 'Menu' : 'X');
 			nav.attr('data-toggle', isOpen ? 'close' : 'open');
 		});
 	},
