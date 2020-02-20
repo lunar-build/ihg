@@ -1,13 +1,11 @@
 .banner {
 	.header-container {
-		background-color: tomato; //@todo await brand colors
-
 		position: relative;
 		flex-wrap: wrap;
 
 		padding: 1rem;
 		box-sizing: border-box;
-
+		overflow: hidden;
 		button {
 			position: absolute;
 			top: 1rem;
@@ -42,7 +40,7 @@
 			padding: 0.5em 0;
 			width: 100%;
 
-			color: white; //@todo await brand colors
+			color: tomato;
 			font-size: 1.5rem;
 			text-decoration: none;
 		}
@@ -54,6 +52,7 @@
 			align-items: center;
 			justify-content: space-between;
 			padding: 2rem 1rem;
+			background-color: tomato; //@todo await brand colors
 
 			button {
 				display: none;
@@ -70,6 +69,7 @@
 			flex: 1 30%;
 		}
 		nav {
+
 			flex-direction: row;
 			justify-content: center;
 
@@ -82,6 +82,8 @@
 
 			a {
 				margin: 0;
+
+				color: white; //@todo await brand colors
 				font-size: 1rem;
 				text-align: center;
 			}
