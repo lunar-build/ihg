@@ -30,3 +30,12 @@
 	max-width: $max-width-inner; 
 }
 
+.flex-container {
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	& > * {
+		flex: 1 1 100%;
+	}
+}
