@@ -160,10 +160,10 @@ add_action('init', function () {
 });
 
 
-// add_action('init', function () {
-//     // @TODO - refactor to action
-//     $cpt = new CPT;
-//     $cpt->register_events();
-//     $cpt->register_images();
-//     $cpt->register_resources();
-// });
+add_action('init', function () {
+    // @TODO - refactor to action
+    $cpt = new CPT;
+    $cpt->register_events();
+    $cpt->register_images();
+    $cpt->register_resources();
+});

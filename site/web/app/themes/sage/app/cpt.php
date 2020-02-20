@@ -8,11 +8,7 @@ Class CPT {
     register_post_type(
       'events',
       [
-        'labels' => [
-          'name' => 'Events',
-          'singular_name' => ['Event'],
-
-        ],
+        'label' => 'Events',
         'public'             => true,
         'publicly_queryable' => true,
         'description' => 'Add Events here',
@@ -31,11 +27,7 @@ Class CPT {
     register_post_type(
       'images',
       [
-        'labels' => [
-          'name' => 'Images',
-          'singular_name' => ['Image'],
-
-        ],
+        'label' => 'Images',
         'public'             => true,
         'publicly_queryable' => true,
         'description' => 'Add Images here',
@@ -53,11 +45,7 @@ Class CPT {
     register_post_type(
       'resources',
       [
-        'labels' => [
-          'name' => 'Resources',
-          'singular_name' => ['resource'],
-
-        ],
+        'label' => 'Resources',
         'public'             => true,
         'publicly_queryable' => true,
         'description' => 'Add Resources here',
@@ -65,7 +53,7 @@ Class CPT {
         'show_in_menu' => true,
         'show_in_nav_menus' => true,
         'show_in_admin_bar' => true,
-        'menu_icon' => 'dashicons-downloads',
+        'menu_icon' => 'dashicons-download',
         'has_archive' => true,
       ]
     );
