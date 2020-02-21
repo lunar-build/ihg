@@ -6,14 +6,21 @@ use Sober\Controller\Controller;
 
 class ArchiveEvent extends Controller
 {
+    protected $post = null;
+    
+    function __construct()
+    {
+        $this->post = get_post();
+    }
+
     public function title()
     {
-        return get_post()->post_title;
+        return $this->post->post_title;
     } 
 
     public function description()
     {
-        return get_post()->post_content;
+        return $this->post->post_content;
     } 
 
     public function date()
@@ -24,6 +31,6 @@ class ArchiveEvent extends Controller
 
     public function link()
     {
-        return get_permalink(get_post()->id);
+        return get_permalink($this->post->id);
     } 
 }
