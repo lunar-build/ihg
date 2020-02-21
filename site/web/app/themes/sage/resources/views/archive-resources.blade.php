@@ -10,8 +10,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
+  @while (have_posts()) @php the_post(); $resource = new ArchiveResource @endphp
+    {{ $resource->title() }}
+    {{ $resource->description() }}
+    {{ $resource->get_file_path() }}
+    @php echo App::create_responsive_image($resource->get_thumbnail()) @endphp
   @endwhile
 
   {!! get_the_posts_navigation() !!}
