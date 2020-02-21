@@ -21,4 +21,9 @@ class ArchiveEvent extends Controller
         $date = date_create(get_field('date'));
         return date_format($date, 'dM');
     } 
+
+    public static function link()
+    {
+        return get_permalink(get_post()->id);
+    } 
 }

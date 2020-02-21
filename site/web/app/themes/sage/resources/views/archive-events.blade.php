@@ -14,6 +14,7 @@
     {{ ArchiveEvent::title() }}
     {{ ArchiveEvent::description() }}
     {{ ArchiveEvent::date() }}
+    {{ ArchiveEvent::link() }}
   @endwhile
 
   {!! get_the_posts_navigation() !!}
