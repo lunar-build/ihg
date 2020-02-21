@@ -11,24 +11,40 @@ $event
   
 $event
     ->addTab('Information', ['placement' => 'left'])
-        ->addDateTimePicker('date_time_picker_field', [
-            'label' => 'Event Date/Time',
+        ->addDatePicker('date', [
+            'label' => 'Event Date',
             'required' => 1,
+            'display_format' => 'd F Y',
+            'return_format' => 'd F Y',
         ])
-        ->addRepeater('Address', [
+        ->addTimePicker('start_time', [
+            'label' => 'Start Time',
+            'instructions' => '',
+            'required' => 0,
+            'display_format' => 'g:i a',
+            'return_format' => 'g:i a',
+        ])
+        ->addTimePicker('end_time', [
+            'label' => 'End Time',
+            'instructions' => '',
+            'required' => 0,
+            'display_format' => 'g:i a',
+            'return_format' => 'g:i a',
+        ])
+        ->addRepeater('address', [
             'button_label' => 'Add Line',
             'layout' => 'block',
           ])->addText('Line');
 
 $event
-    ->addTimePicker('time_picker_field', [
+    ->addTimePicker('doors_open', [
         'label' => 'Doors Open',
         'instructions' => '',
         'required' => 0,
         'display_format' => 'g:i a',
         'return_format' => 'g:i a',
     ])
-    ->addGoogleMap('google_map_field', [
+    ->addGoogleMap('location', [
         'label' => 'Event Location',
         'instructions' => '',
         'required' => 0,

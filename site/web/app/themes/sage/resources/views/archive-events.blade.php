@@ -11,7 +11,9 @@
   @endif
 
   @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
+    {{ ArchiveEvent::title() }}
+    {{ ArchiveEvent::description() }}
+    {{ ArchiveEvent::date() }}
   @endwhile
 
   {!! get_the_posts_navigation() !!}
