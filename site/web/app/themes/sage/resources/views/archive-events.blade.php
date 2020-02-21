@@ -10,11 +10,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post() @endphp
-    {{ ArchiveEvent::title() }}
-    {{ ArchiveEvent::description() }}
-    {{ ArchiveEvent::date() }}
-    {{ ArchiveEvent::link() }}
+  @while (have_posts()) @php the_post(); $archive = new ArchiveEvent @endphp
+    {{ $archive->title() }}
+    {{ $archive->description() }}
+    {{ $archive->date() }}
+    {{ $archive->link() }}
   @endwhile
 
   {!! get_the_posts_navigation() !!}
