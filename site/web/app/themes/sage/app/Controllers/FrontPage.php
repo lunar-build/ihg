@@ -68,16 +68,4 @@ class FrontPage extends Controller
         ]);
         return $posts;
     }
-
-    public static function get_pages()
-    {
-        return [
-            'news' => get_post_type_archive_link('post') . '/news',
-            'image_gallery' => get_post_type_archive_link('images'),
-            'events' => get_post_type_archive_link('events'),
-            'resources' => get_post_type_archive_link('resources'),
-            'in_media' => get_post_type_archive_link('post') . '/media',
-        ];
-    }
-
 }

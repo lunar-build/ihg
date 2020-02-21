@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@php
-FrontPage::get_pages();
-@endphp
-
 @section('content')
 	@php $news = FrontPage::get_news(3); @endphp
 	@while ($news->have_posts()) @php $news->the_post(); $post = new Archive @endphp
