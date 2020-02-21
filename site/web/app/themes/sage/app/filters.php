@@ -18,6 +18,16 @@ add_filter('body_class', function (array $classes) {
         $classes[] = 'sidebar-primary';
     }
 
+    $full_path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    if (preg_match('/crowne-plaza/', $full_path)) {
+        $classes[] =  'crowne-plaza';
+    }
+
+    if (preg_match('/holiday-inn/', $full_path)) {
+        $classes[] =  'holiday-inn';
+    }
+
     /** Clean up class names for custom templates */
     $classes = array_map(function ($class) {
         return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
