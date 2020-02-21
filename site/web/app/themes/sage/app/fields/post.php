@@ -10,7 +10,7 @@ $post
     ->setLocation('post_type', '==', 'post');
 
 $post 
-    ->addSelect('select_field', [
+    ->addSelect('post_type', [
         'label' => 'Post Type',
         'instructions' => '',
         'required' => 1,
