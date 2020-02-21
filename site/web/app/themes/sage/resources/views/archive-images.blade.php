@@ -11,9 +11,7 @@
   @endif
 
   @while (have_posts()) @php the_post(); $image = new ArchiveImage @endphp
-    {{ $image->title() }}
-    {{ $image->description() }}
-    @php echo App::create_responsive_image($image->get_image()) @endphp
+    @include('partials.content-image')
   @endwhile
   {!! get_the_posts_navigation() !!}
 @endsection
