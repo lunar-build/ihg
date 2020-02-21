@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
+@php
+FrontPage::get_pages();
+@endphp
+
 @section('content')
-	@while (have_posts(FrontPage::get_news())) @php the_post(); $post = new Archive @endphp
+	@php $news = FrontPage::get_news(); @endphp
+	@while ($news->have_posts()) @php $news->the_post(); $post = new Archive @endphp
 		{{-- @todo - create partial  --}}
 		{{ $post->title() }}
 		{{ $post->post_date() }}

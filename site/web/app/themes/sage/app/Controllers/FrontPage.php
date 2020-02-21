@@ -8,11 +8,16 @@ class FrontPage extends Controller
 {
     public static function get_news() 
     {
-        $posts = get_posts([
-            'numberposts'	=> 3,
-            'post_type'		=> 'post',
-            'meta_key'		=> 'post_type',
-            'meta_value'	=> 'Latest News'
+        $posts =new \WP_Query([
+            'numberposts' => 3,
+            'post_type' => 'post',
+            'tax_query' => [
+                [
+                    'taxonomy' => 'post_tag',
+                    'field' => 'slug',
+                    'terms' => 'latest',
+                ]
+            ]
         ]);
 
         return $posts;
@@ -50,14 +55,29 @@ class FrontPage extends Controller
 
     public static function get_in_media() 
     {
-        $posts = new \WP_Query([
-            'numberposts'	=> 3,
-            'post_type'		=> 'post',
-            'meta_key'		=> 'post_type',
-            'meta_value'	=> 'In the Media'
+        $posts =new \WP_Query([
+            'numberposts' => 3,
+            'post_type' => 'post',
+            'tax_query' => [
+                [
+                    'taxonomy' => 'post_tag',
+                    'field' => 'slug',
+                    'terms' => 'in-media',
+                ]
+            ]
         ]);
-
         return $posts;
+    }
+
+    public static function get_pages()
+    {
+        return [
+            'news' => get_post_type_archive_link('post') . '/news',
+            'image_gallery' => get_post_type_archive_link('images'),
+            'events' => get_post_type_archive_link('events'),
+            'resources' => get_post_type_archive_link('resources'),
+            'in_media' => get_post_type_archive_link('post') . '/media',
+        ];
     }
 
 }
