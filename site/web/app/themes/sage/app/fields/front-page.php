@@ -48,4 +48,10 @@ $group
         ->addText('Heading')
         ->addTextArea('Text');
 
+$page->addText('youtube_code', [
+    'label' => 'YouTube Embed Code',
+    'instructions' => 'The unique code for the youtube video e.g. the bit after "v=" watch?v=jnMUp2c9AzA',
+    'required' => 1,
+]);
+
 return $page;
