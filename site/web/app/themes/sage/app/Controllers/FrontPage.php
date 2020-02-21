@@ -6,10 +6,10 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
-    public static function get_news() 
+    public static function get_news($num_posts = -1) 
     {
         $posts =new \WP_Query([
-            'numberposts' => 3,
+            'numberposts' => $num_posts,
             'post_type' => 'post',
             'tax_query' => [
                 [
@@ -53,10 +53,10 @@ class FrontPage extends Controller
         return $posts;
     }
 
-    public static function get_in_media() 
+    public static function get_in_media($num_posts = -1) 
     {
         $posts =new \WP_Query([
-            'numberposts' => 3,
+            'numberposts' => $num_posts,
             'post_type' => 'post',
             'tax_query' => [
                 [

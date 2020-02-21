@@ -5,7 +5,7 @@ FrontPage::get_pages();
 @endphp
 
 @section('content')
-	@php $news = FrontPage::get_news(); @endphp
+	@php $news = FrontPage::get_news(3); @endphp
 	@while ($news->have_posts()) @php $news->the_post(); $post = new Archive @endphp
 		{{-- @todo - create partial  --}}
 		{{ $post->title() }}
@@ -29,7 +29,7 @@ FrontPage::get_pages();
 		@include('partials.content-resource')
 	@endwhile
 
-	@php $in_media = FrontPage::get_in_media(); @endphp
+	@php $in_media = FrontPage::get_in_media(3); @endphp
 	@while ($in_media->have_posts()) @php $in_media->the_post(); $media = new Archive; @endphp
 		{{-- @todo - create partial  --}}
 		{{ $media->title() }}
