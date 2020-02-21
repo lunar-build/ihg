@@ -10,9 +10,10 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
+  @while (have_posts()) @php the_post(); $image = new ArchiveImage @endphp
+    {{ $image->title() }}
+    {{ $image->description() }}
+    @php echo App::create_responsive_image($image->get_image()) @endphp
   @endwhile
-
   {!! get_the_posts_navigation() !!}
 @endsection

@@ -8,7 +8,7 @@ $image_upload = new FieldsBuilder('image_upload');
 
 $image_upload
     ->addTab('Image Upload', ['placement' => 'left'])
-        ->addImage('image_field', [
+        ->addImage('image', [
             'label' => 'Image',
             'instructions' => '',
             'required' => 0,
