@@ -31,8 +31,30 @@ class FrontPage extends Controller
     public static function get_events() 
     {
         $posts = new \WP_Query([
-            'numberposts'	=> 5,
+            'numberposts'	=> 3,
             'post_type'		=> 'events',
+        ]);
+
+        return $posts;
+    }
+
+    public static function get_resources() 
+    {
+        $posts = new \WP_Query([
+            'numberposts'	=> 3,
+            'post_type'		=> 'resources',
+        ]);
+
+        return $posts;
+    }
+
+    public static function get_in_media() 
+    {
+        $posts = new \WP_Query([
+            'numberposts'	=> 3,
+            'post_type'		=> 'post',
+            'meta_key'		=> 'post_type',
+            'meta_value'	=> 'In the Media'
         ]);
 
         return $posts;

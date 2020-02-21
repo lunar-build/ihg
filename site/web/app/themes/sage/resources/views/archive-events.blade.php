@@ -10,14 +10,8 @@
     {!! get_search_form(false) !!}
   @endif
 
-
-  @php var_dump(have_posts()); exit; @endphp
-
   @while (have_posts()) @php the_post(); $event = new ArchiveEvent @endphp
-    {{ $event->title() }}
-    {{ $event->description() }}
-    {{ $event->date() }}
-    {{ $event->link() }}
+    @include('partials.content-event')
   @endwhile
 
   {!! get_the_posts_navigation() !!}

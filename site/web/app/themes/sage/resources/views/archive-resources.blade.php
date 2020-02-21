@@ -11,10 +11,7 @@
   @endif
 
   @while (have_posts()) @php the_post(); $resource = new ArchiveResource @endphp
-    {{ $resource->title() }}
-    {{ $resource->description() }}
-    {{ $resource->get_file_path() }}
-    @php echo App::create_responsive_image($resource->get_thumbnail()) @endphp
+		@include('partials.content-resource')
   @endwhile
 
   {!! get_the_posts_navigation() !!}
