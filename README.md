@@ -24,22 +24,6 @@ If you receive `command not found: ansible-vault`, you need to add python to you
 export PATH="/Users/<your_username>/Library/Python/2.7/bin:$PATH"
 ```
 
-### Quick setup
-
-- [Fork this repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-
-- Clone the newly created repo, for example:
-
-```
-git clone git@github.com:lunar-build/lunar-wp-base.git
-```
-
-- Change directory into project root, for example:
-
-```
-cd lunar-wp-base
-```
-
 #### Define and build local environment
 
 - Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. You may wish to define a site based on the eventual domain of the project. For example:
