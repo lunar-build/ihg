@@ -2,7 +2,15 @@
 $brand-primary: #525ddc;
 
 /** Crowne Plaza **/
-$cp-brand-primary: #A10062;
+$cp-brand-plum: #A10062;
+$cp-brand-dark-grey: #54585A;
+$cp-brand-blue-light: #96C7D2;
+$cp-brand-blue-dark: #001450;
+$cp-brand-off-white: #ECECEB;
+$cp-brand-mustard: #FFD100;
+
+$cp-brand-primary: $cp-brand-plum;
+$cp-brand-text: $cp-brand-dark-grey;
 
 /** Holiday Inn **/
 $hi-brand-primary: #026650;

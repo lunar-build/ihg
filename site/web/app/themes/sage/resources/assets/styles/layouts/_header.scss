@@ -52,7 +52,10 @@
 			align-items: center;
 			justify-content: space-between;
 			padding: 2rem 1rem;
-			background-color: tomato; //@todo await brand colors
+
+			.crowne-plaza & {
+				background-color: $cp-brand-primary; //@todo await brand colors
+			}
 
 			button {
 				display: none;
