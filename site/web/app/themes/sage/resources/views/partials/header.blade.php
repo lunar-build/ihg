@@ -1,5 +1,5 @@
 <header class="banner">
-  <div class="container header-container">
+  <div class="container-inner header-container">
     <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
     <button id="nav-toggle">Menu</button>
     <nav class="nav-primary" data-toggle="close">

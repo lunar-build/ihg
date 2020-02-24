@@ -1,4 +1,15 @@
 .banner {
+	.crowne-plaza & {
+		@media screen and ( min-width: $breakpoint--md ) {
+			background-color: $cp-brand-primary;
+		}
+		
+	}
+
+	.holiday-inn & {
+		background-color: $hi-brand-primary; // @todo awaiting brand colours
+	}
+
 	.header-container {
 		position: relative;
 		flex-wrap: wrap;
@@ -12,6 +23,7 @@
 			right: 1rem;
 		}
 	}
+
 	nav {
 		display: flex;
 		flex-direction: column;
@@ -46,16 +58,13 @@
 		}
 	}
 	
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: $breakpoint--md) {
 		.header-container {
 			position: static;
+			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 2rem 1rem;
-
-			.crowne-plaza & {
-				background-color: $cp-brand-primary; //@todo await brand colors
-			}
+			padding: 2rem 0;
 
 			button {
 				display: none;
@@ -63,9 +72,18 @@
 		}
 		.menu-main-navigation-container {
 			width: 100%;
+
 			.nav {
 				display: flex;
 				margin: 0;
+
+				li {
+					margin-right: 0;
+				}
+
+				a {
+					text-align: right;
+				}
 			}
 		}
 		.brand {
