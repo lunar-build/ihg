@@ -1,5 +1,5 @@
 <footer class="main-footer content-info">
-    <div class="container footer-container">
+    <div class="container-inner footer-container">
         <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
         <nav class="nav-footer">
             <ul class="nav-footer-list">
