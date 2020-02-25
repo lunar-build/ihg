@@ -2,6 +2,7 @@ export default {
 	init() {
 		// JavaScript to be fired on all pages
 		$('#nav-toggle').on('click', (e) => {
+			console.log('clicked');
 			const nav = $('.nav-primary');
 			const isOpen = nav.attr('data-toggle') === 'open';
 
