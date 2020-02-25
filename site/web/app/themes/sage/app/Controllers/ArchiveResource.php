@@ -34,6 +34,16 @@ class ArchiveResource extends Controller
         return $file['url'];
     }
 
+    public function get_file_size()
+    {
+        $file = get_field('file');
+        $file_size = $file['filesize'];
+        return $file_size.'MB';
+    
+
+    
+    }
+
     public function get_thumbnail()
     {
         return get_field('thumbnail');
