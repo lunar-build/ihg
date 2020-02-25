@@ -1,0 +1,14 @@
+.event-card {
+    display: flex;
+    flex-direction: column; 
+    max-width: 14em;
+    
+    .event-date-title {
+        display: flex;
+
+        p {
+            padding: 3em;
+            background-color: $cp-brand-primary;
+        }
+    }
+}
