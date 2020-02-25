@@ -6,9 +6,20 @@
     .event-date-title {
         display: flex;
 
-        p {
-            padding: 3em;
+        .date {
+            width: 6rem;
+            height: 6rem;
             background-color: $cp-brand-primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                text-align: center;
+                font-size: 1.2em;
+                color: #fff;
+            }
         }
+        
     }
 }
