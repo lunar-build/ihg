@@ -4,10 +4,7 @@
 	@php $news = FrontPage::get_news(3); @endphp
 	@while ($news->have_posts()) @php $news->the_post(); $post = new Archive @endphp
 		{{-- @todo - create partial  --}}
-		{{ $post->title() }}
-		{{ $post->post_date() }}
-		@php echo $post->description() @endphp
-		@php echo App::create_responsive_image($post->get_image()) @endphp
+		@include('partials.content-news')
 	@endwhile
 	
 	@php $events = FrontPage::get_events(); @endphp
@@ -27,10 +24,7 @@
 
 	@php $in_media = FrontPage::get_in_media(3); @endphp
 	@while ($in_media->have_posts()) @php $in_media->the_post(); $media = new Archive; @endphp
-		{{-- @todo - create partial  --}}
-		{{ $media->title() }}
-		{{ $media->post_date() }}
-		@php echo $media->description() @endphp
+		@include('partials.content')
 	@endwhile
 
 @endsection
