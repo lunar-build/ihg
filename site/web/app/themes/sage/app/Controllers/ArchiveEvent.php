@@ -26,7 +26,7 @@ class ArchiveEvent extends Controller
     public function date()
     {
         $date = date_create(get_field('date'));
-        return date_format($date, 'Md');
+        return date_format($date, 'dM');
     } 
 
     public function link()
