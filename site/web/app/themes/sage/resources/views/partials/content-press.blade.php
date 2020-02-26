@@ -1,5 +1,5 @@
-<article {!! post_class() !!} >
-
+<article class="container-inner" >
+    <div {!! post_class() !!}>
         {{-- DATE --}}
         <p class="press-card-date">{{ $post->formatted_date() }}</p>
 
@@ -9,7 +9,6 @@
                 <a href="{{ get_permalink() }}">{!! get_the_title() !!}</a>
             </h2>
         </header>
-
     </div>
 
 </article>

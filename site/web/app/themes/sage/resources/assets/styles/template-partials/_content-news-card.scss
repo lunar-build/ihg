@@ -1,9 +1,8 @@
 article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2em;
-    width: 90%;
+
+    &.news-card {
+        margin-bottom: 2em;
+    }
 
     .featured-image {
         display: flex;
