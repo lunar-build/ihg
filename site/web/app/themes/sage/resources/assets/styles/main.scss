@@ -27,8 +27,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
-<<<<<<< HEAD
-@import "template-partials/content-event-cards";
-=======
+@import "template-partials/content-event-card";
 @import "template-partials/content-resource-card";
->>>>>>> content-resource.blade
+@import "template-partials/content-news-card";
