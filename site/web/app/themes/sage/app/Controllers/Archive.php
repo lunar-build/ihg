@@ -26,8 +26,8 @@ class Archive extends Controller
     public function get_image()
     {
         return get_post_thumbnail_id($this->post->id);
-    } 
-
+    }
+    
     public function post_date()
     {
         return $this->post->post_date;
