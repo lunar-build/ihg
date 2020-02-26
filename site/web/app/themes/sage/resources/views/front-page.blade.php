@@ -3,7 +3,6 @@
 @section('content')
 	@php $news = FrontPage::get_news(3); @endphp
 	@while ($news->have_posts()) @php $news->the_post(); $post = new Archive @endphp
-		{{-- @todo - create partial  --}}
 		@include('partials.content-news')
 	@endwhile
 	
@@ -24,7 +23,7 @@
 
 	@php $in_media = FrontPage::get_in_media(3); @endphp
 	@while ($in_media->have_posts()) @php $in_media->the_post(); $media = new Archive; @endphp
-		@include('partials.content')
+		@include('partials.content-press')
 	@endwhile
 
 @endsection
