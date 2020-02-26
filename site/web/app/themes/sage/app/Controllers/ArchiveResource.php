@@ -39,9 +39,6 @@ class ArchiveResource extends Controller
         $file = get_field('file');
         $file_size = $file['filesize'];
         return $file_size.'MB';
-    
-
-    
     }
 
     public function get_thumbnail()
