@@ -1,0 +1,22 @@
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    width: 30em;
+
+    .featured-image {
+        display: flex;
+        margin: 0;
+        img {
+            object-fit: contain;
+            width: 30em;
+            margin: 0;
+        }
+    }
+
+    .news-card-text {
+        padding: 1em;
+        background-color: #F5F5F5;
+    }
+}
