@@ -3,14 +3,14 @@ article {
     flex-direction: column;
     align-items: center;
     margin: 2em;
-    width: 30em;
+    width: 90%;
 
     .featured-image {
         display: flex;
         margin: 0;
         img {
             object-fit: contain;
-            width: 30em;
+            width: 100%;
             margin: 0;
         }
     }

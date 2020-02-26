@@ -1,15 +1,16 @@
 .event-card {
     display: flex;
     flex-direction: column; 
-    max-width: 16em;
-    margin: 2em;
+    width: 90vw;
+    height: 80vw;
+    margin: 5vw;
     
     .event-date-title {
         display: flex;
 
         .date {
-            width: 6rem;
-            height: 6rem;
+            width: 35vw;
+            height: 35vw;
             display: flex;
             align-items: center;
             justify-content: center;
