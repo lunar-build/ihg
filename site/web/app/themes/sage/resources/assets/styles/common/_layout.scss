@@ -26,11 +26,12 @@
 }
 
 .container-inner { 
-	margin: 0 5vw;
-	max-width: 90vw;
-	// @media screen and ( min-width: $breakpoint--lg ) {
-	// 	max-width: $max-width-inner;
-	// }
+	margin: 0 7vw;
+	max-width: 86vw;
+	
+	@media screen and ( min-width: $breakpoint--lg ) {
+		max-width: $max-width-inner;
+	}
 	 
 }
 
