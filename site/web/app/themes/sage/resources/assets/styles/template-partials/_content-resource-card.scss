@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     margin: 1em;
+    width: 90vw;
 
     .crowne-plaza & {
         background-color: #F5F5F5; // @todo check brand colours
@@ -34,7 +35,7 @@
         margin: 0;
         display: flex;
         img {
-            width: 22em;
+            width: 100%;
             object-fit: contain;
         }
     }
