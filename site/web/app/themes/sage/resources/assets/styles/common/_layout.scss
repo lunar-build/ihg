@@ -26,8 +26,8 @@
 }
 
 .container-inner { 
-	margin: 0 7vw;
-	max-width: 86vw;
+	margin: 0 7%;
+	max-width: 86%;
 	
 	@media screen and ( min-width: $breakpoint--lg ) {
 		max-width: $max-width-inner;
