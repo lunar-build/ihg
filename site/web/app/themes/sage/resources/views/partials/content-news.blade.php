@@ -11,9 +11,7 @@
             <p class="news-card-date">{{ $post->formatted_date() }}</p>
             
             {{-- TITLE --}}
-            <header>
-                <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
-            </header>
+            <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
 
             {{-- EXCERPT --}}
             <p class="entry-summary">@php the_excerpt() @endphp</p>

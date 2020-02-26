@@ -1,19 +1,40 @@
-.news-panel {
-    margin: 0;
-}
+.front-page-panel {
+    width: 100%;
+    padding-bottom: 4rem;
 
-.events-panel {
-    margin: 0;
-}
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 4rem;
+        padding-bottom: 0.5rem;
 
-.image-gallery-panel {
-    margin: 0;
-}
+        .panel-title {
+            max-width: 70%;
+            font-size: 1.2rem;
 
-.resources-panel {
-    margin: 0;
-}
+            .crowne-plaza & {
+                color: $cp-brand-dark-grey;
+            }
+        }
 
-.press-panel {
-    margin: 0;
+        a {
+            text-decoration: none;
+
+            .crowne-plaza & {
+                color: $cp-brand-primary;
+            }
+        }
+
+    }
+
+    .crowne-plaza & {
+
+        &.events-panel, &.press-panel {
+            background-color: #F5F5F5;
+        }
+
+    }
+    
 }
