@@ -36,7 +36,7 @@ class Archive extends Controller
     public function formatted_date()
     {
         $the_date = date_create($this->post->post_date);
-        return date_format($the_date, 'd F, Y');
+        return strtoupper(date_format($the_date, 'd F, Y'));
         
     }
 }

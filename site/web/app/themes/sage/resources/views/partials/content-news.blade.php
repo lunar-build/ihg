@@ -6,9 +6,9 @@
     </figure>
 
     <div class="news-card-text">
-    
+
         {{-- DATE --}}
-        <p>{{ $post->formatted_date() }}</p>
+        <p class="news-card-date">{{ $post->formatted_date() }}</p>
 
         {{-- TITLE --}}
         <header>
@@ -16,9 +16,8 @@
         </header>
 
         {{-- EXCERPT --}}
-        <div class="entry-summary">
-            @php the_excerpt() @endphp
-        </div>
+        <p class="entry-summary">@php the_excerpt() @endphp</p>
+
     </div>
 
 </article>

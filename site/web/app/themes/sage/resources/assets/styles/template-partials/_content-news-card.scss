@@ -18,5 +18,22 @@ article {
     .news-card-text {
         padding: 1em;
         background-color: #F5F5F5;
+
+        a {
+            text-decoration: none;
+
+            .crowne-plaza & {
+                color: $cp-brand-primary;
+            }
+        }
+
+        p {
+            .crowne-plaza & {
+                color: $cp-brand-dark-grey;
+            }
+        }
+
     }
+
+
 }
