@@ -9,3 +9,4 @@
 
 {{--IMAGE  --}}
 {{-- {!! App::create_responsive_image($hero_image) !!} --}}
+{!! App::get_image_url($hero_image) !!}
