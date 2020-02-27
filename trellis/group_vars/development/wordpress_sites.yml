@@ -5,9 +5,8 @@
 wordpress_sites:
   ihg.local:
     site_hosts:
-      - canonical: ihg.local
-        redirects:
-          - www.ihg.local
+      - canonical: transformation.crowne-plaza.local
+      - canonical: transformation.holiday-inn.local
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: admin@ihg.local
     multisite:
