@@ -25,6 +25,6 @@ class ArchiveImage extends Controller
 
     public function get_image()
     {
-        return get_field('image_field');
+        return get_field('image');
     }
 }
