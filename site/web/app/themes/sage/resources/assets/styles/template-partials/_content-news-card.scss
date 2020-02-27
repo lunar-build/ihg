@@ -1,0 +1,35 @@
+.news-card {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.featured-image {
+    display: flex;
+    margin: 0;
+    img {
+        object-fit: contain;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.news-card-text {
+    padding: 1em;
+    background-color: #F5F5F5;
+
+    a {
+        text-decoration: none;
+
+        .crowne-plaza & {
+            color: $cp-brand-primary;
+        }
+    }
+
+    p {
+        .crowne-plaza & {
+            color: $cp-brand-dark-grey;
+        }
+    }
+
+}
+

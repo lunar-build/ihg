@@ -1,3 +1,70 @@
 .main-footer {
     align-self: flex-end;
+    
+    .crowne-plaza & {
+        background-color: $cp-brand-primary;
+    }
+
+    .holiday-inn & {
+        background-color: $hi-brand-primary;
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and ( min-width: $breakpoint--md ) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .brand {
+        padding: 3em 0;
+
+        @media screen and ( min-width: $breakpoint--md ) {
+            padding: auto;
+            margin-right: 0;
+            margin-bottom: 6em;
+        }
+    }
+}
+
+.nav-footer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 5em;
+
+    @media screen and ( min-width: $breakpoint--md ) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: auto;
+        
+    }
+    
+    .nav-footer-list-item {
+        text-align: center;
+        padding: 1.4em 0;
+
+        @media screen and ( min-width: $breakpoint--md ) {
+            padding: 2em 1.2em;
+            
+            &:first-of-type {
+                padding-left: 0;
+            }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-family: "Agenda, sans serif";
+        }
+    }
 }

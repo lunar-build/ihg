@@ -27,7 +27,12 @@
 
 .container-inner { 
 	margin: 0 auto;
-	max-width: $max-width-inner; 
+	max-width: $max-width-inner;
+	
+	@media screen and ( min-width: $breakpoint--lg ) {
+		max-width: $max-width-inner;
+	}
+	 
 }
 
 .flex-container {

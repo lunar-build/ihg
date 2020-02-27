@@ -1,0 +1,52 @@
+.event-card {
+    display: flex;
+    flex-direction: column; 
+    background-color: white;
+    width: 100%;
+    height: 90%;
+    margin: 1em 0;
+    
+    .event-date-title {
+        display: flex;
+
+        .date {
+            width: 30vw;
+            height: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .crowne-plaza & {
+                background-color: $cp-brand-primary;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1.2em;
+                color: #fff;
+            }
+        }
+
+        h3 {
+            margin: auto 1em;
+
+            .crowne-plaza & {
+                color: $cp-brand-primary;
+            }
+        }
+    }
+
+    p {
+        margin: 1em;
+        .crowne-plaza & {
+            color: $cp-brand-dark-grey;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        .crowne-plaza & {
+            color: $cp-brand-primary;
+        }
+    }
+}

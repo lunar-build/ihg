@@ -23,10 +23,22 @@ class ArchiveResource extends Controller
         return $this->post->post_content;
     } 
 
+    public function permalink() 
+    {
+        return get_the_permalink();
+    }
+
     public function get_file_path()
     {
         $file = get_field('file');
         return $file['url'];
+    }
+
+    public function get_file_size()
+    {
+        $file = get_field('file');
+        $file_size = $file['filesize'];
+        return $file_size.'MB';
     }
 
     public function get_thumbnail()

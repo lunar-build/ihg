@@ -1,0 +1,55 @@
+.press-card {
+    width: 100%;
+    padding: 1em 0;
+
+    hr {
+        margin: 0;
+        width: 100%;
+        padding-right: 1em;
+    }
+
+    .separator-bottom {
+        display: none;
+
+    }
+
+    &:last-of-type {
+        padding-bottom: 3rem;
+
+        .separator-bottom {
+            display: block;
+            margin-top: 3rem;
+        }
+    }
+
+    .post {
+        margin: 0;
+        padding-bottom: 1rem;
+        padding-right: 1em;
+
+        a {
+            text-decoration: none;
+        }
+
+        .press-card-date {
+            padding-top: 1rem;
+        }
+
+        .press-title {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .crowne-plaza & {
+        background-color: #F5F5F5;
+
+        p {
+            color: $cp-brand-dark-grey;
+        }
+
+        a {
+            color: $cp-brand-primary;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.front-page-panel {
+    width: 100%;
+    padding-bottom: 4rem;
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 4rem;
+        padding-bottom: 0.5rem;
+
+        .panel-title {
+            max-width: 70%;
+            font-size: 1.2rem;
+
+            .crowne-plaza & {
+                color: $cp-brand-dark-grey;
+            }
+        }
+
+        a {
+            text-decoration: none;
+
+            .crowne-plaza & {
+                color: $cp-brand-primary;
+            }
+        }
+
+    }
+
+    .crowne-plaza & {
+
+        &.events-panel, &.press-panel {
+            background-color: #F5F5F5;
+        }
+
+    }
+    
+}

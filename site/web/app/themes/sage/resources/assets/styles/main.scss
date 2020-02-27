@@ -16,6 +16,7 @@
 /** Import theme styles */
 @import "common/global";
 @import "common/layout";
+@import "common/fonts";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -26,3 +27,8 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "template-partials/content-event-card";
+@import "template-partials/content-resource-card";
+@import "template-partials/content-news-card";
+@import "template-partials/content-press-card";
+@import "templates/front-page";
