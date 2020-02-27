@@ -18,19 +18,29 @@ $group =
         'instructions' => 'This content will appear in the hero at the top of the front page',
         'required' => 1,
         'layout' => 'inline',
-    ])
-        ->addText('Hero Header')
-            ->setInstructions('Add a header for the hero section');
+        ])
+        ->addText('hero_heading', [
+            'label' => 'Hero Heading',
+            'instructions' => 'Add a heading for the hero section. Max character length set to preserve page layout',
+            'maxlength' => '40',
+        ]);
+            
         
 $group 
     ->addGroup('hero_text', [
         'label' => 'Hero Text',
-        'instructions' => 'Add a subheader and some body text for the hero section',
+        'instructions' => 'Add a subheader and some body text for the hero section. Max character lengths set to preserve page layout',
         'required' => 1,
         'layout' => 'inline',
     ])
-        ->addText('Subheading')
-        ->addTextArea('Text'); // @todo set max character length?
+        ->addText('hero_subheading', [
+            'label' => 'Subheading',
+            'maxlength' => '40',
+        ])
+        ->addTextArea('hero_text', [
+            'label' => 'Text',
+            'maxlength' => '200',
+        ]);
 
 $group
     ->addGroup('hero_image', [
