@@ -65,7 +65,7 @@ export PATH="/Users/<your_username>/Library/Python/2.7/bin:$PATH"
 
 Should be setup as soon as you vagrant up, and log in to the WP admin area.
 
-There is currently a bug, where `Config::define` isn't setting up the appropriate constants that WP is provisioned with Multisite, this is why there are now duplicate constant definitions in application.php.
+There is currently a bug, where `Config::define` isn't setting up the appropriate constants that WP is provisioned with Multisite, you'll need to define the constants in `development.php` instead.
 
 ```
 Config::define('WP_ALLOW_MULTISITE', true);
@@ -75,20 +75,15 @@ Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
 Config::define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
 Config::define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
 Config::define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
-
-define('WP_ALLOW_MULTISITE', true);
-define('MULTISITE', true);
-define('SUBDOMAIN_INSTALL', false); // Set to true if using subdomains
-define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
-define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
-define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
-define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
 ```
 
 Roots.io multisite doesn't work out of the box, you have to install an [mu-plugin](https://github.com/felixarntz/multisite-fixes) to fix a URL rewrite bug.
 
-
 ### Adding sites
+
+By default the Crowne Plaza site will be up and running, but you'll need to add the Holiday Inn sub-site using the WP UI.
+
+Visit `http://transformation.crowne-plaza.local/wp-admin/network/sites.php` and add a new site. Initially you'll have to add the sub-site as a path off of the Crowne Plaza site but you can edit the full URL for the Holiday Inn site to be `http://transformation.holiday-inn.local/`.
 
 ## Plugins
 
