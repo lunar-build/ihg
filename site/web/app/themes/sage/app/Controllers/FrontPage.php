@@ -6,6 +6,38 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+
+    protected $hero = null;
+    
+    function __construct()
+    {
+        $this->hero = get_field('hero');
+    }
+
+    public function hero_heading()
+    {
+        return $this->hero['hero_heading'];
+    }
+
+    public function hero_subheading()
+    {
+        $text = $this->hero['hero_body'];
+        return $text['hero_subheading'];
+
+    }
+
+    public function hero_text()
+    {
+        $text = $this->hero['hero_body'];
+        return $text['hero_text'];
+    }
+
+    public function hero_image()
+    {
+        $hero_image = $this->hero['hero_image'];
+        return $hero_image['image'];
+    }
+
     public static function get_news($num_posts = -1) 
     {
         $posts =new \WP_Query([

@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+	{{-- {{ var_dump(get_field('hero'))}} --}}
+	{{ $hero_heading }}
+	{{ $hero_subheading }}
+	{{ $hero_text }}
+	{!! App::create_responsive_image($hero_image) !!}
+
 	<section class="front-page-panel news-panel">
 		<div class="container-inner">
 			<header>

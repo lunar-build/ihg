@@ -27,7 +27,7 @@ $group =
             
         
 $group 
-    ->addGroup('hero_text', [
+    ->addGroup('hero_body', [
         'label' => 'Hero Text',
         'instructions' => 'Add a subheader and some body text for the hero section. Max character lengths set to preserve page layout',
         'required' => 1,
