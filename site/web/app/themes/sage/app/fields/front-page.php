@@ -10,43 +10,38 @@ $page
     ->setLocation('post_type', '==', 'page')
     ->and('page_type', '==', 'front_page');
 
+//** HERO **//
+
 $group =
-    $page->addGroup('hero_tiles', [
-        'label' => 'Hero Tiles',
-        'instructions' => 'This content will appear in the tiles found within the hero at the top of the front page',
-        'required' => 1,
-        'layout' => 'table',
-    ]);
-
-$group 
-    ->addGroup('tile_1', [
-        'label' => 'Tile 1',
-        'instructions' => '',
+    $page->addGroup('hero', [
+        'label' => 'Hero',
+        'instructions' => 'This content will appear in the hero at the top of the front page',
         'required' => 1,
         'layout' => 'inline',
     ])
-        ->addText('Heading')
-        ->addTextArea('Text');
-
+        ->addText('Hero Header')
+            ->setInstructions('Add a header for the hero section');
+        
 $group 
-    ->addGroup('tile_2', [
-        'label' => 'Tile 2',
-        'instructions' => '',
+    ->addGroup('hero_text', [
+        'label' => 'Hero Text',
+        'instructions' => 'Add a subheader and some body text for the hero section',
         'required' => 1,
         'layout' => 'inline',
     ])
-        ->addText('Heading')
-        ->addTextArea('Text');
+        ->addText('Subheading')
+        ->addTextArea('Text'); // @todo set max character length?
 
-$group 
-    ->addGroup('tile_3', [
-        'label' => 'Tile 3',
-        'instructions' => '',
+$group
+    ->addGroup('hero_image', [
+        'label' => 'Hero Image',
+        'instructions' => 'Upload a background image',
         'required' => 1,
         'layout' => 'inline',
     ])
-        ->addText('Heading')
-        ->addTextArea('Text');
+        ->addFields(get_field_partial('partials.image_upload'));
+
+//** VIDEO **//
 
 $page->addText('youtube_code', [
     'label' => 'YouTube Embed Code',
