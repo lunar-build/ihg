@@ -5,13 +5,14 @@ export default {
 		const closeIcon = $('<i />');
 		closeIcon.addClass('fas fa-times');
 		const hamburger = $('.fa-bars');
+		const nav = $('.nav-primary');
 
 		// JavaScript to be fired on all pages
 		$('#nav-toggle').on('click', () => {
-			const nav = $('.nav-primary');
 			const isOpen = nav.attr('data-toggle') === 'open';
 			const menuBtn = $('#nav-toggle');
 			nav.attr('data-toggle', isOpen ? 'close' : 'open');
+
 
 			menuBtn.children().remove(); // Remove child SVG
 
