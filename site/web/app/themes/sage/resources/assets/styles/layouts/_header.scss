@@ -105,16 +105,24 @@
 			flex: 1 30%;
 		}
 		nav {
+			display: block;
+			position: static;
+			top: unset;
+			left: unset;
+			background-color: transparent;
 			flex-direction: row;
 			justify-content: center;
 
 			height: auto;
 			flex: 0 0 70%;
 
+			.nav {
+				display: flex;
+			}
+
 			&.nav-primary {
 				transform: translateX(0);
 			}
-
 			a {
 				margin: 0;
 

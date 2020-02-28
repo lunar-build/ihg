@@ -10,8 +10,9 @@
 		display: flex;
 
 		.date {
-			width: 30vw;
+			width: 30%;
 			height: 30vw;
+			max-height: 3rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;

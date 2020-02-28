@@ -17,6 +17,8 @@
 	width: 100%;
 	display: flex;
 	position: relative;
+
+	box-sizing: border-box;
 	&--outer {
 		border: 1px solid black;
 		justify-content: center;
