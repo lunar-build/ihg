@@ -1,27 +1,10 @@
-/** Colors */
-$brand-primary: #525ddc;
-
-/** Crowne Plaza **/
-$cp-brand-plum: #A00062;
-$cp-brand-dark-grey: #54585A;
-$cp-brand-blue-light: #96C7D2;
-$cp-brand-blue-dark: #001450;
-$cp-brand-off-white: #ECECEB;
-$cp-brand-mustard: #FFD100;
-
-$cp-brand-primary: $cp-brand-plum;
-$cp-brand-text: $cp-brand-dark-grey;
-
-/** Holiday Inn **/
-$hi-brand-primary: #026650;
-
 $black: #333;
 
-$grey--darkest: #2B2B2B;
+$grey--darkest: #2b2b2b;
 $grey: #7f7f7f;
-$grey--light: #DEDEDE;
-$grey--lighter: #ECECEA;
-$grey--lightest: #F5F5F5;
+$grey--light: #dedede;
+$grey--lighter: #ececea;
+$grey--lightest: #f5f5f5;
 
 /** Breakpoints  */
 // NB: update js files if these change;
@@ -32,5 +15,4 @@ $breakpoint--md: 768px;
 $breakpoint--sm: 501px;
 
 /** Box Model  */
-$spacer:                2rem;
-
+$spacer: 2rem;
