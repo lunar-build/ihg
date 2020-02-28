@@ -6,19 +6,19 @@
 
 	@media (min-width: $breakpoint--sm) {
 		& > article {
-			width: 50%;
+			width: calc(50% - 1rem);
 		}
 	}
 
 	@media (min-width: $breakpoint--md) {
 		& > article {
-			width: 33.3%;
+			width: calc(33.3% - 1rem);
 		}
 	}
 
 	@media (min-width: $breakpoint--lg) {
 		& > article {
-			width: 25%;
+			width: calc(25% - 1rem);
 		}
 	}
 }
