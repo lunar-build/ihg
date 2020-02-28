@@ -1,8 +1,12 @@
 .article-grid {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 
 	flex-wrap: wrap;
+
+	& > article {
+		margin: 0 0.5rem;
+	}
 
 	@media (min-width: $breakpoint--sm) {
 		& > article {
