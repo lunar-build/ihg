@@ -15,16 +15,11 @@ use App\CPT;
  */
 add_action('wp_enqueue_scripts', function () {
     $full_path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
-    if (preg_match('/crowne-plaza/', $full_path)) {
-        $stylesheet =  'crowne-plaza';
-    }
-    if (preg_match('/holiday-inn/', $full_path)) {
-        $stylesheet =  'holiday-inn';
-    }
+    preg_match('/[a-z]+.([a-z-]*).([a-z]+)/', $full_path, $matches);
+    $brand_stylesheet = $matches[1];
 
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_style('sage/'.$stylesheet.'.css', asset_path('styles/'.$stylesheet.'.css'), false, null);
+    wp_enqueue_style('sage/'.$brand_stylesheet.'.css', asset_path('styles/'.$brand_stylesheet.'.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
