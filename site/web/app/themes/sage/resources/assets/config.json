@@ -1,6 +1,12 @@
 {
 	"entry": {
 		"main": ["./scripts/main.js", "./styles/main.scss"],
+		"crowne-plaza": [
+			"./styles/crowne-plaza.scss"
+		],
+		"holiday-inn": [
+			"./styles/holiday-inn.scss"
+		],
 		"customizer": ["./scripts/customizer.js"]
 	},
 	"publicPath": "/app/themes/sage",

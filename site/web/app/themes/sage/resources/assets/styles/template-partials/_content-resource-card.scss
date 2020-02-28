@@ -1,44 +1,39 @@
 .resource-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1em 0;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1em 0;
+	width: 100%;
+	background-color: var(--brand-off-white); // @todo check brand colours
 
-    .crowne-plaza & {
-        background-color: #F5F5F5; // @todo check brand colours
-    }
+	.resource-link {
+		width: 100%;
+		text-decoration: none;
 
-    .resource-link {
-        width: 100%;
-        text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			color: darkGrey; // @todo add brand colours
+		}
+	}
 
-        &:hover {
-            text-decoration: none;
-        }
-        &:focus {
-            outline: none;
-        }
-        &:active {
-            color: darkGrey; // @todo add brand colours
-        }
-    }
+	.resource-card-text {
+		margin: 1em;
+		margin-bottom: 2em;
+		color: darkGrey; // @todo add brand colours
+	}
 
-    .resource-card-text {
-        margin: 1em;
-        margin-bottom: 2em;
-        color: darkGrey; // @todo add brand colours
-    }
-
-    .resource-image {
-        margin: 0;
-        display: flex;
-        img {
-            width: 100%;
-            object-fit: contain;
-        }
-    }
+	.resource-image {
+		margin: 0;
+		display: flex;
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
 }
-
-
