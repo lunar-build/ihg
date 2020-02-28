@@ -20,7 +20,7 @@ class App extends Controller
             return __('Latest Posts', 'sage');
         }
         if (is_archive()) {
-            return get_the_archive_title();
+            return str_replace('Archives: ', '', get_the_archive_title()); // There must be a better way to do this?
         }
         if (is_search()) {
             return sprintf(__('Search Results for %s', 'sage'), get_search_query());
