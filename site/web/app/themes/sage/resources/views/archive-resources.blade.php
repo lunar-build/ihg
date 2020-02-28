@@ -10,9 +10,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post(); $resource = new ArchiveResource @endphp
-		@include('partials.content-resource')
-  @endwhile
+  @component('layouts.article-grid')
+    @while (have_posts()) @php the_post(); $resource = new ArchiveResource @endphp
+      @include('partials.content-resource')
+    @endwhile
+  @endcomponent
 
   {!! get_the_posts_navigation() !!}
 @endsection
