@@ -4,27 +4,21 @@
 
 	flex-wrap: wrap;
 
-	#grid-hero {
+	.grid-hero {
 		display: flex;
 		flex-direction: column;
-		figure {
-			order: -1;
-		}
-		img {
-			display: block;
-			margin: 0;
-			width: 100%;
-		}
 		@media screen and (min-width: $breakpoint--md) {
-
+			flex-direction: row-reverse;
 			justify-content: space-between;
-			padding: 1em;
 			margin-bottom: 1rem;
 			width: 100%;
+			& > * {
+				width: 50%;
+			}
 		}
-
-		figure {
-			margin: 0;
+		
+		.featured-image {
+			order: -1;
 		}
 	}
 

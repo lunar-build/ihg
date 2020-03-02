@@ -1,4 +1,4 @@
-<article id="grid-hero" class="news-card">
+<article class="news-card grid-hero">
     <div class="news-card-text">
         <header>
             <p class="news-card-date"><time>{{ $post->formatted_date() }}</time></p>
