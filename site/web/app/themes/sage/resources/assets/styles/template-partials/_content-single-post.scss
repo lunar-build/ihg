@@ -58,3 +58,21 @@
         }
     }
 }
+
+.single-post-footer {
+    max-width: 600px;
+    margin: 2rem auto 0;
+
+    .article-grid {
+
+        @media screen and (min-width: $breakpoint--sm) {
+            justify-content: center;
+            flex-wrap: nowrap;
+
+            & > article {
+                width: 50%;
+                margin-right: 2rem;
+            }
+        }
+    }
+}

@@ -16,6 +16,13 @@
   <div class="entry-content">
     @php echo $post->description() @endphp
   </div>
-  <footer>
+  <footer class="single-post-footer">
+    <h3>Other News</h3>
+    @component('layouts.article-grid')
+      @php $related_posts = $post->get_related(); @endphp
+      @while ($related_posts->have_posts()) @php $related_posts->the_post(); $post = new ArchivePost @endphp
+        @include('partials.content-news')
+      @endwhile
+    @endcomponent
   </footer>
 </article>
