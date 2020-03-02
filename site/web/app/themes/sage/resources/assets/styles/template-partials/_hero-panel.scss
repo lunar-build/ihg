@@ -1,18 +1,24 @@
 .hero-panel {
     width: 100vw;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2em;
-    background-color: navy;
-    // background-image: url("2/2020/02/cosmea-583092_1920-1200x799.jpg");
-    color: white;
+    padding: 0;
+    overflow: hidden;
 
+    .crowne-plaza & {
+        background-color: $cp-brand-dark-grey;
+        color: white;
+    }
+    
     .hero-heading {
         max-width: 80%;
         font-size: 1.6rem;
+        position: relative;
+        z-index: 2;
         
         @media screen and ( min-width: $breakpoint--md) {
             max-width: 65%;
