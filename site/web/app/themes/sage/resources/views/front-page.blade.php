@@ -10,7 +10,7 @@
 				<a href="/latest-news">View all</a>
 			</header>
 			@php $news = FrontPage::get_news(3); @endphp
-			@while ($news->have_posts()) @php $news->the_post(); $post = new Archive @endphp
+			@while ($news->have_posts()) @php $news->the_post(); $post = new ArchivePost @endphp
 				@include('partials.content-news')
 			@endwhile
 		</div>

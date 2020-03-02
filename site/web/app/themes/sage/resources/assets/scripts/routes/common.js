@@ -24,6 +24,12 @@ export default {
 			}
 			
 		});
+
+		const filter = $('#post_tag-filter');
+
+		filter.on('change', function(e) {
+			location.href = e.target.value;
+		})
 	},
 	finalize() {
 		// JavaScript to be fired on all pages, after page specific JS is fired

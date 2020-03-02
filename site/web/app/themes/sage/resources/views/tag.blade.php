@@ -1,11 +1,10 @@
 @extends('layouts.app')
-
 @section('content')
 	@php $filters = FrontPage::get_news_tags(); 
 		$filter_type = "post_tag"; 
 		$default = [
-			'label' => 'All',
-			'value' => get_permalink()
+			'label' => get_queried_object()->name,
+			'value' =>get_term_link(get_queried_object()->term_id)
 		]; 
 	@endphp
 	@include('partials.page-header')
