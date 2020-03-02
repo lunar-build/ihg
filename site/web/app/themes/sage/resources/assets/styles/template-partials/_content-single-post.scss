@@ -1,0 +1,20 @@
+.type-post {
+    width: 100%;
+}
+
+.single-post-header {
+    .archive-title {
+        font-weight: bold;
+    }
+    .date time {
+        font-size: .75rem;
+        color: lightgrey;
+    }
+    .image {
+        margin: 0;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
