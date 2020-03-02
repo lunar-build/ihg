@@ -2,6 +2,7 @@
 
 @section('content')
 	@include('partials.page-header')
+	@include('partials.post-filters')
 	@php $news = FrontPage::get_news(); @endphp
 	@component('layouts.article-grid')
 		@php $count = 0 @endphp

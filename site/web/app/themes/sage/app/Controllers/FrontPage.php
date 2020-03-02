@@ -43,13 +43,7 @@ class FrontPage extends Controller
         $posts =new \WP_Query([
             'numberposts' => $num_posts,
             'post_type' => 'post',
-            'tax_query' => [
-                [
-                    'taxonomy' => 'post_tag',
-                    'field' => 'slug',
-                    'terms' => 'latest',
-                ]
-            ]
+            'category_name' => 'latest'
         ]);
 
         return $posts;
@@ -90,13 +84,7 @@ class FrontPage extends Controller
         $posts =new \WP_Query([
             'numberposts' => $num_posts,
             'post_type' => 'post',
-            'tax_query' => [
-                [
-                    'taxonomy' => 'post_tag',
-                    'field' => 'slug',
-                    'terms' => 'in-media',
-                ]
-            ]
+            'category_name' => 'in-media'
         ]);
         return $posts;
     }
