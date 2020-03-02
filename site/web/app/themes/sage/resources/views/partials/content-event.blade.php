@@ -1,4 +1,4 @@
-<div class="event-card">
+<article class="event-card">
     <div class="event-date-title">
         <div class="date">
             <p>{{ $event->date() }}</p>
@@ -8,4 +8,4 @@
     
     <p>{{ $event->description() }}<p>
     <a href="{{ $event->link() }}">View event</a>
-</div>
+</article>

@@ -10,9 +10,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post(); $event = new ArchiveEvent @endphp
-    @include('partials.content-event')
-  @endwhile
+  @component('layouts.article-grid')
+    @while (have_posts()) @php the_post(); $event = new ArchiveEvent @endphp
+      @include('partials.content-event')
+    @endwhile
+  @endcomponent
 
   {!! get_the_posts_navigation() !!}
 @endsection

@@ -10,8 +10,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post(); $image = new ArchiveImage @endphp
-    @include('partials.content-image')
-  @endwhile
+  @component('layouts.article-grid')
+    @while (have_posts()) @php the_post(); $image = new ArchiveImage @endphp
+      @include('partials.content-image')
+    @endwhile
+  @endcomponent
+
   {!! get_the_posts_navigation() !!}
 @endsection

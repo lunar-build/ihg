@@ -1,0 +1,28 @@
+.article-grid {
+	display: flex;
+	justify-content: flex-start;
+
+	flex-wrap: wrap;
+
+	& > article {
+		margin: 0 0.5rem;
+	}
+
+	@media (min-width: $breakpoint--sm) {
+		& > article {
+			width: calc(50% - 1rem);
+		}
+	}
+
+	@media (min-width: $breakpoint--md) {
+		& > article {
+			width: calc(33.3% - 1rem);
+		}
+	}
+
+	@media (min-width: $breakpoint--lg) {
+		& > article {
+			width: calc(25% - 1rem);
+		}
+	}
+}

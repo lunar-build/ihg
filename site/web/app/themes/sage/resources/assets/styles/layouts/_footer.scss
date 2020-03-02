@@ -1,13 +1,6 @@
 .main-footer {
     align-self: flex-end;
-    
-    .crowne-plaza & {
-        background-color: $cp-brand-primary;
-    }
-
-    .holiday-inn & {
-        background-color: $hi-brand-primary;
-    }
+    background-color: var(--brand-primary);
 }
 
 .footer-container {
