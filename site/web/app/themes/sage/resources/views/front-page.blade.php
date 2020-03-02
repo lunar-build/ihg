@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+	
+	@include('partials.hero-panel')
 	<section class="front-page-panel news-panel">
 		<div class="container-inner">
 			<header>

@@ -10,43 +10,48 @@ $page
     ->setLocation('post_type', '==', 'page')
     ->and('page_type', '==', 'front_page');
 
+//** HERO **//
+
 $group =
-    $page->addGroup('hero_tiles', [
-        'label' => 'Hero Tiles',
-        'instructions' => 'This content will appear in the tiles found within the hero at the top of the front page',
+    $page->addGroup('hero', [
+        'label' => 'Hero',
+        'instructions' => 'This content will appear in the hero at the top of the front page',
         'required' => 1,
-        'layout' => 'table',
-    ]);
-
+        'layout' => 'inline',
+        ])
+        ->addText('hero_heading', [
+            'label' => 'Hero Heading',
+            'instructions' => 'Add a heading for the hero section. Max character length set to preserve page layout',
+            'maxlength' => '40',
+        ]);
+            
+        
 $group 
-    ->addGroup('tile_1', [
-        'label' => 'Tile 1',
-        'instructions' => '',
+    ->addGroup('hero_body', [
+        'label' => 'Hero Text',
+        'instructions' => 'Add a subheader and some body text for the hero section. Max character lengths set to preserve page layout',
         'required' => 1,
         'layout' => 'inline',
     ])
-        ->addText('Heading')
-        ->addTextArea('Text');
+        ->addText('hero_subheading', [
+            'label' => 'Subheading',
+            'maxlength' => '40',
+        ])
+        ->addTextArea('hero_text', [
+            'label' => 'Text',
+            'maxlength' => '200',
+        ]);
 
-$group 
-    ->addGroup('tile_2', [
-        'label' => 'Tile 2',
-        'instructions' => '',
+$group
+    ->addGroup('hero_image', [
+        'label' => 'Hero Image',
+        'instructions' => 'Upload a background image',
         'required' => 1,
         'layout' => 'inline',
     ])
-        ->addText('Heading')
-        ->addTextArea('Text');
+        ->addFields(get_field_partial('partials.image_upload'));
 
-$group 
-    ->addGroup('tile_3', [
-        'label' => 'Tile 3',
-        'instructions' => '',
-        'required' => 1,
-        'layout' => 'inline',
-    ])
-        ->addText('Heading')
-        ->addTextArea('Text');
+//** VIDEO **//
 
 $page->addText('youtube_code', [
     'label' => 'YouTube Embed Code',

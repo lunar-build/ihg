@@ -31,6 +31,12 @@ class App extends Controller
         return get_the_title();
     }
 
+    // get src of image
+    public static function get_image_url($image_ID)
+    {
+        return wp_get_attachment_image_url($image_ID, 'xl' );
+    }
+
     // generate responsive img with srcset, class and animate-on-scroll
     public static function create_responsive_image($image_ID, $classStr=false, $width="100%")
     {
