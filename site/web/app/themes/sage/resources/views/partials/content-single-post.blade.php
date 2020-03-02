@@ -9,10 +9,12 @@
       </div>
       <figure class="image">
         {!! App::create_responsive_image($post->get_image()) !!}
+        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
       </figure>
     </div>
   </header>
   <div class="entry-content">
+    @php echo $post->description() @endphp
   </div>
   <footer>
   </footer>
