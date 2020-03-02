@@ -9,10 +9,8 @@
     padding: 0;
     overflow: hidden;
 
-    .crowne-plaza & {
-        background-color: $cp-brand-dark-grey;
-        color: white;
-    }
+    background-color: var(--brand-dark-grey);
+    color: white;
     
     .hero-heading {
         max-width: 80%;
