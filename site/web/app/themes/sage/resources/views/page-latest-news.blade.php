@@ -2,6 +2,7 @@
 
 @section('content')
 	@include('partials.page-header')
+	@php $filters = FrontPage::get_news_tags(); $filter_type = "post_tag" @endphp
 	@include('partials.post-filters')
 	@php $news = FrontPage::get_news(); @endphp
 	@component('layouts.article-grid')

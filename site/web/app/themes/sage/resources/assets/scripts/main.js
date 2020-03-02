@@ -9,6 +9,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import latestOne from './routes/latest-news';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,6 +21,7 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
+  latestOne, // @todo need to fix this
 });
 
 // Load Events

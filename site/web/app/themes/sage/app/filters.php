@@ -11,8 +11,8 @@ add_filter('body_class', function (array $classes) {
         if (!in_array(basename(get_permalink()), $classes)) {
             $classes[] = basename(get_permalink());
         }
+        
     }
-
     /** Add class if sidebar is active */
     if (display_sidebar()) {
         $classes[] = 'sidebar-primary';

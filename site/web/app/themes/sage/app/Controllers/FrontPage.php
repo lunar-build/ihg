@@ -88,4 +88,14 @@ class FrontPage extends Controller
         ]);
         return $posts;
     }
+
+    public static function get_news_tags()
+    {
+        $terms = get_terms([
+            'taxonomy' => 'post_tag',
+            'hide_empty' => false, // set to true on prods
+        ]);
+
+        return $terms;
+    }
 }
