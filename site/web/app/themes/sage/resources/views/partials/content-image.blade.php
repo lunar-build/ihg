@@ -1,3 +1,6 @@
-{{ $image->title() }}
-{{ $image->description() }}
-@php echo App::create_responsive_image($image->get_image()) @endphp
+<article class="news-card">
+    {{-- FEATURED IMAGE --}}
+    <figure class="featured-image">
+        {!! App::create_responsive_image($image->get_image()) !!}
+    </figure>
+</article>
