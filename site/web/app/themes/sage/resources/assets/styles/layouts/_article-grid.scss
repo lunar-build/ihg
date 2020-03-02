@@ -4,8 +4,28 @@
 
 	flex-wrap: wrap;
 
-	& > article {
-		margin: 0 0.5rem;
+	#grid-hero {
+		display: flex;
+		flex-direction: column;
+		figure {
+			order: -1;
+		}
+		img {
+			display: block;
+			margin: 0;
+			width: 100%;
+		}
+		@media screen and (min-width: $breakpoint--md) {
+
+			justify-content: space-between;
+			padding: 1em;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+
+		figure {
+			margin: 0;
+		}
 	}
 
 	@media (min-width: $breakpoint--sm) {
