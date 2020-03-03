@@ -1,4 +1,4 @@
-<article class="gallery-card">
+<article class="gallery-hero">
     {{-- FEATURED IMAGE --}}
     <figure class="featured-image">
         @component('partials.modal', [

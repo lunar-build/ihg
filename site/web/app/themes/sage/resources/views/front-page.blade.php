@@ -45,9 +45,17 @@
 				<a href="/images">View all</a>
 			</header>
 			@php $images = FrontPage::get_image_gallery(); @endphp
-			@while ($images->have_posts()) @php $images->the_post(); $image = new ArchiveImage; @endphp
-				@include('partials.content-image')
-			@endwhile
+			@component('layouts.gallery-grid')
+				@php $count = 0 @endphp
+				@while ($images->have_posts()) @php $images->the_post(); $image = new ArchiveImage; @endphp
+					@if(empty($count))
+						@include('partials.gallery-hero')
+					@else
+						@include('partials.content-image')
+					@endif
+					@php $count++ @endphp
+				@endwhile
+			@endcomponent
 		</div>
 	</section>
 
