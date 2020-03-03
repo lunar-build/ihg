@@ -11,7 +11,9 @@
 				<a href="/latest-news">View all</a>
 			</header>
 			@php $news = FrontPage::get_news(3); @endphp
-			@component('layouts.article-grid')
+			@component('layouts.article-grid', [
+				'class' => 'article-grid--front'
+			])
 				@while ($news->have_posts()) @php $news->the_post(); $post = new ArchivePost @endphp
 					@include('partials.content-news')
 				@endwhile
@@ -26,7 +28,9 @@
 				<a href="/events">View all</a>
 			</header>
 			@php $events = FrontPage::get_events(); @endphp
-			@component('layouts.article-grid')
+			@component('layouts.article-grid', [
+				'class' => 'article-grid--front'
+			])
 				@while ($events->have_posts()) @php $events->the_post(); $event = new ArchiveEvent; @endphp
 					@include('partials.content-event')
 				@endwhile
@@ -54,7 +58,9 @@
 				<a href="/resources">View all</a>
 			</header>
 			@php $resources = FrontPage::get_resources(); @endphp
-			@component('layouts.article-grid')
+			@component('layouts.article-grid', [
+				'class' => 'article-grid--front'
+			])
 				@while ($resources->have_posts()) @php $resources->the_post(); $resource = new ArchiveResource; @endphp
 					@include('partials.content-resource')
 				@endwhile

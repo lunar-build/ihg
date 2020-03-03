@@ -1,6 +1,6 @@
 .article-grid {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 
 	flex-wrap: wrap;
 
@@ -11,7 +11,7 @@
 			flex-direction: row-reverse;
 			justify-content: space-between;
 			margin-bottom: 2rem;
-			width: 100%;
+			flex-basis: 100%;
 			& > * {
 				width: 50%;
 			}
@@ -28,19 +28,20 @@
 	
 	@media (min-width: $breakpoint--sm) {
 		& > article {
-			width: calc(50% - 2rem);
+			margin-right: 1rem;
+			flex-basis: calc(50% - 1rem);
 		}
 	}
 
 	@media (min-width: $breakpoint--md) {
 		& > article {
-			width: calc(33.3% - 2rem);
+			flex-basis: calc(33.3% - 1rem);
 		}
 	}
 
 	@media (min-width: $breakpoint--lg) {
-		& > article {
-			width: calc(25% - 2rem);
+		&:not(.article-grid--front) > article:not(.grid-hero) {
+			flex-basis: calc(25% - 1rem);
 		}
 	}
 }
