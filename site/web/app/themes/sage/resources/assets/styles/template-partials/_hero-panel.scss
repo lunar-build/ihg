@@ -1,5 +1,4 @@
 .hero-panel {
-    width: 100vw;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -8,7 +7,7 @@
 
     border-bottom: .75rem solid var(--brand-primary);
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 3rem 1rem;
 
     color: white;
 

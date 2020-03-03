@@ -4,9 +4,9 @@
   <body @php body_class() @endphp>
     <div class="flex-container">
       @php do_action('get_header') @endphp
-      @include('partials.header')
       <div class="wrap container" role="document">
         <div class="content container-inner">
+          @include('partials.header')
           <main class="main">
             @yield('content')
           </main>

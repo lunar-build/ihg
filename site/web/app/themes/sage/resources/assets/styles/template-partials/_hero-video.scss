@@ -2,7 +2,14 @@
     margin: 2rem 0;
     border-bottom: .75rem solid var(--brand-primary);
 
-    @media screen and (min-width: $breakpoint--sm) {
+    .featured-image {
+        align-self: stretch;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint--md) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -13,6 +20,11 @@
 
         .text, & > figure {
             flex: 1 50%;
+        }
+
+        .text {
+            padding: 0 8rem;
+            box-sizing: border-box;
         }
     }
 
