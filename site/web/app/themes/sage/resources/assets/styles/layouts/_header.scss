@@ -51,6 +51,10 @@
 
 		text-align: center;
 
+		&.nav-primary {
+			z-index: 3;
+		}
+
 		.brand {
 			position: absolute;
 			top: 0;

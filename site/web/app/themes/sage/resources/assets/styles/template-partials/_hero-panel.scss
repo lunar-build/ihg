@@ -4,35 +4,69 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 0;
-    overflow: hidden;
 
-    background-color: var(--brand-dark-grey);
+    border-bottom: .75rem solid var(--brand-primary);
+    box-sizing: border-box;
+    padding: 1rem;
+
     color: white;
+
+    .hero-image {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        margin: 0;
+
+        &::before {
+            z-index: 0;
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background-color: rgba(0, 0, 0, .4);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+         
+        }
+    }
     
     .hero-heading {
-        max-width: 80%;
         font-size: 1.6rem;
         position: relative;
         z-index: 2;
-        
-        @media screen and ( min-width: $breakpoint--md) {
-            max-width: 65%;
-        }
     }
 
     .hero-body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        max-width: 80%;
 
-        .hero-rule {
-            width: 20%;
-            margin-right: 80%;
-            text-align: left;
+        h2 {
+            position: relative;
+        }
+        h2::after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1rem;
+            height: .25rem;
+            width: 2rem;
+
+            background-color: var(--brand-primary);
         }
         @media screen and ( min-width: $breakpoint--md) {
             max-width: 35%;
