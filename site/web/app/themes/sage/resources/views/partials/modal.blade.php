@@ -4,16 +4,16 @@
 <div class="modal modal--hide">
     <div class="modal-inner">
         <button class="modal-close js-modal-close btn-default">X</button>
-        <figure class="featured-image">
-            @if (empty($video))
+        <figure class="featured-@php echo empty($embed_code) ? 'image' : 'video' @endphp">
+            @if (empty($embed_code))
                 {!! App::create_responsive_image($attachment_id) !!}
             @else
                 @include('partials.youtube-embed', [
-                    'video' => $video
+                    'embed_code' => $embed_code
                 ])
             @endif
         </figure>
-        @if (empty($video))
+        @if (empty($embed_code))
             <div class="modal-side">
                 <section class="modal-content">
                     <h3 class="modal-title">{{$title}}</h3>

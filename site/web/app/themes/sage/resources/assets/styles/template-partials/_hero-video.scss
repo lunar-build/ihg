@@ -2,8 +2,13 @@
     margin: 2rem 0;
     border-bottom: .75rem solid var(--brand-primary);
 
-    .btn-video {
+    p {
+        margin-bottom: 0;
+    }
+
+    .modal-btn {
         display: block;
+        margin-bottom: 1rem;
         padding: 1rem;
         width: 100%;
 
@@ -20,4 +25,13 @@
             top: -3px;
         }
     }
+
+    .modal-inner {
+        min-height: auto;
+
+        @media screen and (min-width: $breakpoint--sm) {
+            min-height: 60vh;
+        }
+    }
+
 }
