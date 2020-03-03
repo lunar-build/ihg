@@ -11,9 +11,20 @@
     
     .text {
         padding: 0 1rem;
+        @media screen and (min-width: $breakpoint--sm) {
+            padding: 0 3rem;
+            box-sizing: border-box;
+        }
+        @media screen and (min-width: $breakpoint--md) {
+            padding: 0 5rem;
+        }
+
+        @media screen and (min-width: $breakpoint--md) {
+            padding: 0 8rem;
+        }
     }
 
-    @media screen and (min-width: $breakpoint--md) {
+    @media screen and (min-width: $breakpoint--sm) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -24,11 +35,6 @@
 
         .text, & > figure {
             flex: 1 50%;
-        }
-
-        .text {
-            padding: 0 8rem;
-            box-sizing: border-box;
         }
     }
 
