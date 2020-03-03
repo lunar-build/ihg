@@ -49,3 +49,18 @@
 		flex: 1 1 100%;
 	}
 }
+
+.panel-container {
+	@media screen and (min-width: $breakpoint--sm) {
+		display: flex;
+		justify-content: space-between;
+
+		header {
+			flex: 1 25%;
+		}
+
+		.article-grid {
+			flex: 3 75%;
+		}
+	}
+}

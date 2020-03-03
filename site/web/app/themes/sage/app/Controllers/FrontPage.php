@@ -62,7 +62,7 @@ class FrontPage extends Controller
     public static function get_events() 
     {
         $posts = new \WP_Query([
-            'numberposts'	=> 3,
+            'posts_per_page'	=> 3,
             'post_type'		=> 'events',
         ]);
 
@@ -72,7 +72,7 @@ class FrontPage extends Controller
     public static function get_resources() 
     {
         $posts = new \WP_Query([
-            'numberposts'	=> 3,
+            'posts_per_page'	=> 3,
             'post_type'		=> 'resources',
         ]);
 
