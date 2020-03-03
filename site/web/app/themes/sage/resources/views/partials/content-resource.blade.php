@@ -16,7 +16,7 @@
     {{-- TEXT --}}
     <div class=resource-card-text>
         <h2>{{ $resource->title() }}</h2>
-        <p>{{$resource->get_file_type()}} - {{ $resource->get_file_size() }}</p>
+        <p class="file-meta">{{$resource->get_file_type()}} - {{ $resource->get_file_size() }}</p>
     </div> 
 </article>
 

@@ -24,9 +24,20 @@
 
 	.resource-card-text {
 		align-self: flex-start;
-		margin: 1em;
-		margin-bottom: 2em;
+		margin: 1.5em 1em;
 		color: darkGrey; // @todo add brand colours
+		h2 {
+			margin: 0 0 1rem;
+
+			font-size: 1em;
+			color: var(--brand-primary);
+		}
+
+		.file-meta {
+			margin-bottom: 0;
+			color: var(--brand-dark-grey);
+			font-size: .7em;
+		}
 	}
 
 	.resource-image {
