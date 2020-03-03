@@ -17,7 +17,7 @@
 		</div>
 	</section>
 	
-	<section class="front-page-panel events-panel">
+	<section class="front-page-panel front-page-panel--alt events-panel">
 		<div class="container-inner">
 			<header>
 				<h2 class="panel-title">{{ strtoupper('Upcoming events') }}</h2>
@@ -56,7 +56,7 @@
 		</div>
 	</section>
 
-	<section class="front-page-panel press-panel">
+	<section class="front-page-panel front-page-panel--alt press-panel">
 		<div class="container-inner">
 			<header>
 				<h2 class="panel-title">{{ strtoupper('In the media') }}</h2>
