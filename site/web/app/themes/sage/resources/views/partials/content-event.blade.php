@@ -6,6 +6,6 @@
         <h3>{{ $event->title() }}</h3>
     </div>
     
-    <p>{{ $event->description() }}<p>
+    <p>@php echo strlen($event->description()) < 123 ? $event->description() : substr($event->description(), 0, 123) . '...' @endphp<p>
     <a href="{{ $event->link() }}">View event</a>
 </article>
