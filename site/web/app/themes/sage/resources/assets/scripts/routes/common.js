@@ -36,9 +36,20 @@ export default {
 			modal.removeClass('modal--hide');
 		})
 
+		function closeModal (modal) {
+			return modal.addClass('modal--hide');
+		}
+
+		$('body').on('keydown', function(e){
+			if(e.key === 'Escape') {
+				const modal = $('.modal');
+				closeModal(modal);
+			}
+		});
+
 		$('.js-modal-close').on('click', function() {
 			const modal = $(this).parent().parent();
-			modal.addClass('modal--hide');
+			closeModal(modal);
 		})
 	},
 	finalize() {
