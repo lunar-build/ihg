@@ -5,3 +5,70 @@
     cursor: pointer;
     width: 100%;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    height: 100vh;
+    padding: 1rem;
+    width: 100vw;
+
+    background-color: rgba(96, 96, 96, 0.9);
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        min-height: 60vh;
+        img {
+            display: block;
+        }
+    }
+    &-content {
+        background-color: var(--brand-off-white);
+        padding: 1rem;
+    }
+    &-cta { // @todo create brand btn
+        display: block;
+
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+
+        background-color: var(--brand-primary);
+
+        color: var(--brand-off-white);
+        text-align: center;
+        text-decoration: none;
+    }
+    &-meta { // @todo create reusable text like this ? mixin?
+        color: var(--brand-dark-grey);
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+    }
+
+    &-title {
+        margin-top: 0;
+        color: var(--brand-primary);
+    }
+
+    &-close {
+        position: absolute;
+        top: -1.5rem;
+        right: 0rem;
+        width: auto;
+
+        color: var(--brand-off-white);
+        font-size: 1.25rem;
+    }
+}
+
+.modal--hide {
+    display: none;
+}

@@ -30,6 +30,16 @@ export default {
 		filter.on('change', function(e) {
 			location.href = e.target.value;
 		})
+
+		$('.js-modal-open').on('click', function() {
+			const modal = $(this).next();
+			modal.removeClass('modal--hide');
+		})
+
+		$('.js-modal-close').on('click', function() {
+			const modal = $(this).parent().parent();
+			modal.addClass('modal--hide');
+		})
 	},
 	finalize() {
 		// JavaScript to be fired on all pages, after page specific JS is fired
