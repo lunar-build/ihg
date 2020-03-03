@@ -41,6 +41,12 @@ class ArchiveResource extends Controller
         return $file_size.'MB';
     }
 
+    public function get_file_type()
+    {
+        $file = get_field('file');
+        return strtoupper($file['subtype']);
+    }
+
     public function get_thumbnail()
     {
         return get_field('thumbnail');

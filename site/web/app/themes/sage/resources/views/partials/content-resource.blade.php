@@ -6,7 +6,7 @@
             'attachment_id' => $resource->get_thumbnail(),
             'download_url' => $resource->get_file_path(),
             'file' => [
-                'type' => 'jpg',
+                'type' => $resource->get_file_type()   ,
                 'size' => $resource->get_file_size()
             ]
         ])
@@ -16,7 +16,7 @@
     {{-- TEXT --}}
     <div class=resource-card-text>
         <h2>{{ $resource->title() }}</h2>
-        <p>ZIP - {{ $resource->get_file_size() }}</p>
+        <p>{{$resource->get_file_type()}} - {{ $resource->get_file_size() }}</p>
     </div> 
 </article>
 
