@@ -62,7 +62,7 @@
 				<a href="/in-the-media">View all</a>
 			</header>
 			@php $in_media = FrontPage::get_in_media(3); @endphp
-			@while ($in_media->have_posts()) @php $in_media->the_post(); $media = new Archive; @endphp
+			@while ($in_media->have_posts()) @php $in_media->the_post(); $media = new ArchivePost; @endphp
 				@include('partials.content-press')
 			@endwhile
 		</div>
