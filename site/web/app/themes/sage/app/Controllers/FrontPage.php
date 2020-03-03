@@ -98,4 +98,15 @@ class FrontPage extends Controller
 
         return $terms;
     }
+
+    public static function get_video()
+    {
+        $field = get_field('youtube');
+
+        return [
+            'image' => $field['image'],
+            'text' => $field['video_text'],
+            'embed_code' => $field['youtube_code'],
+        ];
+    }
 }

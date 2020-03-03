@@ -1,14 +1,13 @@
 .front-page-panel {
 	width: 100%;
-	padding-bottom: 4rem;
+	margin-bottom: 2rem;
 
 	header {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		padding-top: 4rem;
-		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
 
 		.panel-title {
 			max-width: 70%;

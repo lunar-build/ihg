@@ -1,0 +1,23 @@
+.video-panel {
+    margin: 2rem 0;
+    border-bottom: .75rem solid var(--brand-primary);
+
+    .btn-video {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+
+        color: var(--brand-primary);
+        text-align: left;
+        svg {
+            position: relative;
+            left: -1rem;
+
+            font-size: 1.25rem;
+        }
+        span {
+            position: relative;
+            top: -3px;
+        }
+    }
+}

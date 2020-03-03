@@ -3,6 +3,7 @@
 @section('content')
 	
 	@include('partials.hero-panel')
+	@include('partials.hero-video', FrontPage::get_video())
 	<section class="front-page-panel news-panel">
 		<div class="container-inner">
 			<header>
