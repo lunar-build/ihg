@@ -31,12 +31,20 @@ export default {
 			location.href = e.target.value;
 		})
 
+		const videoEmbed = $('.featured-video');
+		$('.featured-video').remove();
+
 		$('.js-modal-open').on('click', function() {
 			const modal = $(this).next();
+			$('.modal-inner').append(videoEmbed);
+
 			modal.removeClass('modal--hide');
 		})
 
+
 		function closeModal (modal) {
+			$('.featured-video').remove();
+			
 			return modal.addClass('modal--hide');
 		}
 
