@@ -1,4 +1,4 @@
-<section class="front-page-panel video-panel">
+<section class="video-panel">
    <div class="text">
       <p>{{$text}}</p>
       @component('partials.modal', [

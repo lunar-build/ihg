@@ -8,6 +8,10 @@
             object-fit: cover;
         }
     }
+    
+    .text {
+        padding: 0 1rem;
+    }
 
     @media screen and (min-width: $breakpoint--md) {
         display: flex;
