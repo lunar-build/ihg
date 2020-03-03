@@ -14,7 +14,7 @@
             <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
 
             {{-- EXCERPT --}}
-            <p class="entry-summary">@php the_excerpt() @endphp</p>
+            <p class="entry-summary">@php echo strlen(get_the_content()) < 123 ? get_the_content() : substr(get_the_content(), 0, 123) . '...' @endphp</p>
         </div>
         
     </div>
