@@ -2,6 +2,20 @@
     margin: 2rem 0;
     border-bottom: .75rem solid var(--brand-primary);
 
+    @media screen and (min-width: $breakpoint--sm) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 0;
+        max-height: 15rem;
+        overflow: hidden;
+
+        .text, & > figure {
+            flex: 1 50%;
+        }
+    }
+
     p {
         margin-bottom: 0;
     }
