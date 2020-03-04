@@ -172,3 +172,7 @@ add_action('init', function () {
     $cpt->register_images();
     $cpt->register_resources();
 });
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
