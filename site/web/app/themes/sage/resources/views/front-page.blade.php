@@ -5,7 +5,7 @@
 	@include('partials.hero-panel')
 	@include('partials.hero-video', FrontPage::get_video())
 	<section class="front-page-panel news-panel">
-		<div class="container-inner panel-container">
+		<div id="latest-news" class="container-inner panel-container">
 			<header>
 				<h2 class="panel-title">{{ strtoupper('Latest news') }}</h2>
 				<a href="/latest-news">View all</a>
