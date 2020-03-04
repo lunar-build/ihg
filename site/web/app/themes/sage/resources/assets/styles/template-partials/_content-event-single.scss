@@ -33,6 +33,18 @@
 	.event-video { // @todo pull out to reusable class
 		position: relative;
 		min-height: 8rem;
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .4);
+			box-shadow: inset 0px 0px 100px 0px black;
+		}
 		img {
 			height: 100%;
 			width: 100%;
