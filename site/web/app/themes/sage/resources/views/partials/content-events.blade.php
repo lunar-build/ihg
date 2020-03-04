@@ -30,8 +30,7 @@
         <section class="event-video">
             @component('partials.modal', $post->video())
                 <div class="btn-video">
-                    <i class="fa fa-play-circle"></i>
-                    <span>Play Video</span>
+                    @include('partials.video-btn-content')
                 </div>
              @endcomponent
         </section>

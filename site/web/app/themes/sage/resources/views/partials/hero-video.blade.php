@@ -4,8 +4,7 @@
       @component('partials.modal', [
          'embed_code' => $embed_code
       ])
-         <i class="fa fa-play-circle"></i>
-         <span>Play Video</span>
+         @include('partials.video-btn-content')
       @endcomponent
    </div>
    <figure class="featured-image">

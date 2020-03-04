@@ -43,7 +43,8 @@
     }
 
     .modal-btn {
-        display: block;
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
         padding: 1rem;
         width: 100%;
