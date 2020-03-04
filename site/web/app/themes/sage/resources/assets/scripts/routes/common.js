@@ -2,25 +2,23 @@ export default {
 	init() {
 		
 		// Get/create icons with classes for FA
-		const closeIcon = $('<i />');
-		closeIcon.addClass('fas fa-times');
-		const hamburger = $('.fa-bars');
+		const closeIcon = $('#close-icon');
+		const hamburger = $('#hamburger');
 		const nav = $('.nav-primary');
+
+		closeIcon.hide();
 
 		// JavaScript to be fired on all pages
 		$('#nav-toggle').on('click', () => {
 			const isOpen = nav.attr('data-toggle') === 'open';
-			const menuBtn = $('#nav-toggle');
 			nav.attr('data-toggle', isOpen ? 'close' : 'open');
 
-
-			menuBtn.children().remove(); // Remove child SVG
-
-			// Append FA <i />, which jQuery will then use to render SVG
 			if (isOpen) {
-				menuBtn.append(hamburger);
+				hamburger.show();
+				closeIcon.hide();
 			} else {
-				menuBtn.append(closeIcon);
+				closeIcon.show();
+				hamburger.hide();
 			}
 			
 		});
