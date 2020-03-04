@@ -1,17 +1,27 @@
 .press-card {
-	width: 100%;
+	border-top: 1px solid var(--brand-dark-grey);
+	box-sizing: border-box;
+	margin: 1em 0;
 	padding: 1em 0;
+	width: 100%;
+
+	&:last-of-type {
+		border-bottom: 1px solid var(--brand-dark-grey);
+	}
 
 	&-link {
 		display: none;
 	}
 
 	@media screen and (min-width: $breakpoint--md) {
+		display: flex;
+		justify-content: flex-start;
 		position: relative;
+		padding: 2em 0;
 		&-link {
 			position: absolute;
-			top: 50%;
-			right: 0;
+			top: calc(50% - 12.5px);
+			right: 1em;
 
 			display: block;
 			height: 25px;
@@ -19,44 +29,30 @@
 		}	
 	}
 
-	hr {
-		margin: 0;
-		width: 100%;
-		padding-right: 1em;
+	margin: 0;
+	padding-bottom: 1rem;
+	padding-right: 1em;
+
+	a {
+		text-decoration: none;
 	}
 
-	.separator-bottom {
-		display: none;
+	.press-card-date {
+		font-size: .7em;
+		color: var(--brand-dark-grey);
+		@media screen and (min-width: $breakpoint--md) {
+			margin: 0;
+			flex-basis: 10rem;
+		}
+
 	}
 
-	&:last-of-type {
-		padding-bottom: 3rem;
-
-		.separator-bottom {
-			display: block;
-			margin-top: 3rem;
-		}
-	}
-
-	.post {
-		margin: 0;
-		padding-bottom: 1rem;
-		padding-right: 1em;
-
-		a {
-			text-decoration: none;
-		}
-
-		.press-card-date {
-			padding-top: 1rem;
-			font-size: .7em;
-			color: var(--brand-dark-grey);
-		}
-
-		.press-title {
-			padding-bottom: 0;
-			margin-bottom: 0;
-			font-weight: normal;
+	.press-title {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		font-weight: normal;
+		@media screen and (min-width: $breakpoint--md) {
+			margin: 0;
 		}
 	}
 
