@@ -8,20 +8,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 2rem;
+
+    .brand .logo--white {
+        display: block;
+        max-width: 12rem;
+    }
 
     @media screen and ( min-width: $breakpoint--md ) {
         flex-direction: row-reverse;
         justify-content: space-between;
-        align-items: flex-start;
-    }
+        padding: 2rem .5rem;
+        min-height: 8rem;
 
-    .brand {
-        padding: 3em 0;
-
-        @media screen and ( min-width: $breakpoint--md ) {
-            padding: auto;
-            margin-right: 0;
-            margin-bottom: 6em;
+        .nav-footer {
+            align-self: flex-start;
         }
     }
 }
@@ -38,7 +39,7 @@
     @media screen and ( min-width: $breakpoint--md ) {
         flex-direction: row;
         justify-content: space-evenly;
-        margin-bottom: auto;
+        margin: 0;
         
     }
     

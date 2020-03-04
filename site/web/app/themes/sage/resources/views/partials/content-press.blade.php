@@ -2,7 +2,7 @@
     <div {!! post_class() !!}>
         {{-- DATE --}}
         <hr class="separator-top">
-        <p class="press-card-date">{{ $post->formatted_date() }}</p>
+        <p class="press-card-date spaced-text">{{ $post->formatted_date() }}</p>
 
         {{-- TITLE --}}
         <h2 class="entry-title press-title">
