@@ -40,13 +40,19 @@ class FrontPage extends Controller
 
     public static function get_news($num_posts = -1) 
     {
-        $posts =new \WP_Query([
+        $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
+
+        global $wp_query;
+        
+        $wp_query = new \WP_Query([
             'numberposts' => $num_posts,
             'post_type' => 'post',
-            'category_name' => 'latest'
+            'category_name' => 'latest',
+            'paged' => $paged,
+            'posts_per_page' => 13,
         ]);
 
-        return $posts;
+        return $wp_query;
     }
 
     public static function get_image_gallery() 
