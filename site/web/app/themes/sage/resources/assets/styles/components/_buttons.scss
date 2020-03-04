@@ -5,3 +5,10 @@
     cursor: pointer;
     width: 100%;
 }
+
+.link-primary {
+    display: inline-block;
+
+    color: var(--brand-primary);
+    text-decoration: none;
+}

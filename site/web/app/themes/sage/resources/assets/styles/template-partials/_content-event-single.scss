@@ -13,6 +13,16 @@
 			font-size: 1.5em;
 		}
 	}
+	.event-info {
+		padding-bottom: 2rem;
+	}
+	.event-meta {
+		margin-bottom: 1rem;
+		& > * {
+			margin: 0;
+			line-height: 1.5;
+		}
+	}
 	.content {
 		padding: 2rem 1rem;
 
