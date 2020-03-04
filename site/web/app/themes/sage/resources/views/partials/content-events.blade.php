@@ -11,15 +11,15 @@
         <section class="event-info">
             <p class="event-datetime">
                 <p><strong>Date & Time</strong></p>
-                <time>{{'29 September 2020'}}</time>
-                <time>{{'9:30 - 4pm'}}</time>
-                Doors open: {{'9am'}}
+                <time>{{$post->long_date()}}</time>
+                <time>{{$post->start_time()}} - {{$post->end_time()}}</time>
+                Doors open: {{$post->doors_open()}}
             </p>
             <p class="event-location">
                 <p><strong>Location</strong></p>
-                <p>Conference Center</p>
-                <p>Station Road 89a, Bristol, CBA 1DE</p>
-                <p><a href="#">View map</a></p>
+                @foreach ($post->address() as $a)
+                    <p>{{$a['Line']}}</p>
+                @endforeach
             </p>
         </section>
         <p>@php echo strlen($post->description()) < 123 ? $post->description() : substr($post->description(), 0, 123) . '...' @endphp<p>

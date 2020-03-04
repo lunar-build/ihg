@@ -21,15 +21,15 @@ $event
             'label' => 'Start Time',
             'instructions' => '',
             'required' => 0,
-            'display_format' => 'g:i a',
-            'return_format' => 'g:i a',
+            'display_format' => 'g:ia',
+            'return_format' => 'g:ia',
         ])
         ->addTimePicker('end_time', [
             'label' => 'End Time',
             'instructions' => '',
             'required' => 0,
-            'display_format' => 'g:i a',
-            'return_format' => 'g:i a',
+            'display_format' => 'g:ia',
+            'return_format' => 'g:ia',
         ])
         ->addRepeater('address', [
             'button_label' => 'Add Line',
@@ -41,8 +41,8 @@ $event
         'label' => 'Doors Open',
         'instructions' => '',
         'required' => 0,
-        'display_format' => 'g:i a',
-        'return_format' => 'g:i a',
+        'display_format' => 'g:ia',
+        'return_format' => 'g:ia',
     ])
     ->addGoogleMap('location', [
         'label' => 'Event Location',
