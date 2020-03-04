@@ -22,6 +22,11 @@
                 @endforeach
             </p>
         </section>
+        <section>
+            @include('partials.youtube-embed', [
+                'embed_code' => $post->youtube_code()
+            ])
+        </section>
         <p>@php echo strlen($post->description()) < 123 ? $post->description() : substr($post->description(), 0, 123) . '...' @endphp<p>
     </div>
 </article>
