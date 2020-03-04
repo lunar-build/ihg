@@ -12,12 +12,6 @@
 	}
 }
 
-.brand {
-	padding-left: 2rem;
-	padding-right: 2rem;
-	box-sizing: border-box;
-}
-
 .banner {
 
 	@media screen and (min-width: $breakpoint--md) {
@@ -135,6 +129,11 @@
 		}
 		.brand {
 			flex: 1 30%;
+			@media screen and (min-width: $breakpoint--md) {
+				padding-left: 2rem;
+				padding-right: 2rem;
+				box-sizing: border-box;
+			}
 		}
 		nav {
 			display: block;
