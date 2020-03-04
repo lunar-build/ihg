@@ -1,3 +1,35 @@
+@font-face {
+	font-family: 'Agenda';
+	font-weight: normal;
+	src: url('../fonts/agenda/Agenda-Medium.otf');
+}
+
+@font-face {
+	font-family: 'Agenda';
+	font-weight: light;
+	src: url('../fonts/agenda/Agenda-Light.otf');
+}
+
+@font-face {
+	font-family: 'Agenda';
+	font-weight: normal;
+	font-style: italic;
+	src: url('../fonts/agenda/Agenda-Medium_Italic.otf');
+}
+
+@font-face {
+	font-family: 'Agenda';
+	font-weight: light;
+	font-style: italic;
+	src: url('../fonts/agenda/Agenda-Light_Italic.otf');
+}
+
+@font-face {
+	font-family: 'Agenda';
+	font-weight: bold;
+	src: url('../fonts/agenda/Agenda-Bold.otf');
+}
+
 :root {
 	--brand-plum: #a00062;
 	--brand-light-grey: #eaeaea;
@@ -9,4 +41,6 @@
 
 	--brand-primary: var(--brand-plum);
 	--brand-text: var(--brand-dark-grey);
+
+	--brand-main-font: 'Agenda', sans-serif; 
 }
