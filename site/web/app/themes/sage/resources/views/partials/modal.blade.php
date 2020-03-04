@@ -7,7 +7,7 @@
 <div class="modal modal--hide">
     <div class="modal-inner">
         <button class="modal-close js-modal-close btn-default">X</button>
-        <figure class="featured {{empty($embed_code) ? 'image' : 'video' }}">
+        <figure class="featured-{{empty($embed_code) ? 'image' : 'video' }}">
             @if (empty($embed_code))
                 {!! App::create_responsive_image($attachment_id) !!}
             @else
