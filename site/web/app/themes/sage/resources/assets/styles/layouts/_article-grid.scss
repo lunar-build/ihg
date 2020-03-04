@@ -53,3 +53,31 @@
 		}
 	}
 }
+article.has-hover figure {
+	position: relative;
+	cursor: pointer;
+}
+article.has-hover figure::before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	transition: opacity .3s ease-in-out;
+	opacity: 0;
+
+	background-image: url('../images/preview.svg');
+	background-size: inherit;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--brand-overlay);
+}
+
+article.has-hover figure:hover {
+	&::before {
+		opacity: .7;
+	}
+}

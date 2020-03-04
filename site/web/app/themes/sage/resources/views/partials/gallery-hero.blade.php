@@ -1,4 +1,4 @@
-<article class="gallery-hero">
+<article class="gallery-hero has-hover">
     {{-- FEATURED IMAGE --}}
     <figure class="featured-image">
         @component('partials.modal', [

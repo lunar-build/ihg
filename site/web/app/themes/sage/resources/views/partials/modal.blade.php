@@ -3,6 +3,7 @@
     @if (!empty($embed_poster))
         {!! App::create_responsive_image($embed_poster) !!}
     @endif
+    <span class="preview"></span>
 </button>
 <div class="modal modal--hide">
     <div class="modal-inner">

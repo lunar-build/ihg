@@ -1,4 +1,4 @@
-<article class="resource-card">
+<article class="preview-card resource-card has-hover">
     {{-- IMAGE --}}
     <figure class="resource-image">
         @component('partials.modal', [
