@@ -1,8 +1,11 @@
 <header class="banner">
   <div class="container-inner header-container">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+    <a class="brand" href="{{ home_url('/') }}">
+      <img class="logo--color" src="{{App::get_image_asset('logo_color.png')}}" alt="Logo" />
+      <img class="logo--white" src="{{App::get_image_asset('logo_white.png')}}" alt="Logo" />
+    </a>
     <div id="nav-toggle">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+      <object width="100%" data="{{App::get_image_asset('menu.svg')}}"></object>
     </div>
     <nav class="nav-primary" data-toggle="close">
       @if (has_nav_menu('primary_navigation'))

@@ -69,4 +69,9 @@ class App extends Controller
             return '100vw, (min-width: 1440px) 1440px, (min-width: 1024px) 1024px, (min-width: 768px) 768px';
         }
     }
+
+    public static function get_image_asset($asset)
+    {
+        return get_template_directory_uri() . '/../dist/images/' . $asset;
+    }
 }

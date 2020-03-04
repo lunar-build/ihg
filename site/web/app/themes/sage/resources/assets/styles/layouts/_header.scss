@@ -1,4 +1,19 @@
+.logo--color {
+	max-width: 8rem;
+	@media screen and (min-width: $breakpoint--md) {
+		display: none;
+	}
+}
+.logo--white {
+	display: none;
+	@media screen and (min-width: $breakpoint--md) {
+		display: block;
+		max-width: 8rem;
+	}
+}
+
 .banner {
+
 	@media screen and (min-width: $breakpoint--md) {
 		background-color: var(--brand-primary);
 	}
@@ -6,10 +21,10 @@
 
 		position: relative;
 		flex-wrap: wrap;
-		padding: 1rem;
+		padding: .5rem 1rem;
 		box-sizing: border-box;
 
-		background-color: var(--brand-off-white);
+		background-color: var(--brand-white);
 
 		@media screen and (min-width: $breakpoint--sm) {
 			background-color: transparent;
@@ -17,10 +32,11 @@
 
 		#nav-toggle {
 			position: absolute;
-			top: 1rem;
+			top: 1.5rem;
 			right: 1rem;
+			width: 48px;
 
-			@media screen and (min-width: $breakpoint--sm) {
+			@media screen and (min-width: $breakpoint--md) {
 				display: none;
 			}
 
