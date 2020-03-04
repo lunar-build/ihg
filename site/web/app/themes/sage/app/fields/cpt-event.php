@@ -60,9 +60,11 @@ $event
         'required' => 1,
         'layout' => 'inline',
     ])
-    ->addText('youtube_code', [
+    ->addText('embed_code', [
         'label' => 'Embed Code',
         'instructions' => 'The unique code for the youtube video e.g. the bit after "v=" watch?v=jnMUp2c9AzA',
         'required' => 1,
-    ]);
+    ])
+    ->addFields(get_field_partial('partials.image_upload'));
+
 return $event;

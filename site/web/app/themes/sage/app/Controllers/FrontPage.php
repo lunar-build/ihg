@@ -112,7 +112,7 @@ class FrontPage extends Controller
         return [
             'image' => $field['image'],
             'text' => $field['video_text'],
-            'embed_code' => $field['youtube_code'],
+            'embed_code' => $field['embed_code'],
         ];
     }
 }

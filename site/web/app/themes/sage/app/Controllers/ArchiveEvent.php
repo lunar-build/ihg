@@ -54,10 +54,13 @@ class ArchiveEvent extends Controller
         return get_field('address');
     } 
 
-    public function youtube_code()
+    public function video()
     {
         $video = get_field('youtube');
-        return !empty($video) ? $video['youtube_code'] : null; 
+        return [
+            'embed_code' => $video['embed_code'],
+            'embed_poster' => $video['image'],
+        ];
     } 
 
     public function link()

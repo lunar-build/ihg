@@ -30,4 +30,12 @@
 			display: block;
 		}
 	}
+	.event-video { // @todo pull out to reusable class
+		position: relative;
+		min-height: 8rem;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
 }

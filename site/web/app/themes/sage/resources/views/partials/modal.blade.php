@@ -1,10 +1,13 @@
 <button class="modal-btn js-modal-open btn-default">
     {{ $slot }}
+    @if (!empty($embed_poster))
+        {!! App::create_responsive_image($embed_poster) !!}
+    @endif
 </button>
 <div class="modal modal--hide">
     <div class="modal-inner">
         <button class="modal-close js-modal-close btn-default">X</button>
-        <figure class="featured-@php echo empty($embed_code) ? 'image' : 'video' @endphp">
+        <figure class="featured {{empty($embed_code) ? 'image' : 'video' }}">
             @if (empty($embed_code))
                 {!! App::create_responsive_image($attachment_id) !!}
             @else
