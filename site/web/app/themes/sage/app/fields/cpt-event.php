@@ -53,4 +53,16 @@ $event
         'zoom' => 5,
         'height' => '',
     ]);
+$event
+    ->addGroup('youtube', [
+        'label' => 'Video',
+        'instructions' => '',
+        'required' => 1,
+        'layout' => 'inline',
+    ])
+    ->addText('youtube_code', [
+        'label' => 'Embed Code',
+        'instructions' => 'The unique code for the youtube video e.g. the bit after "v=" watch?v=jnMUp2c9AzA',
+        'required' => 1,
+    ]);
 return $event;

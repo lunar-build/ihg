@@ -32,7 +32,7 @@
 				'class' => 'article-grid--front'
 			])
 				@while ($events->have_posts()) @php $events->the_post(); $event = new ArchiveEvent; @endphp
-					@include('partials.content-event')
+					@include('partials.card-event')
 				@endwhile
 			@endcomponent
 		</div>

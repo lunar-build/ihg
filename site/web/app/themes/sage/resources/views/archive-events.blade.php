@@ -12,7 +12,7 @@
 
   @component('layouts.article-grid')
     @while (have_posts()) @php the_post(); $event = new ArchiveEvent @endphp
-      @include('partials.content-event')
+      @include('partials.card-event')
     @endwhile
   @endcomponent
 
