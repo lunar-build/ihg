@@ -4,6 +4,10 @@
 
 	flex-wrap: wrap;
 
+	.front-page-panel & {
+		justify-content: space-between;
+	}
+
 	.grid-hero {
 		display: flex;
 		flex-direction: column;
@@ -30,6 +34,10 @@
 		& > article {
 			margin-right: 1rem;
 			flex-basis: calc(50% - 1rem);
+
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 	}
 
