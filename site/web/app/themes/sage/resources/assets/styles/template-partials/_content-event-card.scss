@@ -8,26 +8,6 @@
 	.event-date-title {
 		display: flex;
 
-		.date {
-			width: 30%;
-			height: 30vw;
-			max-height: 3rem;
-			padding: 2.5rem 0;
-			box-sizing: border-box;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			background-color: var(--brand-primary);
-
-			p {
-				text-align: center;
-				font-size: 1em;
-				color: #fff;
-			}
-		}
-
 		h3 {
 			margin: auto 1em;
 
@@ -46,5 +26,25 @@
 		text-decoration: none;
 		color: var(--brand-primary);
 		font-size: .9em;
+	}
+}
+
+.event-date {
+	width: 30%;
+	height: 30vw;
+	max-height: 3rem;
+	padding: 2.5rem 0;
+	box-sizing: border-box;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--brand-primary);
+
+	p {
+		text-align: center;
+		font-size: 1em;
+		color: #fff;
 	}
 }

@@ -1,0 +1,19 @@
+.event-single {
+	width: 100%;
+	header {
+		padding: 1rem 1rem 2rem; 
+		background-color: var(--brand-light-grey);
+		.archive-title {
+			color: var(--brand-dark-grey);
+			font-size: 1em;
+			font-weight: bold;
+		}
+		h3 {
+			color: var(--brand-primary);
+			font-size: 1.5em;
+		}
+	}
+	.content {
+		padding: 2rem 1rem;
+	}
+}

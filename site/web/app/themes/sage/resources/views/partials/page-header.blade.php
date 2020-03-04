@@ -1,5 +1,7 @@
 <div class="page-header">
-  <h1>{!! App::title() !!}</h1>
+  @if (get_post_type() != 'events')
+    <h1>{!! App::title() !!}</h1>
+  @endif
   @if (!empty($filters))
   	@include('partials.post-filters')
   @endif
