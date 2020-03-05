@@ -1,6 +1,7 @@
 article.single-post {
     width: 100%;
     header {
+        position: relative;
         min-height: 17rem;
         background-color: var(--brand-light-grey);
 
@@ -19,7 +20,12 @@ article.single-post {
             flex-basis: 50%;
         }
     }
-    
+
+    .entry-content {
+        @media screen and (min-width: $breakpoint--md) {
+            margin-top: 10rem;
+        }
+    }
 }
 
 .container-event {
@@ -65,8 +71,8 @@ article.single-post {
         }
         @media screen and (min-width: $breakpoint--md) {
             position: absolute;
-            bottom: 25rem;
-            right: 0;
+            bottom: -5rem;
+            right: 2.5vw;
             max-width: 22.5rem;
             figcaption {
                 position: absolute;
@@ -80,11 +86,7 @@ article.single-post {
             right: 7.5vw;
         }
         @media screen and (min-width: 1200px) {
-            right: 12vw;
-        }
-
-        @media screen and (min-width: 1400px) {
-            right: 15vw;
+            right: 10vw;
         }
     }
 
