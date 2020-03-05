@@ -14,7 +14,9 @@
       </figure>
   </header>
   <div class="entry-content">
-    @php echo $post->description() @endphp
+    @include('partials.flexible-content', [
+      'content' => $post->get_content()
+    ])
   </div>
   <footer class="single-post-footer">
     <h3 class="spaced-text uppercase">Other News</h3>

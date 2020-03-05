@@ -52,5 +52,10 @@ class ArchivePost extends Controller
 
         return $posts;
     }
+
+    public function get_content()
+    {
+        return get_field('sections');
+    }
     
 }

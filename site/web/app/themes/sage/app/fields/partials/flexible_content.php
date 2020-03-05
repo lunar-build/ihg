@@ -19,7 +19,7 @@ $field
                 'label' => 'Quote',
             ])
         ->addLayout('images')
-            ->addText('image', [
+            ->addText('caption', [
                 'label' => 'Caption',
                 'instructions' => 'Caption that will sit under the images',
             ])
