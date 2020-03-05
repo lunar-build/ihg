@@ -20,6 +20,8 @@
 			@endif
 			@php $count++ @endphp
         @endwhile
-        {{ App\pagination($news->max_num_pages) }}
+        @include('partials.pagination', [
+            'result' => $news
+        ])
 	@endcomponent
 @endsection

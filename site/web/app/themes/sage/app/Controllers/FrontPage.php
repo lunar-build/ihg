@@ -47,7 +47,7 @@ class FrontPage extends Controller
             'post_type' => 'post',
             'category_name' => 'latest',
             'paged' => $paged,
-            'posts_per_page' => 13,
+            'posts_per_page' => 1,
         ]);
 
         return $result;

@@ -168,9 +168,10 @@ function pagination($pages = '', $range = 4)
 
     if(1 != $pages)
     {
-        echo "<div class=\"pagination\"><span>Page ".$paged." of ".$pages."</span>";
         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
         if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+
+        if ($paged > 1) echo "<a class=\"previous-page\" href='".get_pagenum_link($paged - 1)."'></a>";
 
         for ($i=1; $i <= $pages; $i++)
         {
@@ -180,8 +181,7 @@ function pagination($pages = '', $range = 4)
             }
         }
 
-        if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";
-        if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
+        if ($paged < $pages) echo "<a class=\"next-page\" href=\"".get_pagenum_link($paged + 1)."\"></a>";
         echo "</div>\n";
     }
 }

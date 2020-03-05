@@ -65,7 +65,8 @@
 	}
 }
 
-.archive .main {
+.archive .main,
+.page:not(.home) .main {
 	padding: 0 1rem;
 
 	@media screen and (min-width: $breakpoint--md) {
