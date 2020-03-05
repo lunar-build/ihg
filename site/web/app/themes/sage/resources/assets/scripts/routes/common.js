@@ -32,21 +32,15 @@ export default {
 		const videoEmbed = $('.featured-video');
 		$('.featured-video').remove();
 
-		let modalOpen = false;
-
 		$('.js-modal-open').on('click', function() {
-			if (modalOpen) return;
-			modalOpen = true;
-
 			const modal = $(this).next();
 			$('.modal-inner').append(videoEmbed);
 
 			modal.removeClass('modal--hide');
 		})
 
-		$('.preview-card').on('click', function() {
-			if (modalOpen) return;
-			modalOpen = true;
+		$('.preview-card').on('click', function(e) {
+			if ($(e.target).hasClass('js-modal-close')) return;
 			const btn = $(this).find('.js-modal-open');
 			const modal = btn.next();
 
@@ -55,7 +49,6 @@ export default {
 
 		function closeModal (modal) {
 			$('.featured-video').remove();
-			modalOpen = false;
 			
 			return modal.addClass('modal--hide');
 		}
