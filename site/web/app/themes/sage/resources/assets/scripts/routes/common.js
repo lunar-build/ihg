@@ -50,8 +50,6 @@ export default {
 			const btn = $(this).find('.js-modal-open');
 			const modal = btn.next();
 
-			$('.modal-inner').append(videoEmbed);
-
 			modal.removeClass('modal--hide');
 		})
 
