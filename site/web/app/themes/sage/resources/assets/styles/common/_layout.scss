@@ -73,3 +73,11 @@
 		padding: 4rem;
 	}
 }
+
+.content-container {
+	@media screen and (min-width: $breakpoint--md) {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: $breakpoint--sm;
+	}
+}

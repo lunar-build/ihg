@@ -1,7 +1,7 @@
 <div class="flex-content">
     @foreach ($content as $block) 
     @php $type = $block['acf_fc_layout']; @endphp
-        <section class="{{$type}}">
+        <section class="{{$type}} {{$type != 'images' ? 'content-container' : ''}}">
             @if ($type == 'text')
                 @if ($block['Heading'])
                     <h4 class="spaced-text uppercase">{{$block['Heading']}}</h4>
