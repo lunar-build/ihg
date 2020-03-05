@@ -53,6 +53,11 @@ $event
         'zoom' => 5,
         'height' => '',
     ]);
+
+
+$event
+    ->addFields(get_field_partial('partials.flexible_content'));
+
 $event
     ->addGroup('youtube', [
         'label' => 'Video',
