@@ -19,6 +19,9 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
+        if (is_category()) {
+            return single_cat_title();
+        }
         if (is_archive()) {
             return str_replace('Archives: ', '', get_the_archive_title()); // There must be a better way to do this?
         }
