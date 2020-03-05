@@ -4,7 +4,7 @@
       @component('partials.modal', [
          'embed_code' => $embed_code
       ])
-         @include('partials.video-btn-content')
+         @include('partials.video-btn-content', ['show_text' => false])
       @endcomponent
    </div>
    <figure class="featured-image">

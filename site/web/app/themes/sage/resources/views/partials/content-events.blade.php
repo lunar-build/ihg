@@ -30,7 +30,7 @@
         <section class="event-video">
             @component('partials.modal', $post->video())
                 <div class="btn-video">
-                    @include('partials.video-btn-content')
+                    @include('partials.video-btn-content', ['show_text' => false])
                 </div>
              @endcomponent
         </section>

@@ -4,4 +4,6 @@
         <polygon stroke="#A00062" stroke-width="3" points="26.286 18.286 34.286 30.071 18.286 30.071" transform="rotate(90 26.286 24.179)"/>
     </g>
 </svg>
+@if ($show_text)
 <span>Play Video</span>
+@endif
