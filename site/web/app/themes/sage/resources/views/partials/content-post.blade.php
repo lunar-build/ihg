@@ -1,5 +1,5 @@
-@php $post = new ArchivePost; @endphp
-<article @php post_class(); $category = get_the_category()[0]; @endphp>
+@php $post = new ArchivePost;  @endphp
+<article class="single-post" $category = get_the_category()[0]; @endphp>
   <header>
     <div class="single-post-header">
       <div class="meta">

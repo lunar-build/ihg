@@ -1,3 +1,6 @@
+@php
+$post = new ArchivePost;
+@endphp
 <article {!! post_class() !!} >
 
   {{-- FEATURED IMAGE --}}

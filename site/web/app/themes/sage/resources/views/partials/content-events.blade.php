@@ -1,15 +1,16 @@
 @php $post = new ArchiveEvent @endphp
 <article class="event-single">
     <header>
-        <p class="archive-title">Upcoming Events</p>
-        <div class="event-date">
-            <p>{{ $post->date() }}</p>
+        <div class="container-single">
+            <p class="archive-title">Upcoming Events</p>
+            <div class="event-date">
+                <p>{{ $post->date() }}</p>
+            </div>
+            <h3>{{ $post->title() }}</h3>
         </div>
-        <h3>{{ $post->title() }}</h3>
     </header>
-
-    <div class="content">
-        <section class="event-info">
+    <section class="event-info">
+        <div class="container-single">
             <div class="event-meta">
                 <p><strong>Date & Time</strong></p>
                 <time>{{$post->long_date()}}</time>
@@ -23,16 +24,20 @@
                 @endforeach
                 <a class="btn-default link-primary" ref="#">View map</a>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    <div class="content">
+        <div class="container-single">
+            <p>@php echo strlen($post->description()) < 123 ? $post->description() : substr($post->description(), 0, 123) . '...' @endphp<p>
 
-        <p>@php echo strlen($post->description()) < 123 ? $post->description() : substr($post->description(), 0, 123) . '...' @endphp<p>
-
-        <section class="event-video">
-            @component('partials.modal', $post->video())
-                <div class="btn-video">
-                    @include('partials.video-btn-content', ['show_text' => false])
-                </div>
-             @endcomponent
-        </section>
+            <section class="event-video">
+                @component('partials.modal', $post->video())
+                    <div class="btn-video">
+                        @include('partials.video-btn-content', ['show_text' => false])
+                    </div>
+                @endcomponent
+            </section>
+        </div>
     </div>
 </article>

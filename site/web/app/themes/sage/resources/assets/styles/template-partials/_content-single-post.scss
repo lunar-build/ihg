@@ -5,6 +5,11 @@
     }
 }
 
+.container-single {
+    margin: 0 auto;
+    max-width: $breakpoint--sm;
+}
+
 .type-post {
     width: 100%;
 

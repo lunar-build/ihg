@@ -3,6 +3,7 @@
 	header {
 		padding: 1rem 1rem 2rem; 
 		background-color: var(--brand-light-grey);
+
 		.archive-title {
 			color: var(--brand-dark-grey);
 			font-size: 1em;
@@ -11,23 +12,41 @@
 		h3 {
 			color: var(--brand-primary);
 			font-size: 1.5em;
+
+			margin-bottom: 0;
 		}
 	}
 	.event-info {
-		padding-bottom: 2rem;
+		padding: 2rem 1rem;
+		@media screen and (min-width: $breakpoint--sm) {
+			padding-top: 0;
+			background-color: var(--brand-light-grey);
+			.container-single {
+				display: flex;
+				justify-content: space-between;	
+			}
+		}
 	}
 	.event-meta {
 		margin-bottom: 1rem;
+
+		@media screen and (min-width: $breakpoint--sm) {
+			flex: 1 50%;
+		}
+
 		& > * {
 			margin: 0;
 			line-height: 1.5;
 		}
-	}
-	.content {
-		padding: 2rem 1rem;
-
 		time {
 			display: block;
+		}
+	}
+	.content {
+		padding: 0 1rem 2rem;
+		@media screen and (min-width: $breakpoint--sm) {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 	.event-video { // @todo pull out to reusable class

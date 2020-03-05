@@ -29,18 +29,23 @@
 			font-size: 1em;
 		}
 	}
+}
+.article-grid,
+.single-events {
 	.event-date {
 		max-height: 3rem;
+		max-width: 5rem;
+
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		box-sizing: border-box;
-	
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	
+
 		background-color: var(--brand-primary);
-	
+
 		p {
 			text-align: center;
 			font-size: 1.25em;
