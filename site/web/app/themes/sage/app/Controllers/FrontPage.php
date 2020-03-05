@@ -47,7 +47,7 @@ class FrontPage extends Controller
             'post_type' => 'post',
             'category_name' => 'latest',
             'paged' => $paged,
-            'posts_per_page' => 1,
+            'posts_per_page' => 13,
         ]);
 
         return $result;
@@ -85,11 +85,16 @@ class FrontPage extends Controller
 
     public static function get_in_media($num_posts = -1) 
     {
+        $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
+
         $posts =new \WP_Query([
             'numberposts' => $num_posts,
             'post_type' => 'post',
-            'category_name' => 'in-media'
+            'category_name' => 'in-media',
+            'paged' => $paged,
+            'posts_per_page' => 13,
         ]);
+        
         return $posts;
     }
 

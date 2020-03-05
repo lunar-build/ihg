@@ -13,7 +13,7 @@
 			@php $count++ @endphp
         @endwhile
         @include('partials.pagination', [
-            'result' => $news
+            'result' => $media
         ])
 	@endcomponent
 @endsection
