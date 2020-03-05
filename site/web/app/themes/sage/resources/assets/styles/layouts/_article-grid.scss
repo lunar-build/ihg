@@ -12,6 +12,8 @@
 		display: flex;
 		flex-direction: column;
 		@media screen and (min-width: $breakpoint--md) {
+			margin-right: 0;
+
 			flex-direction: row-reverse;
 			justify-content: space-between;
 			margin-bottom: 2rem;
