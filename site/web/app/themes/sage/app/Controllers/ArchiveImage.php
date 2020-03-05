@@ -30,12 +30,11 @@ class ArchiveImage extends Controller
 
     public function get_file_size()
     {
-        $file_size = filesize(get_attached_file($this->get_image()));
-        return $file_size.'MB';
+        return \App\readable_file_size($this->get_image());
     }
 
     public function get_file_type()
     {
-        return get_post_mime_type($this->get_image());
+        return str_replace('image/', '', get_post_mime_type($this->get_image()));
     }
 }

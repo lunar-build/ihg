@@ -184,3 +184,10 @@ function pagination($pages = '', $range = 4)
         if ($paged < $pages) echo "<a class=\"next-page arrow\" href=\"".get_pagenum_link($paged + 1)."\"></a>";
     }
 }
+
+function readable_file_size($attachment_id) 
+{
+    $attachment_meta = wp_prepare_attachment_for_js($attachment_id);
+
+    return $attachment_meta['filesizeHumanReadable'];
+}

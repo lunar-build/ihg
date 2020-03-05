@@ -37,8 +37,7 @@ class ArchiveResource extends Controller
     public function get_file_size()
     {
         $file = get_field('file');
-        $file_size = $file['filesize'];
-        return $file_size.'MB';
+        return \App\readable_file_size($file['id']);
     }
 
     public function get_file_type()
