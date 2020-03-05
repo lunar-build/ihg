@@ -47,7 +47,7 @@ class FrontPage extends Controller
             'post_type' => 'post',
             'category_name' => 'latest',
             'paged' => $paged,
-            'posts_per_page' => 13,
+            'posts_per_page' => $num_posts > -1 ? $num_posts : 13,
         ]);
 
         return $result;
@@ -92,7 +92,7 @@ class FrontPage extends Controller
             'post_type' => 'post',
             'category_name' => 'in-media',
             'paged' => $paged,
-            'posts_per_page' => 13,
+            'posts_per_page' => $num_posts > -1 ? $num_posts : 13,
         ]);
         
         return $posts;
