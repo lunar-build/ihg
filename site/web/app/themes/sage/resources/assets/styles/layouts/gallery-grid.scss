@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: repeat(3, auto);
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 1rem;
+	grid-gap: 1.5rem;
 
 	.gallery-hero {
 		grid-column: 1 / 3;
