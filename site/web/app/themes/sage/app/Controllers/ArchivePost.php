@@ -44,6 +44,7 @@ class ArchivePost extends Controller
         $category = get_the_category($this->post->ID)[0];
 
         $posts =new \WP_Query([
+            'posts_per_page' => 2,
             'numberposts' => 2,
             'post_type' => $this->post->post_type,
             'category_name' => $category->slug

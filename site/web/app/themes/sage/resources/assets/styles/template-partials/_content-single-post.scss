@@ -5,7 +5,7 @@
     }
 }
 
-.container-single {
+.container-event {
     margin: 0 auto;
     max-width: $breakpoint--sm;
 }
@@ -21,22 +21,37 @@
 }
 
 .single-post-header {
+    .meta {
+        padding: 2rem 1rem 0;
+    }
     .archive-title {
+        color: var(--brand-dark-grey);
         font-weight: bold;
+        text-transform: uppercase;
+    }
+    .date {
+        margin: 2em 0;
     }
     .date time {
         font-size: .75rem;
-        color: lightgrey;
+        color: var(--brand-dark-grey);
     }
     .image {
-        position: relative;
-        left: -1rem;
-        width: 100vw;
         margin: 0;
         img {
             display: block;
             width: 100%;
         }
+        figcaption {
+            padding: 1rem;
+            color: var(--brand-dark-grey);
+        }
+    }
+
+    .entry-title {
+        color: var(--brand-primary);
+        font-size: 2em;
+        font-weight: normal;
     }
 
     @media screen and (min-width: $breakpoint--sm) {
@@ -67,6 +82,7 @@
 .single-post-footer {
     max-width: 600px;
     margin: 2rem auto 0;
+    padding: 0 1rem;
 
     .article-grid {
 

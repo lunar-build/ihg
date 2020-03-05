@@ -1,7 +1,7 @@
 @php $post = new ArchiveEvent @endphp
 <article class="event-single">
     <header>
-        <div class="container-single">
+        <div class="container-event">
             <p class="archive-title">Upcoming Events</p>
             <div class="event-date">
                 <p>{{ $post->date() }}</p>
@@ -10,7 +10,7 @@
         </div>
     </header>
     <section class="event-info">
-        <div class="container-single">
+        <div class="container-event">
             <div class="event-meta">
                 <p><strong>Date & Time</strong></p>
                 <time>{{$post->long_date()}}</time>
@@ -28,7 +28,7 @@
     </section>
     
     <div class="content">
-        <div class="container-single">
+        <div class="container-event">
             <p>@php echo strlen($post->description()) < 123 ? $post->description() : substr($post->description(), 0, 123) . '...' @endphp<p>
 
             <section class="event-video">
