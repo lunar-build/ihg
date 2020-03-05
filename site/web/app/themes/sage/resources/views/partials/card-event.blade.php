@@ -1,4 +1,4 @@
-<article class="event-card">
+<article class="news-card event-card">
     <header class="event-date-title">
         <div class="event-date">
             <p>{{ $event->date() }}</p>
