@@ -30,14 +30,28 @@
             margin: 0;
             width: 100%;
 
-            img {
-                display: block;
-                margin-bottom: 1rem;
-                width: 100%;
+            @media screen and (min-width: $breakpoint--md) {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
             }
+            .img-container {
+                flex: 1 33.3%;
+                img {
+                    display: block;
+                    margin-bottom: 1rem;
+                    width: 100%;
+                }
+            }
+            
             figcaption {
                 color: var(--brand-dark-grey);
                 font-size: .8em;
+
+                @media screen and (min-width: $breakpoint--md) {
+                    flex: 1 100%;
+                }
+
             }
         }
     }

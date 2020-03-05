@@ -18,7 +18,7 @@
             @if ($type == 'images')
                 <figure>
                     @foreach ($block['columns'] as $img)
-                        {!! App::create_responsive_image($img['image']) !!}
+                        <div class="img-container">{!! App::create_responsive_image($img['image']) !!}</div>
                     @endforeach
                     @if ($block['caption'])
                         <figcaption>{{$block['caption']}}</figcaption>
