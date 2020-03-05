@@ -57,6 +57,9 @@
 }
 article.has-hover figure {
 	position: relative;
+}
+article.has-hover figure,
+article.has-hover h2 {
 	cursor: pointer;
 }
 article.has-hover figure::before {
