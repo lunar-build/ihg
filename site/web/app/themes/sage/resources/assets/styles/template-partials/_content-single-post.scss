@@ -53,6 +53,8 @@ article.single-post {
         color: var(--brand-dark-grey);
     }
     .image {
+        margin: 0;
+        width: 100%;
         img {
             display: block;
             width: 100%;

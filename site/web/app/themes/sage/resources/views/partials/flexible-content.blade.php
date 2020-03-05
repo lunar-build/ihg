@@ -4,7 +4,7 @@
         <section class="{{$type}}">
             @if ($type == 'text')
                 @if ($block['Heading'])
-                    <h4>{{$block['Heading']}}</h4>
+                    <h4 class="spaced-text uppercase">{{$block['Heading']}}</h4>
                 @endif
                 @if ($block['Paragraph'])
                     <p>{!! $block['Paragraph'] !!}</p>
@@ -12,7 +12,7 @@
             @endif
             @if ($type == 'quote')
                 <blockquote>
-                    {{$block['text']}}
+                    &ldquo;{{$block['text']}}&rdquo;
                 </blockquote>
             @endif
             @if ($type == 'images')
