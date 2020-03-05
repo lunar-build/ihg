@@ -1,0 +1,43 @@
+.nav-pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 4rem;
+    padding: 0 3rem;
+    max-width: 80vw;
+    width: fit-content;
+    .arrow {
+        position: absolute;
+        right: 0;
+        top: calc(50% - .5rem);
+
+        display: inline-block;
+        background-image: url('../images/arrow_right.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .previous-page {
+        left: 0;
+        right: initial;
+
+        transform: rotate(180deg);
+    }
+
+    a,
+    .current {
+        margin: 0 1rem;
+
+        color: var(--brand-primary);
+        text-decoration: none;
+    }
+
+    .current {
+        font-weight: bold;
+    }
+}
