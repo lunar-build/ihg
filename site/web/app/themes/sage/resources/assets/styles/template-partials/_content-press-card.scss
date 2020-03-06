@@ -9,7 +9,7 @@
 	}
 
 	.entry-title {
-		font-size: 1em;
+		font-size: 1.25em;
         @media screen and (min-width: $breakpoint--md) {
             font-size: 1.5em;
         }
@@ -78,5 +78,32 @@
 
 	a {
 		color: var(--brand-primary);
+	}
+}
+
+.page-press-coverage-data {
+	.article-grid {
+		.news-card {
+			flex-basis: 100%;
+			@media screen and (min-width: $breakpoint--md) {
+				.featured-image {
+					width: 33.3%;
+					order: 0;
+					img {
+						object-fit: cover;
+					}
+				}
+				.news-card-text {
+					padding: 2rem;
+					width: 66.67%;
+				}
+
+				.entry-title {
+					font-size: 2em;
+					font-weight: normal;
+					margin-bottom: .5rem;
+				}
+			}
+		}
 	}
 }
