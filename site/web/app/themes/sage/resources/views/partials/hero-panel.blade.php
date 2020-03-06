@@ -8,7 +8,7 @@
         <h1>{{ strtoupper($hero_heading) }}</h1>
     </header>
     <div class="hero-body">
-        <h2 class="hero-subheading">{{ strtoupper($hero_subheading) }}</h2>
+        <h2 class="hero-subheading spaced-text">{{ strtoupper($hero_subheading) }}</h2>
         <p class="hero-text">{{ $hero_text }}</p>
         <button class="btn-scroll btn-default" id="btn-scroll" data-section="latest-news"></button>
     </div>
