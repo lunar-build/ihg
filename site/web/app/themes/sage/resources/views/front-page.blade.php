@@ -6,7 +6,7 @@
 	@include('partials.hero-video', FrontPage::get_video())
 	<section class="front-page-panel news-panel">
 		<div id="latest-news" class="container-inner panel-container">
-			<header>
+			<header class="panel-header">
 				<h2 class="panel-title spaced-text">{{ strtoupper('Latest news') }}</h2>
 				<a href="/latest-news">View all</a>
 			</header>
@@ -22,7 +22,7 @@
 	</section>
 	<section class="front-page-panel image-gallery-panel front-page-panel--alt">
 		<div class="container-inner panel-container">
-			<header>
+			<header class="panel-header">
 				<h2 class="panel-title spaced-text">{{ strtoupper('Image gallery') }}</h2>
 				<a href="/images">View all</a>
 			</header>
@@ -43,7 +43,7 @@
 
 	<section class="front-page-panel resources-panel">
 		<div class="container-inner panel-container">
-			<header>
+			<header class="panel-header">
 				<h2 class="panel-title spaced-text">{{ strtoupper('Downloadable Resources') }}</h2>
 				<a href="/resources">View all</a>
 			</header>
@@ -60,7 +60,7 @@
 
 	<section class="front-page-panel front-page-panel--alt press-panel">
 		<div class="container-inner panel-container">
-			<header>
+			<header class="panel-header">
 				<h2 class="panel-title spaced-text">{{ strtoupper('press coverage') }}</h2>
 				<a href="/in-the-media">View all</a>
 			</header>
