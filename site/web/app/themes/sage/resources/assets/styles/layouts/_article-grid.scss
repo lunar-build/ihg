@@ -55,14 +55,14 @@
 		}
 	}
 }
-article.has-hover figure {
+article.has-hover > figure {
 	position: relative;
 }
-article.has-hover figure,
+article.has-hover > figure,
 article.has-hover h2 {
 	cursor: pointer;
 }
-article.has-hover figure::before {
+article.has-hover > figure::before {
 	display: block;
 	content: '';
 	position: absolute;
@@ -81,7 +81,7 @@ article.has-hover figure::before {
 	background-color: var(--brand-overlay);
 }
 
-article.has-hover figure:hover {
+article.has-hover > figure:hover {
 	&::before {
 		opacity: .7;
 	}
