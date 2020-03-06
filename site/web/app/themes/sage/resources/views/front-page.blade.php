@@ -20,7 +20,7 @@
 			@endcomponent
 		</div>
 	</section>
-	<section class="front-page-panel image-gallery-panel">
+	<section class="front-page-panel image-gallery-panel front-page-panel--alt">
 		<div class="container-inner panel-container">
 			<header>
 				<h2 class="panel-title spaced-text">{{ strtoupper('Image gallery') }}</h2>
