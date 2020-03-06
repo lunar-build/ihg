@@ -84,7 +84,7 @@
         text-decoration: none;
     }
     &-meta { // @todo create reusable text like this ? mixin?
-        color: var(--brand-dark-grey);
+        color: var(--brand-text-light-grey);
         letter-spacing: .1rem;
         text-transform: uppercase;
     }

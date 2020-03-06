@@ -47,7 +47,7 @@ article.single-post {
     padding: 2rem 1rem 0;
 }
 .archive-title {
-    color: var(--brand-dark-grey);
+    color: var(--brand-text-dark-grey);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -56,7 +56,7 @@ article.single-post {
 }
 .date time {
     font-size: .75rem;
-    color: var(--brand-dark-grey);
+    color: var(--brand-text-light-grey);
 }
 .image {
     margin: 0;
@@ -67,7 +67,7 @@ article.single-post {
     }
     figcaption {
         padding: 1rem;
-        color: var(--brand-dark-grey);
+        color: var(--brand-text-light-grey);
     }
     @media screen and (min-width: $breakpoint--md) {
         position: absolute;
@@ -107,7 +107,7 @@ article.single-post {
     padding: 0 1rem;
 
     h3 {
-        color: var(--brand-dark-grey);
+        color: var(--brand-text-dark-grey);
     }
 
     .article-grid {
