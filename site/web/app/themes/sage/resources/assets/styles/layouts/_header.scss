@@ -1,14 +1,23 @@
 .logo--color {
 	max-width: 8rem;
-	@media screen and (min-width: $breakpoint--md) {
-		display: none;
-	}
 }
 .logo--white {
 	display: none;
-	@media screen and (min-width: $breakpoint--md) {
-		display: block;
+}
+
+.home {
+	.logo--color {
 		max-width: 8rem;
+		@media screen and (min-width: $breakpoint--md) {
+			display: none;
+		}
+	}
+	.logo--white {
+		display: none;
+		@media screen and (min-width: $breakpoint--md) {
+			display: block;
+			max-width: 8rem;
+		}
 	}
 }
 
@@ -19,7 +28,12 @@
 .banner {
 
 	@media screen and (min-width: $breakpoint--md) {
-		background-color: var(--brand-primary);
+		background-color: var(--brand-white);
+		border-bottom: 5px solid var(--brand-primary);
+		.home & {
+			background-color: var(--brand-primary);
+			border-bottom: none;
+		}
 	}
 	.header-container {
 
@@ -161,8 +175,9 @@
 			}
 			a {
 				margin: 0;
-
-				color: white; //@todo await brand colors
+				.home & {
+					color: white; //@todo await brand colors
+				}
 				font-size: 1rem;
 				text-align: center;
 			}
