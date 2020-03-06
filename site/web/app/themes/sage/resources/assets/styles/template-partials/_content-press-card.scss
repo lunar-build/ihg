@@ -50,7 +50,7 @@
 	.press-card-date {
 		margin-top: 1rem;
 		font-size: .7em;
-		color: var(--brand-dark-grey);
+		color: var(--brand-text-light-grey);
 		@media screen and (min-width: $breakpoint--md) {
 			position: relative;
 			top: -1rem;
@@ -70,7 +70,7 @@
 		}
 	}
 
-	background-color: #f5f5f5;
+	background-color: var(--brand-light-grey);
 
 	p {
 		color: var(--brand-dark-grey);

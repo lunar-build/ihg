@@ -6,3 +6,4 @@
   	@include('partials.post-filters')
   @endif
 </div>
+

@@ -23,7 +23,7 @@
 		.panel-title {
 			max-width: 70%;
 			font-size: 1.2rem;
-			color: var(--brand-dark-grey);
+			color: var(--brand-text-dark-grey);
 		}
 
 		a {
@@ -35,7 +35,7 @@
 
 	&.image-gallery-panel,
 	&.press-panel {
-		background-color: #f5f5f5;
+		background-color: var(--brand-light-grey);
 	}
 
 	&.press-panel {
