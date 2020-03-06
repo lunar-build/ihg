@@ -43,62 +43,61 @@ article.single-post {
     }
 }
 
-    .meta {
-        padding: 2rem 1rem 0;
-    }
-    .archive-title {
-        color: var(--brand-dark-grey);
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    .date {
-        margin: 2em 0;
-    }
-    .date time {
-        font-size: .75rem;
-        color: var(--brand-dark-grey);
-    }
-    .image {
-        margin: 0;
+.meta {
+    padding: 2rem 1rem 0;
+}
+.archive-title {
+    color: var(--brand-dark-grey);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.date {
+    margin: 2em 0;
+}
+.date time {
+    font-size: .75rem;
+    color: var(--brand-dark-grey);
+}
+.image {
+    margin: 0;
+    width: 100%;
+    img {
+        display: block;
         width: 100%;
-        img {
-            display: block;
-            width: 100%;
-        }
+    }
+    figcaption {
+        padding: 1rem;
+        color: var(--brand-dark-grey);
+    }
+    @media screen and (min-width: $breakpoint--md) {
+        position: absolute;
+        bottom: -5rem;
+        right: 2.5vw;
+        max-width: 22.5rem;
         figcaption {
-            padding: 1rem;
-            color: var(--brand-dark-grey);
-        }
-        @media screen and (min-width: $breakpoint--md) {
             position: absolute;
-            bottom: -5rem;
-            right: 2.5vw;
-            max-width: 22.5rem;
-            figcaption {
-                position: absolute;
-                bottom: -2rem;
-                left: -190px;
-                box-sizing: border-box;
-                max-width: 200px;
-            }
-        }
-        @media screen and (min-width: $breakpoint--lg) {
-            right: 7.5vw;
-        }
-        @media screen and (min-width: 1200px) {
-            right: 10vw;
+            bottom: -2rem;
+            left: -190px;
+            box-sizing: border-box;
+            max-width: 200px;
         }
     }
+    @media screen and (min-width: $breakpoint--lg) {
+        right: 7.5vw;
+    }
+    @media screen and (min-width: 1200px) {
+        right: 10vw;
+    }
+}
 
+article.single-post {
     .entry-title {
         color: var(--brand-primary);
-        font-size: 2em;
+        font-size: 1em;
         font-weight: normal;
-    }
-
-@media screen and (min-width: $breakpoint--md) {
-    .entry-title {
-        font-size: 2rem;
+        @media screen and (min-width: $breakpoint--md) {
+            font-size: 2rem;
+        }
     }
 }
 

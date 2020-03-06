@@ -61,7 +61,7 @@
 	<section class="front-page-panel front-page-panel--alt press-panel">
 		<div class="container-inner panel-container">
 			<header>
-				<h2 class="panel-title spaced-text">{{ strtoupper('In the media') }}</h2>
+				<h2 class="panel-title spaced-text">{{ strtoupper('press coverage') }}</h2>
 				<a href="/in-the-media">View all</a>
 			</header>
 			<div class="panel-blocks">
