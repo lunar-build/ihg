@@ -1,6 +1,5 @@
 .main-footer {
     align-self: flex-end;
-    background-color: var(--brand-primary);
 }
 
 .footer-container {
@@ -9,6 +8,9 @@
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
+    box-sizing: border-box;
+
+    background-color: var(--brand-primary);
 
     .brand .logo--white {
         display: block;
@@ -19,6 +21,8 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         padding: 2rem .5rem;
+        padding-right: 8rem;
+        padding-left: 8rem;
         min-height: 8rem;
 
         .nav-footer {
