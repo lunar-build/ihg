@@ -19,7 +19,7 @@
     ])
   </div>
   <footer class="single-post-footer">
-    <h3 class="spaced-text uppercase">Other News</h3>
+  <h3 class="spaced-text uppercase">Other {{$category->slug == 'in-media' ? 'Press' : 'News' }}</h3>
     @component('layouts.article-grid')
       @php $related_posts = $post->get_related(); @endphp
       @while ($related_posts->have_posts()) @php $related_posts->the_post(); $post = new ArchivePost @endphp
