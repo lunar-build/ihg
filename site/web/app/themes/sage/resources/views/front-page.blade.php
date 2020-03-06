@@ -20,24 +20,6 @@
 			@endcomponent
 		</div>
 	</section>
-	
-	<section class="front-page-panel front-page-panel--alt events-panel">
-		<div class="container-inner panel-container">
-			<header>
-				<h2 class="panel-title spaced-text">{{ strtoupper('Upcoming events') }}</h2>
-				<a href="/events">View all</a>
-			</header>
-			@php $events = FrontPage::get_events(); @endphp
-			@component('layouts.article-grid', [
-				'class' => 'article-grid--front'
-			])
-				@while ($events->have_posts()) @php $events->the_post(); $event = new ArchiveEvent; @endphp
-					@include('partials.card-event')
-				@endwhile
-			@endcomponent
-		</div>
-	</section>
-
 	<section class="front-page-panel image-gallery-panel">
 		<div class="container-inner panel-container">
 			<header>

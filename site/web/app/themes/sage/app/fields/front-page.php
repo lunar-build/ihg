@@ -21,8 +21,6 @@ $group =
         ])
         ->addText('hero_heading', [
             'label' => 'Hero Heading',
-            'instructions' => 'Add a heading for the hero section. Max character length set to preserve page layout',
-            'maxlength' => '40',
         ]);
             
         
@@ -35,7 +33,6 @@ $group
     ])
         ->addText('hero_subheading', [
             'label' => 'Subheading',
-            'maxlength' => '40',
         ])
         ->addTextArea('hero_text', [
             'label' => 'Text',
