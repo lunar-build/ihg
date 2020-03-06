@@ -26,8 +26,15 @@
 }
 
 .banner {
+	position: fixed;
+	background-color: white;
+	top: 0;
+	z-index: 3;
 
+	width: 100%;
 	@media screen and (min-width: $breakpoint--md) {
+		position: static;
+
 		background-color: var(--brand-white);
 		border-bottom: 5px solid var(--brand-primary);
 		.home & {
