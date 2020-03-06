@@ -58,7 +58,7 @@
 }
 
 .panel-container {
-	@media screen and (min-width: $breakpoint--sm) {
+	@media screen and (min-width: $breakpoint--md) {
 		display: flex;
 		justify-content: space-between;
 
@@ -70,6 +70,7 @@
 			flex: 3 75%;
 		}
 	}
+
 }
 
 .archive .main,
