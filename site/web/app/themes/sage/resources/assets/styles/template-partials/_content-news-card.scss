@@ -8,6 +8,13 @@
 		color: var(--brand-text-light-grey);
 		line-height: 1.5;
 	}
+
+	.read-more {
+		display: none;
+		@media screen and (min-width: $breakpoint--md) {
+			display: block;
+		}
+	}
 }
 
 .card-title {

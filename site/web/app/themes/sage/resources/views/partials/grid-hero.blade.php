@@ -1,15 +1,14 @@
 <article class="news-card grid-hero">
-    <div class="news-card-text">
+    <div class="card-text">
         <header>
-            <p class="news-card-date"><time>{{ $post->formatted_date() }}</time></p>
-            <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
+            <p class="card-date spaced-text"><time>{{ $post->formatted_date() }}</time></p>
+            <h2 class="card-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
         </header>
-        <div class="entry-content">
-            @php the_content() @endphp
-        </div>
-        <a href="{{ get_permalink() }}">Read more</a>
+        <p class="entry-summary">@php echo strlen(get_the_content()) < 123 ? get_the_content() : substr(get_the_content(), 0, 123) . '...' @endphp</p>
+        <a class="read-more" href="{{ get_permalink() }}">Read more</a>
     </div>
     <figure class="featured-image">
         @php echo App::create_responsive_image($post->get_image()) @endphp
     </figure>
 </article>
+

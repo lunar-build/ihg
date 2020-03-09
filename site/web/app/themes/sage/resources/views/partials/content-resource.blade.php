@@ -14,7 +14,7 @@
         @endcomponent
     </figure>
     {{-- TEXT --}}
-    <div class=card-text>
+    <div class="card-text">
         <h2 class="card-title">{{ $resource->title() }}</h2>
         <p class="file-meta spaced-text">{{$resource->get_file_type()}} - {{ $resource->get_file_size() }}</p>
     </div> 

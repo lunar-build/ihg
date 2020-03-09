@@ -8,7 +8,7 @@
         <div class="card-text">
 
             {{-- DATE --}}
-            <p class="card-date">{{ $post->formatted_date() }}</p>
+            <p class="card-date spaced-text">{{ $post->formatted_date() }}</p>
             
             {{-- TITLE --}}
             <h2 class="card-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>

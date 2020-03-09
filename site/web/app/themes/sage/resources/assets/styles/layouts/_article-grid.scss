@@ -21,11 +21,27 @@
 			& > * {
 				width: 50%;
 			}
+
+			.card-text {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				& > * {
+					flex-basis: 100%;
+				}
+				.read-more {
+					align-self: flex-end;
+				}
+			}
+			.card-title {
+				font-size: 2rem;
+			}
 		}
 		
 		.featured-image {
 			order: -1;
 		}
+
 	}
 
 	article {
