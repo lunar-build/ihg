@@ -5,12 +5,13 @@
     flex: 1 100%;
     .post_filter {
         display: block;
-        padding: .5rem;
+        padding: 1rem;
         box-sizing: border-box;
         background-color: var(--brand-primary);
         color: white;
 
-        height: 1.75rem;
+        height: 2.75rem;
+        border-radius: .25rem;
         overflow: hidden;
         width: 100%;
 
@@ -19,9 +20,14 @@
         &[data-toggle="open"] {
             height: auto;
         }
+        
+        p {
+            margin: 0;
+        }
 
         .filter-options {
             width: 100%;
+        
         }
 
         .modal p {

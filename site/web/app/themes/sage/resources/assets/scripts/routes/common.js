@@ -23,12 +23,16 @@ export default {
 			
 		});
 
-        const filterOption = $('#post_tag-filter > p');
+        const filters = $('#post_tag-filter');
 
-        filterOption.on('click', function() {
-			const modal = $(this).parent().find('.modal');
+        filters.on('click', function() {
+			const modal = $(this).find('.modal');
 
-			modal.toggleClass('modal--hide');
+			if ($(this).data('toggle') == 'closed')  {
+				modal.removeClass('modal--hide');
+			}
+
+			$(this).data('toggle', $(this).data('toggle') == 'closed' ? 'open' : 'closed');
 		});
 		
 		$('.filter-option').on('click', function() {
