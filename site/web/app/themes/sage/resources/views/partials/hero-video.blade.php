@@ -2,7 +2,8 @@
    <div class="text">
       <p>{{$text}}</p>
       @component('partials.modal', [
-         'embed_code' => $embed_code
+         'embed_code' => $embed_code,
+         'text' => ''
       ])
          @include('partials.video-btn-content', ['show_text' => true])
       @endcomponent

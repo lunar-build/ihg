@@ -3,6 +3,7 @@
     <figure class="resource-image">
         @component('partials.modal', [
             'title' => $resource->title(),
+            'text' => get_the_content(),
             'attachment_id' => $resource->get_thumbnail(),
             'download_url' => $resource->get_file_path(),
             'file' => [

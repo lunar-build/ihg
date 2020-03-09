@@ -3,6 +3,7 @@
     <figure class="featured-image">
         @component('partials.modal', [
             'title' => $image->title(),
+            'text' => get_the_content(),
             'attachment_id' => $image->get_image(),
             'file' => [
                 'type' => $image->get_file_type(),

@@ -33,7 +33,7 @@
             justify-content: space-between;
 
             min-height: auto;
-            max-width: $breakpoint--md;
+            max-width: $breakpoint--lg;
             width: 90%;
         }
     }
@@ -55,7 +55,8 @@
     }
     &-content {
         padding: 1rem;
-
+        max-width: 100%;
+        
         @media screen and (min-width: $breakpoint--sm) {
             flex: 3 75%;
         }
@@ -74,6 +75,7 @@
         display: block;
 
         box-sizing: border-box;
+        margin-top: 2rem;
         padding: 1rem;
         width: 100%;
 
@@ -83,15 +85,23 @@
         text-align: center;
         text-decoration: none;
     }
+    &-text {
+        color: var(--brand-text-dark-grey);
+        line-height: 1.5;
+        margin-top: 0;
+    }
     &-meta { // @todo create reusable text like this ? mixin?
         color: var(--brand-text-light-grey);
         letter-spacing: .1rem;
         text-transform: uppercase;
+        font-size: .8rem;
     }
 
     &-title {
         margin-top: 0;
+        margin-bottom: .25rem;
         color: var(--brand-primary);
+        font-weight: normal;
     }
 
     &-close {
