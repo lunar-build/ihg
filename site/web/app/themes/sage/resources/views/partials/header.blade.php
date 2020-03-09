@@ -1,8 +1,8 @@
 <header class="banner">
   <div class="container-inner header-container">
     <a class="brand" href="{{ home_url('/') }}">
-      <img class="logo--color" src="{{App::get_image_asset('logo_color.png')}}" alt="Logo" />
-      <img class="logo--white" src="{{App::get_image_asset('logo_white.png')}}" alt="Logo" />
+      <img class="logo--color" src="{{App::get_image_asset(BRAND . '/logo_color.png')}}" alt="Logo" />
+      <img class="logo--white" src="{{App::get_image_asset(BRAND . '/logo_white.png')}}" alt="Logo" />
     </a>
     <div id="nav-toggle">
       @include("partials.hamburger")

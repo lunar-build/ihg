@@ -16,9 +16,11 @@ use App\CPT;
 add_action('wp_enqueue_scripts', function () {
     $full_path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     preg_match('/[a-z]+.([a-z-]*).([a-z]+)/', $full_path, $matches);
-    $brand_stylesheet = $matches[1];
 
-    wp_enqueue_style('sage/'.$brand_stylesheet.'.css', asset_path('styles/'.$brand_stylesheet.'.css'), false, null);
+    $brand = $matches[1];
+    define('BRAND', $brand);
+
+    wp_enqueue_style('sage/'.$brand.'.css', asset_path('styles/'.$brand.'.css'), false, null);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
