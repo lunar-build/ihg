@@ -23,11 +23,20 @@ export default {
 			
 		});
 
-		const filter = $('#post_tag-filter');
+        const filterOption = $('#post_tag-filter > p');
 
-		filter.on('change', function(e) {
-			location.href = e.target.value;
-		})
+        filterOption.on('click', function() {
+			const modal = $(this).parent().find('.modal');
+
+			modal.find('.filter-options').prepend($(this));
+
+			modal.toggleClass('modal--hide');
+		});
+		
+		$('.filter-option').on('click', function() {
+			$('[data-selected="selected"]').attr('data-selected', '');
+			$(this).attr('data-selected', 'selected');
+		});
 
 		const videoEmbed = $('.featured-video');
 		$('.featured-video').remove();
