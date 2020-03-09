@@ -28,14 +28,10 @@ export default {
         filters.on('click', function() {
 			const modal = $(this).find('.modal');
 
-
-			if ($(this).data('toggle') == 'closed')  {
-				$(this).addClass('open');
-
+			if(!$(this).hasClass('open'))  {
 				modal.removeClass('modal--hide');
 			}
-
-			$(this).data('toggle', $(this).data('toggle') == 'closed' ? 'open' : 'closed');
+			$(this).toggleClass('open');
 		});
 		
 		$('.filter-option').on('click', function() {
