@@ -28,7 +28,6 @@ export default {
         filterOption.on('click', function() {
 			const modal = $(this).parent().find('.modal');
 
-
 			modal.toggleClass('modal--hide');
 		});
 		
@@ -37,6 +36,13 @@ export default {
 			$(this).attr('data-selected', 'selected');
 
 			location.href = $(this).data('value');
+		});
+
+		$('.modal').on('click', function(e) {
+			const modal = $('#post_tag-filter .modal');
+			if($(e.target).hasClass('modal') && !modal.hasClass('modal--hide')) {
+				modal.addClass('modal--hide')
+			}
 		});
 
 		const videoEmbed = $('.featured-video');
