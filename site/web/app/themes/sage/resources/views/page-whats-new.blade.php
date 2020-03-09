@@ -9,7 +9,9 @@
 		]; 
 	@endphp
 	@include('partials.page-header')
-	@component('layouts.article-grid')
+	@component('layouts.article-grid', [
+		'class' => 'news-grid'
+	])
 		@php $count = 0 @endphp
 		@php $news = FrontPage::get_news(); @endphp
 		@while ($news->have_posts()) @php $news->the_post(); $post = new ArchivePost @endphp
@@ -19,9 +21,9 @@
 				@include('partials.content-news')
 			@endif
 			@php $count++ @endphp
-        @endwhile
-        @include('partials.pagination', [
-            'result' => $news
-        ])
+		@endwhile
 	@endcomponent
+	@include('partials.pagination', [
+		'result' => $news
+	])
 @endsection

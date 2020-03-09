@@ -6,8 +6,8 @@
 		@while ($media->have_posts()) @php $media->the_post(); $post = new ArchivePost @endphp
 			@include('partials.grid-hero')
         @endwhile
-        @include('partials.pagination', [
-            'result' => $media
-        ])
 	@endcomponent
+	@include('partials.pagination', [
+		'result' => $media
+	])
 @endsection
