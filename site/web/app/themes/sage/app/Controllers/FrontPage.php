@@ -38,17 +38,23 @@ class FrontPage extends Controller
         return $hero_image['image'];
     }
 
-    public static function get_news($num_posts = -1) 
+    public static function get_news($num_posts = -1, $tag_id = null) 
     {
         $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
 
-        $result = new \WP_Query([
+        $args = [
             'numberposts' => $num_posts,
             'post_type' => 'post',
             'category_name' => 'latest',
             'paged' => $paged,
             'posts_per_page' => $num_posts > -1 ? $num_posts : 13,
-        ]);
+        ];
+
+        if ($tag_id) {
+            $args['tag_id'] = $tag_id;
+        }
+
+        $result = new \WP_Query($args);
 
         return $result;
     }
