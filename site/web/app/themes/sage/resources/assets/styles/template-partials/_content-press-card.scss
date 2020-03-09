@@ -7,13 +7,11 @@
 	&-link {
 		display: none;
 	}
-
-	.entry-title {
-		font-size: 1.25em;
-        @media screen and (min-width: $breakpoint--md) {
-            font-size: 1.5em;
-        }
-    }
+	
+	.card-text {
+		padding-right: 0;
+		padding-left: 0;
+	}
 
 	@media screen and (min-width: $breakpoint--md) {
 		display: flex;
@@ -47,20 +45,6 @@
 		text-decoration: none;
 	}
 
-	.press-card-date {
-		margin-top: 1rem;
-		font-size: .7em;
-		color: var(--brand-text-light-grey);
-		@media screen and (min-width: $breakpoint--md) {
-			position: relative;
-			top: -1rem;
-			
-			margin: 0;
-			flex-basis: 10rem;
-		}
-
-	}
-
 	.press-title {
 		padding-bottom: 0;
 		margin-bottom: 0;
@@ -72,13 +56,6 @@
 
 	background-color: var(--brand-light-grey);
 
-	p {
-		color: var(--brand-dark-grey);
-	}
-
-	a {
-		color: var(--brand-primary);
-	}
 }
 
 .page-press-coverage-data {

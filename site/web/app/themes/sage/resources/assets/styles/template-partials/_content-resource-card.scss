@@ -22,24 +22,6 @@
 		}
 	}
 
-	.resource-card-text {
-		align-self: flex-start;
-		margin: 1.5em 1em;
-		color: darkGrey; // @todo add brand colours
-		h2 {
-			margin: 0 0 1rem;
-
-			font-size: 1em;
-			color: var(--brand-primary);
-		}
-
-		.file-meta {
-			margin-bottom: 0;
-			color: var(--brand-text-light-grey);
-			font-size: .7em;
-		}
-	}
-
 	.resource-image {
 		margin: 0;
 		display: flex;

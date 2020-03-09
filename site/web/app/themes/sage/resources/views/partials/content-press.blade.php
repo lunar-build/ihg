@@ -2,9 +2,9 @@
     <figure class="featured-image">
         {!! App::create_responsive_image($post->get_image()) !!}
     </figure>
-    <header>
-        <p class="press-card-date spaced-text">{{ $post->formatted_date() }}</p>
-        <h2 class="entry-title press-title">
+    <header class="card-text">
+        <p class="card-date spaced-text">{{ $post->formatted_date() }}</p>
+        <h2 class="card-title">
             <a href="{{ get_permalink() }}">{!! get_the_title() !!}</a>
         </h2>
     </header>

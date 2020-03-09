@@ -7,7 +7,7 @@
 	<section class="front-page-panel news-panel">
 		<div id="latest-news" class="container-inner panel-container">
 			<header class="panel-header">
-				<h2 class="panel-title spaced-text">{{ strtoupper('Latest news') }}</h2>
+				<h2 class="panel-title spaced-text uppercase">What's new</h2>
 				<a href="/latest-news">View all</a>
 			</header>
 			@php $news = FrontPage::get_news(3); @endphp
@@ -23,7 +23,7 @@
 	<section class="front-page-panel image-gallery-panel front-page-panel--alt">
 		<div class="container-inner panel-container">
 			<header class="panel-header">
-				<h2 class="panel-title spaced-text">{{ strtoupper('Image gallery') }}</h2>
+				<h2 class="panel-title spaced-text uppercase">Image gallery</h2>
 				<a href="/images">View all</a>
 			</header>
 			@php $images = FrontPage::get_image_gallery(); @endphp
@@ -44,7 +44,7 @@
 	<section class="front-page-panel resources-panel">
 		<div class="container-inner panel-container">
 			<header class="panel-header">
-				<h2 class="panel-title spaced-text">{{ strtoupper('Downloadable Resources') }}</h2>
+				<h2 class="panel-title spaced-text uppercase">Downloadable Resources</h2>
 				<a href="/resources">View all</a>
 			</header>
 			@php $resources = FrontPage::get_resources(); @endphp
@@ -61,7 +61,7 @@
 	<section class="front-page-panel front-page-panel--alt press-panel">
 		<div class="container-inner panel-container">
 			<header class="panel-header">
-				<h2 class="panel-title spaced-text">{{ strtoupper('press coverage') }}</h2>
+				<h2 class="panel-title spaced-text uppercase">press coverage</h2>
 				<a href="/in-the-media">View all</a>
 			</header>
 			<div class="panel-blocks">
