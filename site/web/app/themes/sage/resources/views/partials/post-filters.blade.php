@@ -10,13 +10,17 @@
         <p data-selected="selected" data-value="{{str_replace(home_url(), '', $default['value'])}}">Category: {{ html_entity_decode($default['label'])}}</p>
         <div class="modal modal--hide">
             <div class="filter-options">
-            @foreach ($filters as $f)
                 <p 
-                    class="filter-option" 
-                    data-value="{{str_replace(home_url(), '', get_term_link($f->term_id))}}"
-                >
-                {{html_entity_decode($f->name)}}</p>
-            @endforeach
+                    class="filter-option"
+                    data-selected="selected" data-value="{{str_replace(home_url(), '', $default['value'])}}"
+                >Category: {{ html_entity_decode($default['label'])}}</p>
+                @foreach ($filters as $f)
+                    <p 
+                        class="filter-option" 
+                        data-value="{{str_replace(home_url(), '', get_term_link($f->term_id))}}"
+                    >
+                    {{html_entity_decode($f->name)}}</p>
+                @endforeach
             </div>
         </div>
     </div>
