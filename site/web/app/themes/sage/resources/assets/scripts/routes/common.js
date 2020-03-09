@@ -28,7 +28,10 @@ export default {
         filters.on('click', function() {
 			const modal = $(this).find('.modal');
 
+
 			if ($(this).data('toggle') == 'closed')  {
+				$(this).addClass('open');
+
 				modal.removeClass('modal--hide');
 			}
 
@@ -45,6 +48,7 @@ export default {
 		$('.modal').on('click', function(e) {
 			const modal = $('#post_tag-filter .modal');
 			if($(e.target).hasClass('modal') && !modal.hasClass('modal--hide')) {
+				filters.removeClass('open');
 				modal.addClass('modal--hide')
 			}
 		});
@@ -69,6 +73,10 @@ export default {
 
 		function closeModal (modal) {
 			$('.featured-video').remove();
+
+			if (filters) {
+				filters.removeClass('open');
+			}
 			
 			return modal.addClass('modal--hide');
 		}
