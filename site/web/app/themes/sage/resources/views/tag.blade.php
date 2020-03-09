@@ -8,19 +8,17 @@
 		]; 
 	@endphp
 	@include('partials.page-header')
-	@component('layouts.article-grid'[
+	@component('layouts.article-grid', [
 		'class' => 'news-grid'
 	])
 		@php $count = 0 @endphp
-		<div class="news-grid">
-			@while (have_posts()) @php the_post(); $post = new ArchivePost @endphp
-				@if(empty($count))
-					@include('partials.grid-hero')
-				@else
-					@include('partials.content-news')
-				@endif
-				@php $count++ @endphp
-			@endwhile
-		</div>
+		@while (have_posts()) @php the_post(); $post = new ArchivePost @endphp
+			@if(empty($count))
+				@include('partials.grid-hero')
+			@else
+				@include('partials.content-news')
+			@endif
+			@php $count++ @endphp
+		@endwhile
 	@endcomponent
 @endsection
