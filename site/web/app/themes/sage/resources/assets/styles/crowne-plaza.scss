@@ -2,36 +2,52 @@
 	font-family: 'Agenda';
 	font-weight: normal;
 	src: url('../fonts/agenda/Agenda-Medium.otf') format('opentype'),
-		url('../fonts/agenda/Agenda-Medium.eot'), /* IE9 Compat Modes */
-		url('../fonts/agenda/Agenda-Medium.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/agenda/Agenda-Medium.woff') format('woff'), /* Pretty Modern Browsers */
-		url('../fonts/agenda/Agenda-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/agenda/Agenda-Medium.eot'),
+		url('../fonts/agenda/Agenda-Medium.woff2') format('woff2'),
+		url('../fonts/agenda/Agenda-Medium.woff') format('woff'),
+		url('../fonts/agenda/Agenda-Medium.ttf')  format('truetype');
 }
 
 @font-face {
 	font-family: 'Agenda';
 	font-weight: light;
-	src: url('../fonts/agenda/Agenda-Light.otf');
+	src: url('../fonts/agenda/Agenda-Light.otf') format('opentype'),
+		url('../fonts/agenda/Agenda-Light.eot'),
+		url('../fonts/agenda/Agenda-Light.woff2') format('woff2'),
+		url('../fonts/agenda/Agenda-Light.woff') format('woff'),
+		url('../fonts/agenda/Agenda-Light.ttf')  format('truetype');
 }
 
 @font-face {
 	font-family: 'Agenda';
 	font-weight: normal;
 	font-style: italic;
-	src: url('../fonts/agenda/Agenda-Medium_Italic.otf');
+	src: url('../fonts/agenda/Agenda-Medium_Italic.otf') format('opentype'),
+		url('../fonts/agenda/Agenda-MediumItalic.eot'),
+		url('../fonts/agenda/Agenda-MediumItalic.woff2') format('woff2'),
+		url('../fonts/agenda/Agenda-MediumItalic.woff') format('woff'),
+		url('../fonts/agenda/Agenda-MediumItalic.ttf')  format('truetype');
 }
 
 @font-face {
 	font-family: 'Agenda';
 	font-weight: light;
 	font-style: italic;
-	src: url('../fonts/agenda/Agenda-Light_Italic.otf');
+	src: url('../fonts/agenda/Agenda-Light_Italic.otf') format('opentype'),
+		url('../fonts/agenda/Agenda-LightItalic.eot'),
+		url('../fonts/agenda/Agenda-LightItalic.woff2') format('woff2'),
+		url('../fonts/agenda/Agenda-LightItalic.woff') format('woff'),
+		url('../fonts/agenda/Agenda-LightItalic.ttf')  format('truetype');
 }
 
 @font-face {
 	font-family: 'Agenda';
 	font-weight: bold;
-	src: url('../fonts/agenda/Agenda-Bold.otf');
+	src: url('../fonts/agenda/Agenda-Bold.otf') format('opentype'),
+		url('../fonts/agenda/Agenda-Bold.eot'),
+		url('../fonts/agenda/Agenda-Bold.woff2') format('woff2'),
+		url('../fonts/agenda/Agenda-Bold.woff') format('woff'),
+		url('../fonts/agenda/Agenda-Bold.ttf')  format('truetype');
 }
 
 :root {
