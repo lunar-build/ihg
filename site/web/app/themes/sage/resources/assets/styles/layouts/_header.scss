@@ -40,6 +40,22 @@
 			background-color: var(--brand-primary);
 			border-bottom: none;
 		}
+
+		.home &--alt {
+			background-color: var(--brand-white);
+			border-bottom: 5px solid var(--brand-primary);
+
+			nav .menu-item a {
+				color: var(--brand-primary);
+			}
+
+			.logo--color {
+				display: block;
+			}
+			.logo--white {
+				display: none;
+			}
+		}
 	}
 	.header-container {
 		position: relative;

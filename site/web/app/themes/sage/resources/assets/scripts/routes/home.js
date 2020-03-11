@@ -9,7 +9,18 @@ export default {
         behavior: 'smooth',
         block: 'center',
       });
-    })
+    });
+
+    const banner = $('.banner');
+    const d = $(document);
+
+    d.on('scroll', function() {
+      if (d.scrollTop() > banner.position().top + banner.height()) {
+        banner.addClass('banner--alt');
+      } else {
+        banner.removeClass('banner--alt');
+      }
+    });
     
   },
   finalize() {
