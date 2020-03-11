@@ -4,6 +4,7 @@ body {
 
 .heading-spacer {
 	position: relative;
+	margin-bottom: 2rem;
 	&::after {
 		display: block;
 		content: '';

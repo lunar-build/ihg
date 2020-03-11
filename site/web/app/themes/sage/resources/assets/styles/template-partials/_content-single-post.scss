@@ -55,7 +55,7 @@ article.single-post {
     text-transform: uppercase;
 }
 .date {
-    margin: 2em 0;
+    margin: 1rem 0;
 }
 .date time {
     font-size: .75rem;
@@ -96,8 +96,9 @@ article.single-post {
 article.single-post {
     .entry-title {
         color: var(--brand-primary);
-        font-size: 1em;
+        font-size: 2.5rem;
         font-weight: normal;
+        margin-top: 1rem;
         @media screen and (min-width: $breakpoint--md) {
             font-size: 2rem;
         }
@@ -111,6 +112,7 @@ article.single-post {
 
     h3 {
         color: var(--brand-text-dark-grey);
+        margin-bottom: 4rem;
     }
 
     .article-grid {
