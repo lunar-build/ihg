@@ -78,6 +78,7 @@ article.single-post {
     color: var(--brand-text-light-grey);
 }
 .image {
+    position: relative;
     margin: 0;
     width: 100%;
     img {
@@ -87,6 +88,17 @@ article.single-post {
     figcaption {
         padding: 1rem;
         color: var(--brand-text-light-grey);
+
+        @media screen and (min-width: $breakpoint--md) {
+            position: absolute;
+            left: -9rem;
+            bottom: -1rem;
+            
+            max-width: 8rem;
+
+            font-size: .9rem;
+            line-height: 1.5;
+        }
     }
 
     @media screen and (min-width: $breakpoint--md) {
