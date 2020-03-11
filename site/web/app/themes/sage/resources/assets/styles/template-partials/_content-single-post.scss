@@ -4,6 +4,7 @@ article.single-post {
         position: relative;
         min-height: 17rem;
         background-color: var(--brand-light-grey);
+        padding-top: 3rem;
 
         @media screen and (min-width: $breakpoint--md) {
             padding-right: 2rem;
@@ -15,12 +16,22 @@ article.single-post {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
+            align-items: center;
             margin-right: auto;
             margin-left: auto;
             max-width: $breakpoint--lg;
+            padding-top: 6rem;
+            padding-bottom: 4rem;
         }
         .meta {
-            flex-basis: 50%;
+            flex-basis: 45%;
+        }
+    }
+    @media screen and (min-width: $breakpoint--lg) {
+        .header {
+            align-items: flex-start;
+
+            height: 15rem;
         }
     }
 
@@ -47,12 +58,17 @@ article.single-post {
 }
 
 .meta {
-    padding: 2rem 1rem 0;
+    box-sizing: border-box;
+    padding: 0 1rem 0;
 }
 .archive-title {
     color: var(--brand-text-dark-grey);
     font-weight: bold;
     text-transform: uppercase;
+    @media screen and (min-width: $breakpoint--md) {
+        margin-top: 0;
+    }
+
 }
 .date {
     margin: 1rem 0;
@@ -72,24 +88,9 @@ article.single-post {
         padding: 1rem;
         color: var(--brand-text-light-grey);
     }
+
     @media screen and (min-width: $breakpoint--md) {
-        position: absolute;
-        bottom: -5rem;
-        right: 2.5vw;
-        max-width: 22.5rem;
-        figcaption {
-            position: absolute;
-            bottom: -2rem;
-            left: -190px;
-            box-sizing: border-box;
-            max-width: 200px;
-        }
-    }
-    @media screen and (min-width: $breakpoint--lg) {
-        right: 7.5vw;
-    }
-    @media screen and (min-width: 1200px) {
-        right: 10vw;
+        flex-basis: 55%;
     }
 }
 
@@ -100,7 +101,7 @@ article.single-post {
         font-weight: normal;
         margin-top: 1rem;
         @media screen and (min-width: $breakpoint--md) {
-            font-size: 2rem;
+            font-size: 3rem;
         }
     }
 }
