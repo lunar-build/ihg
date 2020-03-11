@@ -8,9 +8,9 @@ class ArchivePost extends Controller
 {
     protected $post = null;
     
-    function __construct()
+    function __construct($id = null)
     {
-        $this->post = get_post();
+        $this->post = $id ? get_post($id) : get_post();
     }
 
     public function title()
@@ -27,6 +27,11 @@ class ArchivePost extends Controller
     {
         return get_field('image');
     }
+
+    public static function get_image_for_post($post)
+    {
+        return get_field('image', $post->ID);
+    }
     
     public function post_date()
     {
@@ -36,6 +41,12 @@ class ArchivePost extends Controller
     public function formatted_date()
     {
         $the_date = date_create($this->post->post_date);
+        return strtoupper(date_format($the_date, 'd F Y'));   
+    }
+
+    public static function format_date($post)
+    {
+        $the_date = date_create($post->post_date);
         return strtoupper(date_format($the_date, 'd F Y'));   
     }
 
@@ -56,6 +67,13 @@ class ArchivePost extends Controller
     public function get_content()
     {
         return get_field('sections');
+    }
+
+    public static function get_hero()
+    {
+        $post = get_field('hero');
+
+        return $post;
     }
     
 }
