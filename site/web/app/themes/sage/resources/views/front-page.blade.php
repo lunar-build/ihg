@@ -8,7 +8,7 @@
 		<div id="latest-news" class="container-inner panel-container">
 			<header class="panel-header">
 				<h2 class="panel-title spaced-text uppercase">What's new</h2>
-				<a href="/latest-news">View all</a>
+				<a href="{{get_permalink(get_page_by_path('whats-new'))}}">View all</a>
 			</header>
 			@php $news = FrontPage::get_news(3); @endphp
 			@component('layouts.article-grid', [
@@ -62,7 +62,7 @@
 		<div class="container-inner panel-container">
 			<header class="panel-header">
 				<h2 class="panel-title spaced-text uppercase">press coverage</h2>
-				<a href="/in-the-media">View all</a>
+				<a href="{{get_permalink(get_page_by_path('press-coverage'))}}">View all</a>
 			</header>
 			<div class="panel-blocks">
 				@php $in_media = FrontPage::get_in_media(3); @endphp
