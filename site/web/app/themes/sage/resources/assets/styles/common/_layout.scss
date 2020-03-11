@@ -7,8 +7,9 @@
 
 	@media screen and (min-width: $breakpoint--md) {
 		margin-top: 0;
+		padding-top: 100px;
 	}
- 
+
 	& .page {
 		overflow-x: hidden;
 		display: flex;
@@ -66,11 +67,11 @@
 			flex: 1 25%;
 		}
 
-		.article-grid, .gallery-grid {
+		.article-grid,
+		.gallery-grid {
 			flex: 3 75%;
 		}
 	}
-
 }
 
 .archive .main,
