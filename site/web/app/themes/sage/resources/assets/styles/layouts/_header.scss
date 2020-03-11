@@ -31,12 +31,15 @@
 	z-index: 3;
 
 	width: 100%;
+
 	@media screen and (min-width: $breakpoint--md) {
 		min-height: 100px;
 		width: auto;
 		background-color: var(--brand-white);
 		border-bottom: 5px solid var(--brand-primary);
 		.home & {
+			transition: all .3s ease-in-out;
+
 			background-color: var(--brand-primary);
 			border-bottom: none;
 		}

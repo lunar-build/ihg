@@ -79,7 +79,7 @@
 	padding: 0 1rem;
 
 	@media screen and (min-width: $breakpoint--md) {
-		padding: 4rem;
+		padding: calc(100px + 4rem) 4rem 4rem;
 	}
 }
 
