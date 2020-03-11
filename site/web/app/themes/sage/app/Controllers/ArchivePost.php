@@ -72,6 +72,12 @@ class ArchivePost extends Controller
     public static function get_hero()
     {
         $post = get_field('hero');
+        if (empty($post)) return null;
+
+        $post->image = get_field('image', $post->ID);
+        $the_date = date_create($post->post_date);
+        $post->formatted_date = strtoupper(date_format($the_date, 'd F Y'));  
+        $post->permalink = get_permalink($post);
 
         return $post;
     }
