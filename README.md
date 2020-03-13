@@ -131,21 +131,33 @@ add_action('init', function () {
 
 ## Styling
 
-Styling across both the Crowne Plaza and Holiday Inn microsites are largely the same. The code should be as if they were one site with the exception being accent colours for the brand.
+Styling across both the Crowne Plaza and Holiday Inn microsites is largely the same. The code should be as if they were one site with brand colours being the exception. 
 
-The below code adds a class to the body, which allows us to apply brand targeted styling which should be limited to:
+The core styles are found in main.scss, but I have added 2 new entry points in the config.json for brand specific CSS variables.
 
-* Colours and;
-* Fonts
-
+**RegEx for deriving brand from URL**
 ```
-if (preg_match('/crowne-plaza/', $full_path)) {
-  $classes[] =  'crowne-plaza';
-}
+$full_path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+preg_match('/[a-z]+.([a-z-]*).([a-z]+)/', $full_path, $matches);
 
-if (preg_match('/holiday-inn/', $full_path)) {
-  $classes[] =  'holiday-inn';
-}
+$brand = $matches[1];
+define('BRAND', $brand);
+
+wp_enqueue_style('sage/'.$brand.'.css', asset_path('styles/'.$brand.'.css'), false, null);
 ```
+
+**New CSS build entrypoints**
+```
+"entry": {
+  "main": ["./scripts/main.js", "./styles/main.scss"],
+  "crowne-plaza": [
+    "./styles/crowne-plaza.scss"
+  ],
+  "holiday-inn": [
+    "./styles/holiday-inn.scss"
+  ],
+},
+```
+
 
 ## Deployment

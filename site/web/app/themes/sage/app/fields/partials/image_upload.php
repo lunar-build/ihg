@@ -15,13 +15,6 @@ $image_upload
             'return_format' => 'id',
             'preview_size' => 'thumbnail',
             'library' => 'all',
-            // 'min_width' => '',
-            // 'min_height' => '',
-            // 'min_size' => '',
-            // 'max_width' => '',
-            // 'max_height' => '',
-            // 'max_size' => '',
-            // 'mime_types' => '',
         ]);
             
 return $image_upload;
