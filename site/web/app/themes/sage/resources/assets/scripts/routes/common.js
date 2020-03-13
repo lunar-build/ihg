@@ -1,11 +1,19 @@
 export default {
 	init() {
 		const adminBar = $('#wpadminbar');
+		$('.banner').css({top: adminBar.height()});
+
+		let adminBarHeight = 0;
 
 		if (adminBar) {
-			$('.banner').css({top: adminBar.height()});
+			$(window).on('resize', function() {
+				if (adminBarHeight != adminBar.height()) {
+					$('.banner').css({top: adminBar.height()});
+					adminBarHeight = adminBar.height();
+				}
+			});
 		}
-		
+
 		// Get/create icons with classes for FA
 		const closeIcon = $('#close-icon');
 		const hamburger = $('#hamburger');
