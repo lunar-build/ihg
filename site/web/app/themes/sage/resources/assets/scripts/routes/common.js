@@ -13,19 +13,18 @@ export default {
 					adminBarHeight = adminBar.height();
 				}
 			});
+			const d = $(document);
+
+			d.on('scroll', function() {
+				if (d.scrollTop() > 0) {
+					banner.css({top: 0});
+					adminBar.hide();
+				} else {
+					banner.css({top: adminBar.height()});
+					adminBar.show();
+				}
+			});
 		}
-
-		const d = $(document);
-
-		d.on('scroll', function() {
-			if (d.scrollTop() > 0) {
-				banner.css({top: 0});
-				adminBar.hide();
-			} else {
-				banner.css({top: adminBar.height()});
-				adminBar.show();
-			}
-		});
 
 		// Get/create icons with classes for FA
 		const closeIcon = $('#close-icon');
