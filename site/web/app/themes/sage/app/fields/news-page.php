@@ -6,9 +6,11 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 
 $hero = new FieldsBuilder('hero');
 
-$hero
-    ->setLocation('post_type', '==', 'page');
+$news_page = get_page_by_path('whats-new');
 
+$hero
+    ->setLocation('post_type', '==', 'page')
+        ->and('post', '==', $news_page->ID);
 
 $hero
 ->addPostObject('hero', [
