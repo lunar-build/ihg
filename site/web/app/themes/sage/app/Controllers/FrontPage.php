@@ -61,12 +61,13 @@ class FrontPage extends Controller
 
     public static function get_image_gallery() 
     {
-        $posts = new \WP_Query([
+        $images = new \WP_Query([
             'numberposts'	=> 5,
             'post_type'		=> 'images',
+            'posts_per_page'	=> 5,
         ]);
 
-        return $posts;
+        return $images;
     }
 
     public static function get_events() 
