@@ -4,9 +4,9 @@
   @include('partials.page-header')
 
   @component('layouts.article-grid')
-    @while (have_posts()) @php the_post(); $image = new ArchiveImage @endphp
+    @php $images = FrontPage::get_image_gallery(-1); @endphp
+    @while ($images->have_posts()) @php $images->the_post(); $image = new ArchiveImage; @endphp
       @include('partials.content-image')
     @endwhile
   @endcomponent
-
 @endsection

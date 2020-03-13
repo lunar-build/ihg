@@ -59,12 +59,12 @@ class FrontPage extends Controller
         return $result;
     }
 
-    public static function get_image_gallery() 
+    public static function get_image_gallery($num_posts = 5) 
     {
         $images = new \WP_Query([
-            'numberposts'	=> 5,
+            'numberposts'	=> $num_posts,
             'post_type'		=> 'images',
-            'posts_per_page'	=> 5,
+            'posts_per_page' => $num_posts,
         ]);
 
         return $images;
@@ -80,10 +80,10 @@ class FrontPage extends Controller
         return $posts;
     }
 
-    public static function get_resources() 
+    public static function get_resources($num_posts = 3) 
     {
         $posts = new \WP_Query([
-            'posts_per_page'	=> 3,
+            'posts_per_page'	=> $num_posts,
             'post_type'		=> 'resources',
         ]);
 
