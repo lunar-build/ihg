@@ -38,7 +38,7 @@
 		background-color: var(--brand-white);
 		border-bottom: 5px solid var(--brand-primary);
 		.home & {
-			transition: all .3s ease-in-out;
+			transition: background-color, border .2s ease-in-out;
 
 			background-color: var(--brand-primary);
 			border-bottom: none;

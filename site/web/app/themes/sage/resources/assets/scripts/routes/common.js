@@ -1,5 +1,10 @@
 export default {
 	init() {
+		const adminBar = $('#wpadminbar');
+
+		if (adminBar) {
+			$('.banner').css({top: adminBar.height()});
+		}
 		
 		// Get/create icons with classes for FA
 		const closeIcon = $('#close-icon');
