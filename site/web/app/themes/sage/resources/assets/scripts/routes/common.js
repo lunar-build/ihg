@@ -18,7 +18,6 @@ export default {
 		const d = $(document);
 
 		d.on('scroll', function() {
-			console.log(d.scrollTop(), adminBar.height());
 			if (d.scrollTop() > 0) {
 				banner.css({top: 0});
 				adminBar.hide();
