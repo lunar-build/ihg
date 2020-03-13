@@ -1,18 +1,32 @@
 export default {
 	init() {
 		const adminBar = $('#wpadminbar');
-		$('.banner').css({top: adminBar.height()});
+		const banner = $('.banner');
+		banner.css({top: adminBar.height()});
 
 		let adminBarHeight = 0;
 
 		if (adminBar) {
 			$(window).on('resize', function() {
 				if (adminBarHeight != adminBar.height()) {
-					$('.banner').css({top: adminBar.height()});
+					banner.css({top: adminBar.height()});
 					adminBarHeight = adminBar.height();
 				}
 			});
 		}
+
+		const d = $(document);
+
+		d.on('scroll', function() {
+			console.log(d.scrollTop(), adminBar.height());
+			if (d.scrollTop() > 0) {
+				banner.css({top: 0});
+				adminBar.hide();
+			} else {
+				banner.css({top: adminBar.height()});
+				adminBar.show();
+			}
+		});
 
 		// Get/create icons with classes for FA
 		const closeIcon = $('#close-icon');
