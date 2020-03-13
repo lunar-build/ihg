@@ -48,8 +48,8 @@ export default {
 		});
 		
 		$('.filter-option').on('click', function() {
-			$('[data-selected="selected"]').attr('data-selected', '');
-			$(this).attr('data-selected', 'selected');
+			$('[aria-selected="true"]').attr('aria-selected', 'false');
+			$(this).attr('aria-selected', 'true');
 
 			location.href = $(this).data('value');
 		});

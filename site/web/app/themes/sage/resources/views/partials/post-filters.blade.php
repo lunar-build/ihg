@@ -1,16 +1,22 @@
 <div class="filters">
     {{-- Only show first-of-type, when closed --}}
     <div id="{{$filter_type}}-filter" class="post_filter" data-toggle="closed">
-        <p data-selected="selected" data-value="{{str_replace(home_url(), '', $default['value'])}}">Category: {{ html_entity_decode($default['label'])}}</p>
+        <p id="filter-label" data-selected="selected" data-value="{{str_replace(home_url(), '', $default['value'])}}">Category: {{ html_entity_decode($default['label'])}}</p>
         <div class="modal modal--hide dropdown">
-            <div class="filter-options">
-                @php
-                    $current_id = get_queried_object()->term_id;
-                @endphp
+            @php
+                $current_id = get_queried_object()->term_id;
+            @endphp
+            <div 
+                class="filter-options" 
+                role="listbox" 
+                aria-labelledby="filter-label" 
+                aria-roledescription="A list of news article filters"
+                aria-activedescendant="{{$current_id}}"
+            >
                 <p 
                     class="filter-option" 
                     data-value="/whats-new"
-                    data-selected="{{empty($current_id) ? 'selected' : ''}}"
+                    aria-selected="{{empty($current_id) ? 'true' : 'false'}}"
                 >
                     All
                 </p>
@@ -18,7 +24,7 @@
                     <p 
                         class="filter-option" 
                         data-value="{{str_replace(home_url(), '', get_term_link($f->term_id))}}"
-                        data-selected="{{$current_id == $f->term_id ? 'selected' : ''}}"
+                        aria-selected="{{$current_id == $f->term_id ? 'true' : 'false'}}"
                     >
                     {{html_entity_decode($f->name)}}</p>
                 @endforeach

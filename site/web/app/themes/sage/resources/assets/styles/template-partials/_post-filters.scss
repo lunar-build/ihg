@@ -82,7 +82,7 @@
                 border: 1px solid var(--brand-dark-grey); // @Todo color
             }
 
-            &[data-selected="selected"]::after {
+            &[aria-selected="true"]::after {
                 border: 1px solid var(--brand-primary); // @Todo color
                 background-image: radial-gradient(circle, var(--brand-primary) 0px, var(--brand-primary) 5px, white 6px, white);
             }
