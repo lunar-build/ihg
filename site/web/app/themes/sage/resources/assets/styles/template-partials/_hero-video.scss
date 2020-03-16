@@ -1,0 +1,81 @@
+.video-panel {
+    margin: 2rem 0;
+    border-bottom: .75rem solid var(--brand-primary);
+
+    .featured-image {
+        align-self: stretch;
+        img {
+            object-fit: cover;
+        }
+    }
+    
+    .text {
+        padding: 0 1rem;
+        @media screen and (min-width: $breakpoint--sm) {
+            padding: 0 3rem;
+            box-sizing: border-box;
+        }
+        @media screen and (min-width: $breakpoint--md) {
+            padding: 0 5rem;
+        }
+
+        @media screen and (min-width: $breakpoint--md) {
+            padding: 0 8rem;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint--sm) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 0;
+        max-height: 15rem;
+        overflow: hidden;
+
+        .text, & > figure {
+            flex: 1 50%;
+        }
+    }
+
+    p {
+        color: var(--brand-text-dark-grey);
+        font-size: 1.2rem;
+        margin: 0;
+        @media screen and (min-width: $breakpoint--sm) {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .modal-btn {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        width: 100%;
+
+        color: var(--brand-primary);
+        font-size: .9em;
+        text-align: left;
+        svg {
+            position: relative;
+            left: -1rem;
+
+            font-size: 1.25rem;
+        }
+        span {
+            position: relative;
+            top: -3px;
+        }
+    }
+
+    .modal-inner {
+        min-height: auto;
+
+        @media screen and (min-width: $breakpoint--sm) {
+            min-height: 60vh;
+        }
+    }
+
+}

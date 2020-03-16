@@ -1,0 +1,16 @@
+// Agenda - Adobe Font
+// Plume Bold Italic
+// Trebuchet MS Bold
+// Arial
+
+body {
+    font-family: var(--brand-main-font);
+}
+
+.spaced-text {
+    letter-spacing: .1rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

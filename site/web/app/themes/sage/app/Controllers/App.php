@@ -19,8 +19,14 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
+        if (is_tag()) {
+            return single_tag_title();
+        }
+        if (is_category()) {
+            return single_cat_title();
+        }
         if (is_archive()) {
-            return get_the_archive_title();
+            return str_replace('Archives: ', '', get_the_archive_title()); // There must be a better way to do this?
         }
         if (is_search()) {
             return sprintf(__('Search Results for %s', 'sage'), get_search_query());
@@ -29,6 +35,12 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    // get src of image
+    public static function get_image_url($image_ID)
+    {
+        return wp_get_attachment_image_url($image_ID, 'xl' );
     }
 
     // generate responsive img with srcset, class and animate-on-scroll
@@ -62,5 +74,10 @@ class App extends Controller
         if ( $width === '100%' ) {
             return '100vw, (min-width: 1440px) 1440px, (min-width: 1024px) 1024px, (min-width: 768px) 768px';
         }
+    }
+
+    public static function get_image_asset($asset)
+    {
+        return get_template_directory_uri() . '/../dist/images/' . $asset;
     }
 }

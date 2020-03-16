@@ -2,15 +2,25 @@
 
 namespace App;
 
+
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use StoutLogic\AcfBuilder\FieldsBuilder;
+use App\CPT;
 
 /**
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
+    $full_path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    preg_match('/[a-z]+.([a-z-]*).([a-z]+)/', $full_path, $matches);
+
+    $brand = $matches[1];
+    define('BRAND', $brand);
+
+    wp_enqueue_style('sage/'.$brand.'.css', asset_path('styles/'.$brand.'.css'), false, null);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
@@ -154,4 +164,12 @@ add_action('init', function () {
             };
         }
     });
+});
+
+
+add_action('init', function () {
+    // @TODO - refactor to action
+    $cpt = new CPT;
+    $cpt->register_images();
+    $cpt->register_resources();
 });

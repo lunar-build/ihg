@@ -1,0 +1,31 @@
+.btn-default {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.link-primary {
+    display: inline-block;
+
+    color: var(--brand-primary);
+    text-decoration: none;
+}
+
+.btn-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: calc(50% - 24px);
+    width: 100%;
+    text-align: center;
+
+    color: var(--brand-off-white);
+    font-size: 1.5rem;
+    svg {
+        margin-right: .5rem;
+    }
+}

@@ -1,0 +1,34 @@
+.resource-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: var(--brand-off-white); // @todo check brand colours
+
+	.resource-link {
+		width: 100%;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			color: darkGrey; // @todo add brand colours
+		}
+	}
+
+	.resource-image {
+		margin: 0;
+		display: flex;
+		width: 100%;
+
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}

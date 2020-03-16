@@ -1,3 +1,19 @@
 body {
 	margin: 0;
 }
+
+.heading-spacer {
+	position: relative;
+	margin-bottom: 2rem;
+	&::after {
+		display: block;
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -1rem;
+		height: .2rem;
+		width: 2rem;
+
+		background-color: var(--brand-primary);
+	}
+}

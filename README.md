@@ -8,87 +8,15 @@ Base Wordpress theme and setup using Roots. Comprehensive documentation for Root
 
 Your machine must have the following dependencies
 
-- Ansible 2.5.3-2.7.5
-- Virtualbox >= 4.3.10
-- Vagrant >= 2.1.0
-- Node.js >= 8.0.0
+- Ansible 2.5.3-2.7.5
+- Virtualbox >= 4.3.10
+- Vagrant >= 2.1.0
+- Node.js >= 8.0.0
 - Yarn
 
 See the [Roots documentation for installing machine dependencies](https://roots.io/getting-started/docs/macos-basic-setup/).
 
-#### Command not found: ansible-vault
-
-If you receive `command not found: ansible-vault`, you need to add python to your path:
-
-```
-export PATH="/Users/<your_username>/Library/Python/2.7/bin:$PATH"
-```
-
-### Quick setup
-
-- [Fork this repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-
-- Clone the newly created repo, for example:
-
-```
-git clone git@github.com:lunar-build/lunar-wp-base.git
-```
-
-- Change directory into project root, for example:
-
-```
-cd lunar-wp-base
-```
-
-#### Define and build local environment
-
-- Define environment domain and other information in /trellis/group_vars/development/wordpress_sites.yml. You may wish to define a site based on the eventual domain of the project. For example:
-
-```
-wordpress_sites:
-  ihg.local:
-    site_hosts:
-      - canonical: ihg.local
-        redirects:
-          - www.ihg.local
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@ihg.local
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-      provider: self-signed
-    cache:
-      enabled: false
-```
-
-- Create a file called .vault_pass at the root of the trellis directory. Paste in the password stored in LastPass, under 'Lunar base theme encryption password'.
-
-- Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo.
-
-To edit the development vault file, run the following command:
-
-```
-ansible-vault edit trellis/group_vars/development/vault.yml
-```
-
-When prompted, supply the Lunar base theme encryption password.
-
-- Ensure that the site name matches the one defined in /trellis/group_vars/development/wordpress_sites.yml. For example:
-
-```
-vault_mysql_root_password: devpw
-
-# Variables to accompany `group_vars/development/wordpress_sites.yml`
-# Note: the site name (`ihg.local`) must match up with the site name in the above file.
-vault_wordpress_sites:
-  ihg.local:
-    admin_password: admin
-    env:
-      db_password: password
-```
-
-- For more information about how to deal with encrypted vault.yml files, see [this document](https://roots.io/trellis/docs/vault/).
+#### Build local environment
 
 - Build vagrant box (this will take some time)
 
@@ -122,9 +50,40 @@ yarn && yarn build
 ansible-vault view trellis/group_vars/development/vault.yml
 ```
 
+**Command not found: ansible-vault**
+If you receive `command not found: ansible-vault`, you need to add python to your path:
+
+```
+export PATH="/Users/<your_username>/Library/Python/2.7/bin:$PATH"
+```
+
 - Set theme to Lunar Base Theme
 - Activate plugins
 - Or, upload an existing database. Database details are found in .env, which will have been generated from the encrypted vault.yml file on vagrant up.
+
+## Multisite
+
+Should be setup as soon as you vagrant up, and log in to the WP admin area.
+
+There is currently a bug, where `Config::define` isn't setting up the appropriate constants that WP is provisioned with Multisite, you'll need to define the constants in `development.php` instead.
+
+```
+Config::define('WP_ALLOW_MULTISITE', true);
+Config::define('MULTISITE', true);
+Config::define('SUBDOMAIN_INSTALL', false); // Set to true if using subdomains
+Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
+Config::define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
+Config::define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
+Config::define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
+```
+
+Roots.io multisite doesn't work out of the box, you have to install an [mu-plugin](https://github.com/felixarntz/multisite-fixes) to fix a URL rewrite bug.
+
+### Adding sites
+
+By default the Crowne Plaza site will be up and running, but you'll need to add the Holiday Inn sub-site using the WP UI.
+
+Visit `http://transformation.crowne-plaza.local/wp-admin/network/sites.php` and add a new site. Initially you'll have to add the sub-site as a path off of the Crowne Plaza site but you can edit the full URL for the Holiday Inn site to be `http://transformation.holiday-inn.local/`.
 
 ## Plugins
 
@@ -146,16 +105,59 @@ See [this document](https://roots.io/wordpress-plugins-with-composer/).
 
 ### Installing ACF Pro with encrypted license key
 
-This base theme comes with ACF already installed, with an encrypted license key stored in /trellis/group_vars/development/vault.yml. It does not currently have the same key stored in the other environment vaults - on the assumption that the site will use another license in production, paid for by the client. To understand how this is setup, read [this document](https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/).
+This base theme comes with ACF already installed, with an encrypted license key stored in /trellis/group_vars/development/vault.yml. It does not currently have the same key stored in the other environment vaults - on the assumption that the site will use another license in production, paid for by the client. To understand how this is setup, read [this document](https://roots.io/guides/acf-pro-as-a-composer-dependency-with-encrypted-license-key/)
 
 ## Features
 
 - Environment variables set in .env file, not wp_admin
 - Additional image sizes are defined in setup.php
 - Function to return responsive image (open to improvement). See Controllers/App.php function create_responsive_image()
-- ACF Field Builder installed and configured. No more defining fields in the admin panel. See https://roots.io/guides/using-acf-builder-with-sage/ for how to use
+- ACF Field Builder installed and configured. No more defining fields in the admin panel. See https://roots.io/guides/using-acf-builder-with-sage/ and https://github.com/StoutLogic/acf-builder/wiki for how to use
 - Browser watch. Run `yarn start` in the theme folder
 - Linter is turned off in resources/assets/build/webpack.config.js. Turn back on if web development isn't frustrating enough for you
 - Very lightweight layout strategy defined. Navigate to /sample-page in the browser (uses page.blade.php template) for examples. Feel free to use or delete if not fit for purpose
+
+## CPTs
+
+CPTs are defined within a CPT class for encapsulation `site/web/app/themes/sage/app/cpt.php`. Add more CPTs here if you need to and invoke them in setup.php.
+
+```
+add_action('init', function () {
+    $cpt = new CPT;
+    $cpt->register_events();
+    //.... more CPTs
+});
+```
+
+## Styling
+
+Styling across both the Crowne Plaza and Holiday Inn microsites is largely the same. The code should be as if they were one site with brand colours being the exception. 
+
+The core styles are found in main.scss, but I have added 2 new entry points in the config.json for brand specific CSS variables.
+
+**RegEx for deriving brand from URL**
+```
+$full_path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+preg_match('/[a-z]+.([a-z-]*).([a-z]+)/', $full_path, $matches);
+
+$brand = $matches[1];
+define('BRAND', $brand);
+
+wp_enqueue_style('sage/'.$brand.'.css', asset_path('styles/'.$brand.'.css'), false, null);
+```
+
+**New CSS build entrypoints**
+```
+"entry": {
+  "main": ["./scripts/main.js", "./styles/main.scss"],
+  "crowne-plaza": [
+    "./styles/crowne-plaza.scss"
+  ],
+  "holiday-inn": [
+    "./styles/holiday-inn.scss"
+  ],
+},
+```
+
 
 ## Deployment

@@ -148,3 +148,46 @@ function get_field_partial($partial)
     $partial = str_replace('.', '/', $partial);
     return include(config('theme.dir')."/app/fields/{$partial}.php");
 }
+
+function pagination($pages = '', $range = 4)
+{
+    $showitems = ($range * 2)+1;
+
+    global $paged;
+    if(empty($paged)) $paged = 1;
+
+    if($pages == '')
+    {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages)
+        {
+            $pages = 1;
+        }
+    }
+
+    if(1 != $pages)
+    {
+        if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
+        if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+
+        if ($paged > 1) echo "<a class=\"previous-page arrow\" href='".get_pagenum_link($paged - 1)."'></a>";
+
+        for ($i=1; ($i <= $pages && $i < 7); $i++)
+        {
+            if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+            {
+                echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+            }
+        }
+
+        if ($paged < $pages) echo "<a class=\"next-page arrow\" href=\"".get_pagenum_link($paged + 1)."\"></a>";
+    }
+}
+
+function readable_file_size($attachment_id) 
+{
+    $attachment_meta = wp_prepare_attachment_for_js($attachment_id);
+
+    return $attachment_meta['filesizeHumanReadable'];
+}

@@ -1,19 +1,17 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab33b930eea597120507375bafbc816b",
+    "content-hash": "ff4fb45628357dac1166251a21d39846",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.7.12",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.7.12",
-                "reference": null,
-                "shasum": null
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.7.12#v5.7.12"
             },
             "require": {
                 "composer/installers": "^1.4",
@@ -423,8 +421,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.2.3",
-                "reference": "5.2.3",
-                "shasum": null
+                "reference": "5.2.3"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -607,21 +604,21 @@
         },
         {
             "name": "stoutlogic/acf-builder",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StoutLogic/acf-builder.git",
-                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb"
+                "reference": "c2c9181218ed63a041f24dd550324e920e4846cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
-                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
+                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/c2c9181218ed63a041f24dd550324e920e4846cf",
+                "reference": "c2c9181218ed63a041f24dd550324e920e4846cf",
                 "shasum": ""
             },
             "require": {
-                "doctrine/inflector": "~1.1",
-                "doctrine/instantiator": "~1.0.0",
+                "doctrine/inflector": "^1.1",
+                "doctrine/instantiator": "^1.0",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -646,7 +643,7 @@
                 }
             ],
             "description": "An Advanced Custom Field Configuration Builder",
-            "time": "2018-09-14T16:55:15+00:00"
+            "time": "2019-12-09T14:37:25+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -762,6 +759,24 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/classic-editor",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/classic-editor/",
+                "reference": "tags/1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/classic-editor/"
         }
     ],
     "packages-dev": [
@@ -1033,6 +1048,24 @@
                 "standards"
             ],
             "time": "2019-10-28T04:36:32+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/what-the-file",
+            "version": "1.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/what-the-file/",
+                "reference": "tags/1.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/what-the-file.1.5.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/what-the-file/"
         }
     ],
     "aliases": [],
